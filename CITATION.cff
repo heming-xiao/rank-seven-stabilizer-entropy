@@ -1,0 +1,12 @@
+cff-version: "1.2.0"
+title: "Rank Seven Stabilizer Entropy Project"
+message: "Cite this version of the community research and reproduction materials. Heming Xiao initiated and leads the project. OpenAI Codex agents developed the main proof, verification code, and manuscript."
+authors:
+  - name: "Rank Seven Stabilizer Entropy Project"
+contact:
+  - given-names: Heming
+    family-names: Xiao
+version: "v1"
+type: software
+repository-code: https://github.com/heming-xiao/rank-seven-stabilizer-entropy
+date-released: "2026-11-19"

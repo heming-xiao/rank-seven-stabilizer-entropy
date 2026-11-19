@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "vertices": 7,
+  "pairs_covered_exactly_once_by_CB": 21,
+  "triples": 35,
+  "difference_monomials": 84,
+  "monomials_with_nonzero_coefficient_in_some_triple": 75,
+  "dual_constraints_checked": 2940,
+  "CB_saturations_checked": 588,
+  "exact_dual_objective_matches": 84,
+  "price_denominators": [
+    1,
+    2,
+    3,
+    6
+  ],
+  "strictly_slack_constraints": 137,
+  "minimum_positive_slack": "1",
+  "certificate_sha256": "18fc6e04997a08fdcc4a49894a219e5302b31910d1f6debf473df98fbeba8785"
+}

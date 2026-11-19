@@ -1,0 +1,26 @@
+import Rank7UpperSigned00
+import Rank7UpperSigned01
+import Rank7UpperSigned02
+import Rank7UpperSigned03
+import Rank7UpperSigned04
+import Rank7UpperSigned05
+import Rank7UpperSigned06
+import Rank7UpperSigned07
+import Rank7UpperSigned08
+import Rank7UpperSigned09
+import Rank7UpperSigned10
+import Rank7UpperSigned11
+namespace RankSeven.UpperSignedData
+open Lean.Grind Pauli ExteriorCuts PackingDual PackingInterpolation UpperCornerDual
+attribute [local instance] Ring.intCast
+variable {R : Type} [CommRing R] [LE R] [LT R] [Std.IsLinearOrder R] [Std.LawfulOrderLT R] [OrderedRing R]
+abbrev Verified := {c : Cert // c.check=true}
+def allData : Array Verified := #[⟨obj0,ok0⟩,⟨obj1,ok1⟩,⟨obj2,ok2⟩,⟨obj3,ok3⟩,⟨obj4,ok4⟩,⟨obj5,ok5⟩,⟨obj6,ok6⟩,⟨obj7,ok7⟩,⟨obj8,ok8⟩,⟨obj9,ok9⟩,⟨obj10,ok10⟩,⟨obj11,ok11⟩,⟨obj12,ok12⟩,⟨obj13,ok13⟩,⟨obj14,ok14⟩,⟨obj15,ok15⟩,⟨obj16,ok16⟩,⟨obj17,ok17⟩,⟨obj18,ok18⟩,⟨obj19,ok19⟩,⟨obj20,ok20⟩,⟨obj21,ok21⟩,⟨obj22,ok22⟩,⟨obj23,ok23⟩,⟨obj24,ok24⟩,⟨obj25,ok25⟩,⟨obj26,ok26⟩,⟨obj27,ok27⟩,⟨obj28,ok28⟩,⟨obj29,ok29⟩,⟨obj30,ok30⟩,⟨obj31,ok31⟩,⟨obj32,ok32⟩,⟨obj33,ok33⟩,⟨obj34,ok34⟩,⟨obj35,ok35⟩,⟨obj36,ok36⟩,⟨obj37,ok37⟩,⟨obj38,ok38⟩,⟨obj39,ok39⟩,⟨obj40,ok40⟩,⟨obj41,ok41⟩,⟨obj42,ok42⟩,⟨obj43,ok43⟩,⟨obj44,ok44⟩,⟨obj45,ok45⟩,⟨obj46,ok46⟩,⟨obj47,ok47⟩,⟨obj48,ok48⟩,⟨obj49,ok49⟩,⟨obj50,ok50⟩,⟨obj51,ok51⟩,⟨obj52,ok52⟩,⟨obj53,ok53⟩,⟨obj54,ok54⟩,⟨obj55,ok55⟩,⟨obj56,ok56⟩,⟨obj57,ok57⟩,⟨obj58,ok58⟩,⟨obj59,ok59⟩,⟨obj60,ok60⟩,⟨obj61,ok61⟩,⟨obj62,ok62⟩,⟨obj63,ok63⟩,⟨obj64,ok64⟩,⟨obj65,ok65⟩,⟨obj66,ok66⟩,⟨obj67,ok67⟩,⟨obj68,ok68⟩,⟨obj69,ok69⟩,⟨obj70,ok70⟩,⟨obj71,ok71⟩,⟨obj72,ok72⟩,⟨obj73,ok73⟩,⟨obj74,ok74⟩,⟨obj75,ok75⟩,⟨obj76,ok76⟩,⟨obj77,ok77⟩,⟨obj78,ok78⟩,⟨obj79,ok79⟩,⟨obj80,ok80⟩,⟨obj81,ok81⟩,⟨obj82,ok82⟩,⟨obj83,ok83⟩,⟨obj84,ok84⟩,⟨obj85,ok85⟩,⟨obj86,ok86⟩,⟨obj87,ok87⟩,⟨obj88,ok88⟩,⟨obj89,ok89⟩,⟨obj90,ok90⟩,⟨obj91,ok91⟩,⟨obj92,ok92⟩,⟨obj93,ok93⟩,⟨obj94,ok94⟩,⟨obj95,ok95⟩,⟨obj96,ok96⟩,⟨obj97,ok97⟩,⟨obj98,ok98⟩,⟨obj99,ok99⟩,⟨obj100,ok100⟩,⟨obj101,ok101⟩,⟨obj102,ok102⟩,⟨obj103,ok103⟩,⟨obj104,ok104⟩,⟨obj105,ok105⟩,⟨obj106,ok106⟩,⟨obj107,ok107⟩,⟨obj108,ok108⟩,⟨obj109,ok109⟩,⟨obj110,ok110⟩,⟨obj111,ok111⟩,⟨obj112,ok112⟩,⟨obj113,ok113⟩,⟨obj114,ok114⟩,⟨obj115,ok115⟩,⟨obj116,ok116⟩,⟨obj117,ok117⟩,⟨obj118,ok118⟩,⟨obj119,ok119⟩,⟨obj120,ok120⟩,⟨obj121,ok121⟩,⟨obj122,ok122⟩,⟨obj123,ok123⟩,⟨obj124,ok124⟩,⟨obj125,ok125⟩,⟨obj126,ok126⟩,⟨obj127,ok127⟩,⟨obj128,ok128⟩,⟨obj129,ok129⟩,⟨obj130,ok130⟩,⟨obj131,ok131⟩,⟨obj132,ok132⟩,⟨obj133,ok133⟩,⟨obj134,ok134⟩,⟨obj135,ok135⟩,⟨obj136,ok136⟩,⟨obj137,ok137⟩,⟨obj138,ok138⟩,⟨obj139,ok139⟩,⟨obj140,ok140⟩,⟨obj141,ok141⟩,⟨obj142,ok142⟩,⟨obj143,ok143⟩,⟨obj144,ok144⟩,⟨obj145,ok145⟩,⟨obj146,ok146⟩,⟨obj147,ok147⟩,⟨obj148,ok148⟩,⟨obj149,ok149⟩,⟨obj150,ok150⟩,⟨obj151,ok151⟩,⟨obj152,ok152⟩,⟨obj153,ok153⟩,⟨obj154,ok154⟩,⟨obj155,ok155⟩,⟨obj156,ok156⟩,⟨obj157,ok157⟩,⟨obj158,ok158⟩,⟨obj159,ok159⟩,⟨obj160,ok160⟩,⟨obj161,ok161⟩,⟨obj162,ok162⟩,⟨obj163,ok163⟩,⟨obj164,ok164⟩,⟨obj165,ok165⟩,⟨obj166,ok166⟩,⟨obj167,ok167⟩,⟨obj168,ok168⟩,⟨obj169,ok169⟩,⟨obj170,ok170⟩,⟨obj171,ok171⟩,⟨obj172,ok172⟩,⟨obj173,ok173⟩,⟨obj174,ok174⟩,⟨obj175,ok175⟩,⟨obj176,ok176⟩,⟨obj177,ok177⟩,⟨obj178,ok178⟩,⟨obj179,ok179⟩,⟨obj180,ok180⟩,⟨obj181,ok181⟩,⟨obj182,ok182⟩,⟨obj183,ok183⟩,⟨obj184,ok184⟩,⟨obj185,ok185⟩,⟨obj186,ok186⟩,⟨obj187,ok187⟩,⟨obj188,ok188⟩,⟨obj189,ok189⟩,⟨obj190,ok190⟩,⟨obj191,ok191⟩,⟨obj192,ok192⟩,⟨obj193,ok193⟩,⟨obj194,ok194⟩,⟨obj195,ok195⟩,⟨obj196,ok196⟩,⟨obj197,ok197⟩,⟨obj198,ok198⟩,⟨obj199,ok199⟩,⟨obj200,ok200⟩,⟨obj201,ok201⟩,⟨obj202,ok202⟩,⟨obj203,ok203⟩,⟨obj204,ok204⟩,⟨obj205,ok205⟩,⟨obj206,ok206⟩,⟨obj207,ok207⟩,⟨obj208,ok208⟩,⟨obj209,ok209⟩,⟨obj210,ok210⟩,⟨obj211,ok211⟩,⟨obj212,ok212⟩,⟨obj213,ok213⟩,⟨obj214,ok214⟩,⟨obj215,ok215⟩,⟨obj216,ok216⟩,⟨obj217,ok217⟩,⟨obj218,ok218⟩,⟨obj219,ok219⟩,⟨obj220,ok220⟩,⟨obj221,ok221⟩,⟨obj222,ok222⟩,⟨obj223,ok223⟩,⟨obj224,ok224⟩,⟨obj225,ok225⟩,⟨obj226,ok226⟩,⟨obj227,ok227⟩,⟨obj228,ok228⟩,⟨obj229,ok229⟩,⟨obj230,ok230⟩,⟨obj231,ok231⟩,⟨obj232,ok232⟩,⟨obj233,ok233⟩,⟨obj234,ok234⟩,⟨obj235,ok235⟩,⟨obj236,ok236⟩,⟨obj237,ok237⟩,⟨obj238,ok238⟩,⟨obj239,ok239⟩,⟨obj240,ok240⟩,⟨obj241,ok241⟩,⟨obj242,ok242⟩,⟨obj243,ok243⟩,⟨obj244,ok244⟩,⟨obj245,ok245⟩,⟨obj246,ok246⟩,⟨obj247,ok247⟩,⟨obj248,ok248⟩,⟨obj249,ok249⟩,⟨obj250,ok250⟩,⟨obj251,ok251⟩,⟨obj252,ok252⟩,⟨obj253,ok253⟩,⟨obj254,ok254⟩,⟨obj255,ok255⟩,⟨obj256,ok256⟩,⟨obj257,ok257⟩,⟨obj258,ok258⟩,⟨obj259,ok259⟩,⟨obj260,ok260⟩,⟨obj261,ok261⟩,⟨obj262,ok262⟩,⟨obj263,ok263⟩,⟨obj264,ok264⟩,⟨obj265,ok265⟩,⟨obj266,ok266⟩,⟨obj267,ok267⟩,⟨obj268,ok268⟩,⟨obj269,ok269⟩,⟨obj270,ok270⟩,⟨obj271,ok271⟩,⟨obj272,ok272⟩,⟨obj273,ok273⟩,⟨obj274,ok274⟩,⟨obj275,ok275⟩,⟨obj276,ok276⟩,⟨obj277,ok277⟩,⟨obj278,ok278⟩,⟨obj279,ok279⟩,⟨obj280,ok280⟩,⟨obj281,ok281⟩,⟨obj282,ok282⟩,⟨obj283,ok283⟩,⟨obj284,ok284⟩,⟨obj285,ok285⟩]
+def lookup (i : Nat) : Verified := allData[i]?.getD ⟨obj0,ok0⟩
+def objective (i : Nat) : Cert := (lookup i).val
+theorem allObjectives (i : Nat) (x : Wedge7→R) (nx : ∀w,0≤x w) (rows : RowsHold x)
+    (n0 : 0≤UpperFrameTrace.sharedExcess x) (v0 : 0≤UpperFrameTrace.highExcess x) :
+    gain x (fun w => Int.cast (R:=R) ((objective i).cost w))≤0 :=
+  certified (objective i) (lookup i).property x nx rows n0 v0
+end RankSeven.UpperSignedData
+#print axioms RankSeven.UpperSignedData.allObjectives

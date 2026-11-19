@@ -1,0 +1,68 @@
+name = "rank7_real_spectrum"
+defaultTargets = ["Rank7RealCutSpectrum", "Rank7RealUpperCutPrice", "Rank7RealTiedCutPrice", "Rank7RealUpperPhysicalComparison", "Rank7RealLowerCutPrice", "Rank7RealLowerRawCut", "Rank7RealLowerPauliPrice", "Rank7RealLowerPhysicalPrice", "Rank7RealLowerPhysicalComparison", "Rank7RealLowerSmallHeadDual", "Rank7RealLowerSmallHeadFactors", "Rank7RealLowerSmallHead", "Rank7RealLowerWeightedDebit", "Rank7RealLowerWeightedReceipt", "Rank7RealLowerWeighted", "Rank7RealLowerWeightedFourth", "Rank7RealLowerWeightedFullMargin", "Rank7RealLowerAllWeighted", "Rank7RealPhysicalHighest"]
+
+[[require]]
+name = "rank7_lean"
+path = ".."
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "fc4f59e577feb1a4956671bc04ac18aaaf8cd842"
+
+[[lean_lib]]
+name = "Rank7RealCutSpectrum"
+
+[[lean_lib]]
+name = "Rank7RealUpperCutPrice"
+
+[[lean_lib]]
+name = "Rank7RealTiedCutPrice"
+
+[[lean_lib]]
+name = "Rank7RealUpperPhysicalComparison"
+
+[[lean_lib]]
+name = "Rank7RealLowerCutPrice"
+
+[[lean_lib]]
+name = "Rank7RealLowerRawCut"
+
+[[lean_lib]]
+name = "Rank7RealLowerPauliPrice"
+
+[[lean_lib]]
+name = "Rank7RealLowerPhysicalPrice"
+
+[[lean_lib]]
+name = "Rank7RealLowerPhysicalComparison"
+
+[[lean_lib]]
+name = "Rank7RealLowerSmallHeadDual"
+
+[[lean_lib]]
+name = "Rank7RealLowerSmallHeadFactors"
+
+[[lean_lib]]
+name = "Rank7RealLowerSmallHead"
+
+[[lean_lib]]
+name = "Rank7RealLowerWeightedDebit"
+
+[[lean_lib]]
+name = "Rank7RealLowerWeightedReceipt"
+
+[[lean_lib]]
+name = "Rank7RealLowerWeighted"
+
+[[lean_lib]]
+name = "Rank7RealLowerWeightedFourth"
+
+[[lean_lib]]
+name = "Rank7RealLowerWeightedFullMargin"
+
+[[lean_lib]]
+name = "Rank7RealLowerAllWeighted"
+
+[[lean_lib]]
+name = "Rank7RealPhysicalHighest"

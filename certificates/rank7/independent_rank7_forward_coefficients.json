@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "monomials": 210,
+  "monomials_occurring_in_some_triple": 165,
+  "old_packing_rows": 98,
+  "old_certified_monomials": 205,
+  "conditional_certified_monomials": 210,
+  "conditional_fixed_pairs": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ]
+  ],
+  "dual_inequalities_checked": 7525,
+  "exception_optima": {
+    "0166": {
+      "CB_value": 2,
+      "exact_old_packing_optimum": "5/2",
+      "conditional_optimum": 2
+    },
+    "0256": {
+      "CB_value": 7,
+      "exact_old_packing_optimum": "15/2",
+      "conditional_optimum": 7
+    },
+    "0266": {
+      "CB_value": 4,
+      "exact_old_packing_optimum": "9/2",
+      "conditional_optimum": 4
+    },
+    "1166": {
+      "CB_value": 2,
+      "exact_old_packing_optimum": "5/2",
+      "conditional_optimum": 2
+    },
+    "1266": {
+      "CB_value": 8,
+      "exact_old_packing_optimum": "17/2",
+      "conditional_optimum": 8
+    }
+  },
+  "certificate_sha256": "25ae44e42f2c0dff41b1c31eb6e5ddf6b941fdd6981ce0799b55a8dc89009d0d"
+}

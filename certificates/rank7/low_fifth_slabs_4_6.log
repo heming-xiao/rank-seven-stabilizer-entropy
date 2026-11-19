@@ -1,0 +1,16 @@
+Slab 4, accepted 200000, depth 31
+Slab 4, accepted 400000, depth 31
+Slab 4, accepted 600000, depth 31
+Slab 4, accepted 800000, depth 31
+Complete slab 4: old 952, weighted 1718, shared 830464, maximum depth 31
+Slab 5, accepted 200000, depth 33
+Slab 5, accepted 400000, depth 33
+Slab 5, accepted 600000, depth 33
+Slab 5, accepted 800000, depth 33
+Complete slab 5: old 1337, weighted 1455, shared 951730, maximum depth 33
+Slab 6, accepted 200000, depth 34
+Slab 6, accepted 400000, depth 34
+Slab 6, accepted 600000, depth 34
+Slab 6, accepted 800000, depth 34
+Complete slab 6: old 1560, weighted 1099, shared 904484, maximum depth 34
+exit 0

@@ -1,0 +1,18 @@
+# Highest-pair geometry on an arbitrary complex seven-frame
+
+The terminal declaration is `RankSeven.HighestAnchorCoefficient.physicalHighest`. For every ordered field admitting the project's half, every $n=k+3$, every orthonormal physical seven-frame $A$, and every weight vector `mu`, it proves $2v₊≤5κ₁$. Here $v₊$ is `UpperFrameTrace.highExcess` and $κ₁$ is the highest-pair component of `WeightedProbeShift.physicalPayment`.
+
+The heavy-coset and stability parts of the proof are in `HighestPhysicalConcentration.physicalStabilizerPlane`, `HighestAnchorVectors.physicalHighestFromLines`, and `HighestAnchorPauliTrace.physicalHighestFromWords`. They reduce the assertion to one true stabilizer-line test for each of the ten wedges containing both head slots. The following steps discharge that test.
+
+1. Let $s$ be column $i$ of the character projector $P_c$ and set $h=(P_c)_{ii}>0$. Use the coordinates $φx(b)=(P_c W_{c+b}x)_i$ on character representatives. The identity `HighestCharacterChart.chartGram` gives $⟨φx,φy⟩=h⟨x,y⟩$. In particular the original five tail columns acquire Gram $hI$. The vector $φs$ has exactly one possible nonzero coordinate, the character of $c$, of squared norm $h²$. These identities use no square roots.
+
+2. In character coordinates the physical word $W_p$ translates every index by $p$ with an explicit unit phase. Antisymmetrizing on both sides shows that the resulting ordered four-coordinate inner product equals $24h⁴$ times the true compressed Pauli minor. Pairing a word with a stabilizer translate cancels every four-tuple outside the zero total character. The occupied anchor translates uniformly over the character lines. Its translated occupation is counted at most four times on a four-tuple, giving the local price in `HighestChartOrbitPrice.physicalOrbitPrice`.
+
+3. Expand the four-row determinant in its anchor column. The first-order cofactors are the explicit three-by-three minors $C_T(i,j)$ of the partner $φv$ and the original tail columns $φY_i,φY_j$. Repeated anchor rows make the determinant vanish. For each ordered four-tuple the squared determinant is bounded by the sum of the four possible hole prices. Summing over all tuples contributes four choices of the anchor slot and six orderings for each ordered-list selector of an unordered triple. Thus the affine support has mass at most $24h²Σ_T|C_T(i,j)|²$. This is `HighestAnchorCoefficient.maskMass`.
+
+4. In the original five-tail Fock space, the exact contracted triple acts on the top Slater volume. An orthogonal tail frame of squared norm $h$ gives volume mass $h⁵$ and contracted mass $h³Σ_{i<j}|C_T(i,j)|²$. To handle a tail which overlaps the partner $y$, let $N=‖y‖²$, $a_y$ be annihilation and $c_y$ creation. For every contracted test $Q$ and input $ω$, the identity $N²‖Qω‖²=‖Qa_y c_yω‖²+N‖Qa_yω‖²$ replaces it with two partner-vacant inputs of degree at most five. The superlevel bound on the actual character-triple occupation gives $Σ_TΣ_{i<j}|C_T(i,j)|²≤2h²‖φv‖²$. The zero partner is included. See `HighestTailReplacement.vacantSuffices`, `AnchorAllFock.anchoredPairContractions`, and `HighestScaledSlater.anchoredScaledFive`.
+
+Combining these estimates yields $h²2^{-n}Σ_p E_p(i,j)≤4Σ_T|C_T(i,j)|²$ on each wall and $2^{-n}Σ_{i<j,p}E_p(i,j)≤8h‖v‖²$ on their sum. This closes the highest-pair stability test. The shared-head geometry estimate is a separate assertion.
+
+All newly frozen highest-pair modules are in `highestPhysicalPrice.sha256`. Their external Fock and character modules are tracked in the companion anchor audit. The terminal theorem prints only `propext`, `Classical.choice`, and `Quot.sound`.
+

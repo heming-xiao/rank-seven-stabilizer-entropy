@@ -1,0 +1,1223 @@
+Real spectrum package, Lean 4.36.0
+MATHLIB-COMMIT fc4f59e577feb1a4956671bc04ac18aaaf8cd842
+SOURCE-SHA256 8EB0841665702148FF81F7689851B8EF22E5D5B17A1C43AE787BD4B09477AF83 Rank7RealCutSpectrum.lean
+SOURCE-SHA256 9BBCEF5EF539C5E9024F228A637EBFBAB54C54847D15C12AAB613E16993B7519 Rank7RealUpperCutPrice.lean
+SOURCE-SHA256 56A161CE35946ECA4AE9D767FE35F823756FE49FCD58DB8AA45B8AF8C4F057E4 Rank7RealTiedCutPrice.lean
+SOURCE-SHA256 EFEF8C6551B5777FA8721BFC4F953767AE00E359048401E4F294C37BB63D5D15 Rank7RealUpperPhysicalComparison.lean
+SOURCE-SHA256 746F7483F53E4B7C366499C8221D80C2D40B73949E632C999671D7D0DE1E833B Rank7RealLowerCutPrice.lean
+SOURCE-SHA256 AB58C78A83C3775E3B72EDB8FE5BFCC0038282BD9EFECB4F312D42308A2A62A2 Rank7RealLowerRawCut.lean
+SOURCE-SHA256 FD3DB804BCE640ED438A9A6FCA2A0123E179FBE67BE5C1DD1F2DFDFA7BAD08A3 Rank7RealLowerPauliPrice.lean
+SOURCE-SHA256 71FC6D15C867F41BB52CF54ADABF170723AD03A2E954A54C8F6E546710956BAF Rank7RealLowerPhysicalPrice.lean
+SOURCE-SHA256 8CD925340BE37593BFB4D457AC15F28483FBEF3B33342AAA1C106A9A4D238D11 Rank7RealLowerPhysicalComparison.lean
+SOURCE-SHA256 00150C18E20BFCAD6017273684E9ED7304DEBC6C4932968CD11D6EEC23DEADBC Rank7RealLowerSmallHeadDual.lean
+SOURCE-SHA256 1BC32B65FD8FCAE74E760605E8B9328747C2290283C619F1256DAF828639D6D2 Rank7RealLowerSmallHeadFactors.lean
+SOURCE-SHA256 71B07E770A8E5BAE166D6327FE9796166E0F11FB3FD75F8F97F8DE78C1DD5928 Rank7RealLowerSmallHead.lean
+SOURCE-SHA256 7156F7D41C3A837B53645F03BBD8160D0A5B822FEB114EB10AB8D645151E8E2B Rank7RealLowerWeightedDebit.lean
+SOURCE-SHA256 3D2AE54930EAE21428585648E3345181713C99777EEA83D7213EC80BE953590B Rank7RealLowerWeightedReceipt.lean
+SOURCE-SHA256 77CFB3F680013F0D4756F7C82458F56A1B2B204DE5AA58EEB6958C3551133F37 Rank7RealLowerWeighted.lean
+SOURCE-SHA256 50E70D69D69C972F5795CE716FA75D77BBC8A1582D1FF1BBAB1C757F788A91F4 Rank7RealLowerWeightedFourth.lean
+SOURCE-SHA256 3B1064E73110279C781D80B90376C008F9349250C893C3CCA64B75103CF3B5D0 Rank7RealLowerWeightedFullMargin.lean
+SOURCE-SHA256 81025487B6618480796EAB66D5082EB8C0F253E9828CF3F7C3C49BE179B0ECD3 Rank7RealLowerAllWeighted.lean
+SOURCE-SHA256 6A3174E276C49B45D60AB7FF4B186A3E99DB12BEB4F35FEB7DA8D01749E43E8E Rank7RealPhysicalHighest.lean
+SOURCE-SHA256 AD4397559DFEF6AAA917877346584EA6915C4DBA84928C075BEAD5296BA130CE lakefile.toml
+SOURCE-SHA256 582A63F8F9C5128067B688778C1051CF1464C3CA9D57B9325025C051C29B774A lean-toolchain
+SOURCE-SHA256 9049CCEAB261F0C8AF450CC3A2A8150CD34C4A8D3A17D8E2F0E9F83874E3714D lake-manifest.json
+ℹ [5498/5757] Replayed Rank7PauliReduction
+info: Rank7PauliReduction.lean:282:0: 'RankSeven.Pauli.twirlTranspose' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PauliReduction.lean:283:0: 'RankSeven.Pauli.zeroAncillaFourthMoment' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PauliReduction.lean:284:0: 'RankSeven.Pauli.productExpectationEqTrace' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PauliReduction.lean:285:0: 'RankSeven.crossPurityLe' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5500/5757] Replayed Rank7PauliTensor
+info: Rank7PauliTensor.lean:323:0: 'RankSeven.Pauli.tensorExpectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PauliTensor.lean:324:0: 'RankSeven.Pauli.fourthOperatorSumEqTrace' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PauliTensor.lean:325:0: 'RankSeven.Pauli.pauliMomentEqTrace' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PauliTensor.lean:326:0: 'RankSeven.Pauli.unnormalizedTwirlTranspose' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PauliTensor.lean:327:0: 'RankSeven.Pauli.qubitIndicesComplete' depends on axioms: [propext, Quot.sound]
+info: Rank7PauliTensor.lean:328:0: 'RankSeven.Pauli.normalizedPauliMomentPadLeftMany' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5504/5757] Replayed Rank7PauliTwirlEntries
+info: Rank7PauliTwirlEntries.lean:141:0: 'RankSeven.Pauli.sumSingleQubitAxes' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PauliTwirlEntries.lean:142:0: 'RankSeven.Pauli.unnormalizedTwirlEntry' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PauliTwirlEntries.lean:143:0: 'RankSeven.Pauli.normalizedTwirlParallelPlanes' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5506/5757] Replayed Rank7ExteriorPauliBase
+info: Rank7ExteriorPauliBase.lean:232:0: 'RankSeven.ExteriorPauliBase.normalized_physical_plane_gram' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5520/5757] Replayed Rank7PlaneProjector
+info: Rank7PlaneProjector.lean:243:0: 'RankSeven.ExteriorPauliBase.projectWaves_idempotent' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PlaneProjector.lean:244:0: 'RankSeven.ExteriorPauliBase.projectWaves_selfAdjoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PlaneProjector.lean:245:0: 'RankSeven.ExteriorPauliBase.physicalExteriorAction' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PlaneProjector.lean:246:0: 'RankSeven.ExteriorPauliBase.projectedHalfOccupation' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5524/5757] Replayed Rank7Compression
+info: Rank7Compression.lean:172:0: 'RankSeven.Compression.lossIdentity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7Compression.lean:173:0: 'RankSeven.Compression.HermitianEntries.realLossIdentity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7Compression.lean:174:0: 'RankSeven.Compression.HermitianEntries.realLossNonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5528/5757] Replayed Rank7PhysicalWedges
+info: Rank7PhysicalWedges.lean:206:0: 'RankSeven.PhysicalWedges.coordsNodup' depends on axioms: [propext, Quot.sound]
+info: Rank7PhysicalWedges.lean:207:0: 'RankSeven.PhysicalWedges.leftInverseCoordinate' depends on axioms: [propext]
+info: Rank7PhysicalWedges.lean:208:0: 'RankSeven.PhysicalWedges.embeddedKernel_image' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalWedges.lean:209:0: 'RankSeven.PhysicalWedges.baseCoordinatePermutation' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5532/5757] Replayed Rank7PhysicalChartRestriction
+info: Rank7PhysicalChartRestriction.lean:109:0: 'RankSeven.PhysicalChartRestriction.actualChildEntry' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5536/5757] Replayed Rank7EightPointCompression
+info: Rank7EightPointCompression.lean:344:0: 'RankSeven.ExteriorPauliBase.projectMaskWaves_idempotent' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7EightPointCompression.lean:345:0: 'RankSeven.ExteriorPauliBase.projectMaskWaves_selfAdjoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7EightPointCompression.lean:346:0: 'RankSeven.ExteriorPauliBase.physicalMaskAction' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7EightPointCompression.lean:347:0: 'RankSeven.ExteriorPauliBase.eightPointOccupationSandwich' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7EightPointCompression.lean:348:0: 'RankSeven.ExteriorPauliBase.eightPointCompressionCertificateOfMass' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Rank7EightPointCompression.lean:349:0: 'RankSeven.ExteriorPauliBase.eightPointCompressionCertificate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Rank7EightPointCompression.lean:350:0: 'RankSeven.ExteriorPauliBase.eightPointRealCompression' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5540/5757] Replayed Rank7MissingHole
+info: Rank7MissingHole.lean:183:0: 'RankSeven.shortRowsHaveKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7MissingHole.lean:184:0: 'RankSeven.sevenRowsHaveHole' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5542/5757] Replayed Rank7ComplexEightPoint
+info: Rank7ComplexEightPoint.lean:188:0: 'RankSeven.ComplexExterior.eightPointComplexCompression' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7ComplexEightPoint.lean:189:0: 'RankSeven.ComplexExterior.eightPointComplexCompressionOfRows' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [5544/5757] Replayed Rank7ExteriorDeterminantBridge
+info: Rank7ExteriorDeterminantBridge.lean:351:0: 'RankSeven.ExteriorDeterminantBridge.exteriorProduct_eq_minor4' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Rank7ExteriorDeterminantBridge.lean:352:0: 'RankSeven.ExteriorDeterminantBridge.coordinate_compression' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7ExteriorDeterminantBridge.lean:353:0: 'RankSeven.ExteriorDeterminantBridge.base_quadratic_nonnegative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [5546/5757] Replayed Rank7PhysicalExteriorCompression
+info: Rank7PhysicalExteriorCompression.lean:254:0: 'RankSeven.PhysicalExteriorCompression.rankSevenPhysicalExteriorCompression' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Rank7PhysicalExteriorCompression.lean:255:0: 'RankSeven.PhysicalExteriorCompression.rankSevenPauliMinorCompression' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Rank7PhysicalExteriorCompression.lean:256:0: 'RankSeven.PhysicalExteriorCompression.rankSevenPauliKernelUpper' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [5548/5757] Replayed Rank7PhysicalExteriorPositivity
+info: Rank7PhysicalExteriorPositivity.lean:232:0: 'RankSeven.PhysicalExteriorPositivity.physicalClassSquareSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalExteriorPositivity.lean:233:0: 'RankSeven.PhysicalExteriorPositivity.physicalKernel_nonnegative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Rank7PhysicalExteriorPositivity.lean:234:0: 'RankSeven.PhysicalExteriorPositivity.physicalKernel_symmetric' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [5552/5757] Replayed Rank7CompressionCuts
+info: Rank7CompressionCuts.lean:134:0: 'RankSeven.Compression.cutCostEqTraces' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7CompressionCuts.lean:135:0: 'RankSeven.Compression.realLossControlsRankSevenCuts' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5556/5757] Replayed Rank7HermitianEffect
+info: Rank7HermitianEffect.lean:40:0: 'RankSeven.Compression.effectNormLeQuadratic' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5560/5757] Replayed Rank7PauliFrames
+info: Rank7PauliFrames.lean:131:0: 'RankSeven.Pauli.normalizedPauliMomentEqPairedFrameTrace' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5562/5757] Replayed Rank7ExteriorCompressionEffect
+info: Rank7ExteriorCompressionEffect.lean:255:0: 'RankSeven.ExteriorCompressionEffect.normalizedEntries_quadratic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Rank7ExteriorCompressionEffect.lean:256:0: 'RankSeven.ExteriorCompressionEffect.normalizedExteriorEffect' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [5564/5757] Replayed Rank7PhysicalCompressionEffect
+info: Rank7PhysicalCompressionEffect.lean:81:0: 'RankSeven.PhysicalCompressionEffect.rankSevenPhysicalEffect' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalCompressionEffect.lean:82:0: 'RankSeven.PhysicalCompressionEffect.rankSevenPhysicalCrossedCuts' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [5568/5757] Replayed Rank7ComplexPauliMoment
+info: Rank7ComplexPauliMoment.lean:111:0: 'RankSeven.ComplexPauliMoment.productExpectationHermitian' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7ComplexPauliMoment.lean:112:0: 'RankSeven.ComplexPauliMoment.pauliExpectationFourth' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5570/5757] Replayed Rank7PhysicalPairedReduction
+info: Rank7PhysicalPairedReduction.lean:303:0: 'RankSeven.PhysicalPairedReduction.purityFrameTrace' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalPairedReduction.lean:304:0: 'RankSeven.PhysicalPairedReduction.purityPadLeftMany' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalPairedReduction.lean:305:0: 'RankSeven.PhysicalPairedReduction.purityPadRight' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5572/5757] Replayed Rank7AnticommutingDefect
+info: Rank7AnticommutingDefect.lean:246:0: 'RankSeven.AnticommutingDefect.quarticPhaseSums' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7AnticommutingDefect.lean:247:0: 'RankSeven.AnticommutingDefect.characterSquare' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7AnticommutingDefect.lean:248:0: 'RankSeven.AnticommutingDefect.characterDefectSquare' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7AnticommutingDefect.lean:249:0: 'RankSeven.AnticommutingDefect.characterDefectNonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5574/5757] Replayed Rank7CutTrace
+info: Rank7CutTrace.lean:307:0: 'RankSeven.CutTrace.restrictionEffect' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7CutTrace.lean:308:0: 'RankSeven.CutTrace.cutCostTraceVariance' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7CutTrace.lean:309:0: 'RankSeven.CutTrace.eigenvalueBounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7CutTrace.lean:310:0: 'RankSeven.CutTrace.cutCostLowerFromSpectrum' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [5576/5757] Replayed Rank7RealCutSpectrum
+warning: Rank7RealCutSpectrum.lean: imports `Mathlib.Analysis.Matrix.Spectrum` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: Rank7RealCutSpectrum.lean: imports `Mathlib.Data.List.Nodup` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: Rank7RealCutSpectrum.lean: imports `Mathlib.Analysis.SpecialFunctions.Log.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+info: Rank7RealCutSpectrum.lean:161:0: 'RankSeven.RealCutSpectrum.spectralWitness' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7RealCutSpectrum.lean:162:0: 'RankSeven.RealCutSpectrum.cutCostLower' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7RealCutSpectrum.lean:163:0: 'RankSeven.RealCutSpectrum.physicalCutLower' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7RealCutSpectrum.lean:164:0: 'RankSeven.RealCutSpectrum.physicalCutRounding' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7RealCutSpectrum.lean:165:0: 'RankSeven.RealCutSpectrum.entropyOrder' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [5577/5757] Ran Rank7RealCutSpectrum:irArts
+warning: Rank7RealCutSpectrum.lean: imports `Mathlib.Analysis.Matrix.Spectrum` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: Rank7RealCutSpectrum.lean: imports `Mathlib.Data.List.Nodup` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: Rank7RealCutSpectrum.lean: imports `Mathlib.Analysis.SpecialFunctions.Log.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+ℹ [5579/5757] Replayed Rank7UpperAnalytic
+info: Rank7UpperAnalytic.lean:80:0: 'RankSeven.UpperCorner.psiTailFloor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperAnalytic.lean:81:0: 'RankSeven.UpperCorner.oddReserveTangent' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperAnalytic.lean:82:0: 'RankSeven.UpperCorner.supportWidthBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperAnalytic.lean:83:0: 'RankSeven.UpperCorner.supportConditionMonotone' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperAnalytic.lean:84:0: 'RankSeven.UpperCorner.supportNonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5581/5757] Replayed Rank7Interval
+info: Rank7Interval.lean:653:0: 'RankSeven.Interval.cppFloorEq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7Interval.lean:654:0: 'RankSeven.Interval.floorSqrtSound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7Interval.lean:655:0: 'RankSeven.Interval.Bounds.rationalSound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7Interval.lean:656:0: 'RankSeven.Interval.Bounds.cppAbsoluteEq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7Interval.lean:657:0: 'RankSeven.Interval.Bounds.squareSound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7Interval.lean:658:0: 'RankSeven.Interval.Bounds.smallestSound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7Interval.lean:659:0: 'RankSeven.Interval.Bounds.largestSound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7Interval.lean:660:0: 'RankSeven.Interval.Bounds.positivePartSound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7Interval.lean:661:0: 'RankSeven.Interval.Bounds.mulSound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7Interval.lean:662:0: 'RankSeven.Interval.Bounds.divSound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7Interval.lean:663:0: 'RankSeven.Interval.Bounds.discountPrune' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7Interval.lean:664:0: 'RankSeven.Interval.blendSound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7Interval.lean:665:0: 'RankSeven.Interval.blendEnclosed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7Interval.lean:666:0: 'RankSeven.Interval.Bilinear.positiveOnRectangle' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7Interval.lean:668:0: 'RankSeven.Interval.integerSqrtCertified' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7Interval.lean:669:0: 'RankSeven.Interval.Bounds.rootSound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5583/5757] Replayed Rank7UpperPrices
+info: Rank7UpperPrices.lean:359:0: 'RankSeven.UpperPrices.penaltyNormalization' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperPrices.lean:360:0: 'RankSeven.UpperPrices.commonPaymentExact' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperPrices.lean:361:0: 'RankSeven.UpperPrices.sourceMonotone' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperPrices.lean:362:0: 'RankSeven.UpperPrices.reserveBounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperPrices.lean:363:0: 'RankSeven.UpperPrices.sharedShiftOnBox' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperPrices.lean:364:0: 'RankSeven.UpperPrices.clippedZero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperPrices.lean:365:0: 'RankSeven.UpperPrices.supportRatioMonotone' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperPrices.lean:366:0: 'RankSeven.UpperPrices.rectangleSupports' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperPrices.lean:367:0: 'RankSeven.UpperPrices.checkerPriceMultiaffine' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5587/5757] Replayed Rank7UpperContractor
+info: Rank7UpperContractor.lean:479:0: 'RankSeven.UpperContractor.sharedWidth' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperContractor.lean:480:0: 'RankSeven.UpperContractor.lowerClamps' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperContractor.lean:481:0: 'RankSeven.UpperContractor.upperClamps' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperContractor.lean:482:0: 'RankSeven.UpperContractor.contractPreserves' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperContractor.lean:483:0: 'RankSeven.UpperContractor.contractValid' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperContractor.lean:484:0: 'RankSeven.UpperContractor.validSubbox' depends on axioms: [propext]
+info: Rank7UpperContractor.lean:485:0: 'RankSeven.UpperContractor.initialValid' does not depend on any axioms
+ℹ [5589/5757] Replayed Rank7UpperWeighted
+info: Rank7UpperWeighted.lean:304:0: 'RankSeven.UpperWeighted.priceSound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperWeighted.lean:305:0: 'RankSeven.UpperWeighted.acceptedMargin' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperWeighted.lean:306:0: 'RankSeven.UpperWeighted.gapPriceLeSquareRootGap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperWeighted.lean:308:0: 'RankSeven.UpperWeighted.failedUnitPolynomialBounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5591/5757] Replayed Rank7UpperSupportEnclosure
+info: Rank7UpperSupportEnclosure.lean:75:0: 'RankSeven.UpperSupportEnclosure.checkedWeightSound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperSupportEnclosure.lean:76:0: 'RankSeven.UpperSupportEnclosure.priceEnclosed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperSupportEnclosure.lean:77:0: 'RankSeven.UpperSupportEnclosure.commonSupportPrices' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5593/5757] Replayed Rank7BoxTraversal
+info: Rank7BoxTraversal.lean:186:0: 'RankSeven.Interval.Box.coverBySplit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7BoxTraversal.lean:187:0: 'RankSeven.Interval.Box.midpointEqTruncation' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7BoxTraversal.lean:188:0: 'RankSeven.Interval.BoxVerifier.replaySound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7BoxTraversal.lean:189:0: 'RankSeven.Interval.blendedRectangle' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5595/5757] Replayed Rank7UpperOldRegions
+info: Rank7UpperOldRegions.lean:122:0: 'RankSeven.UpperOldRegions.acceptedOldCondition' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5597/5757] Replayed Rank7UpperReplay
+info: Rank7UpperReplay.lean:327:0: 'RankSeven.UpperReplay.acceptedCornersWitness' depends on axioms: [propext, Quot.sound]
+info: Rank7UpperReplay.lean:328:0: 'RankSeven.UpperReplay.acceptedSectorRows' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperReplay.lean:329:0: 'RankSeven.UpperReplay.replayRegion' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperReplay.lean:331:0: 'RankSeven.UpperReplay.initialContains' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5599/5757] Replayed Rank7UpperEndpoint
+info: Rank7UpperEndpoint.lean:558:0: 'RankSeven.UpperEndpoint.originalMargins' does not depend on any axioms
+info: Rank7UpperEndpoint.lean:559:0: 'RankSeven.UpperEndpoint.marginsEnclosed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperEndpoint.lean:560:0: 'RankSeven.UpperEndpoint.acceptedSharedSector' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5601/5757] Replayed Rank7UpperEndpointPrices
+info: Rank7UpperEndpointPrices.lean:122:0: 'RankSeven.UpperEndpointPrices.physicalShiftAndPayment' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperEndpointPrices.lean:123:0: 'RankSeven.UpperEndpointPrices.physicalPriceMultiaffine' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperEndpointPrices.lean:124:0: 'RankSeven.UpperEndpointPrices.supportTerms' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperEndpointPrices.lean:125:0: 'RankSeven.UpperEndpointPrices.realMarginsDecomposed' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5603/5757] Replayed Rank7UpperInterior
+info: Rank7UpperInterior.lean:115:0: 'RankSeven.UpperInterior.positiveChord' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperInterior.lean:116:0: 'RankSeven.UpperInterior.rectangleOfCornerEstimates' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5605/5757] Replayed Rank7SectorDefectAccounting
+info: Rank7SectorDefectAccounting.lean:335:0: 'RankSeven.SectorDefectAccounting.sectorElimination' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7SectorDefectAccounting.lean:336:0: 'RankSeven.SectorDefectAccounting.cbKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7SectorDefectAccounting.lean:337:0: 'RankSeven.SectorDefectAccounting.physicalDefectAccounting' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7SectorDefectAccounting.lean:338:0: 'RankSeven.SectorDefectAccounting.physicalLossNonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7SectorDefectAccounting.lean:339:0: 'RankSeven.SectorDefectAccounting.referenceEvaluation' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5607/5757] Replayed Rank7PackingDual
+info: Rank7PackingDual.lean:920:0: 'RankSeven.PackingDual.weightedCornerBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PackingDual.lean:922:0: 'RankSeven.PackingDual.ordinaryForwardBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PackingDual.lean:923:0: 'RankSeven.PackingDual.uniformBlockBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5609/5757] Replayed Rank7PackingInterpolation
+info: Rank7PackingInterpolation.lean:355:0: 'RankSeven.PackingInterpolation.unlistedNoProbe' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PackingInterpolation.lean:356:0: 'RankSeven.PackingInterpolation.restoredProbeGain' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PackingInterpolation.lean:357:0: 'RankSeven.PackingInterpolation.restoredProbeSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PackingInterpolation.lean:358:0: 'RankSeven.PackingInterpolation.exceptionalDebit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PackingInterpolation.lean:359:0: 'RankSeven.PackingInterpolation.signedForwardDebit' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5611/5757] Replayed Rank7RectangularPairedReduction
+info: Rank7RectangularPairedReduction.lean:276:0: 'RankSeven.RectangularPairedReduction.purityRectangularTrace' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7RectangularPairedReduction.lean:277:0: 'RankSeven.RectangularPairedReduction.rectangularPairedPurityBound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Rank7RectangularPairedReduction.lean:278:0: 'RankSeven.RectangularPairedReduction.rankSevenPurityLeOfPaired' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Rank7RectangularPairedReduction.lean:279:0: 'RankSeven.RectangularPairedReduction.computationalPurityInvariant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Rank7RectangularPairedReduction.lean:280:0: 'RankSeven.RectangularPairedReduction.rankSevenComputationalComparison' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [5613/5757] Replayed Rank7FrameExteriorSector
+info: Rank7FrameExteriorSector.lean:359:0: 'RankSeven.FrameExteriorSector.framedWordMinor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7FrameExteriorSector.lean:360:0: 'RankSeven.FrameExteriorSector.normalizedSector_eq_physicalEntry' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Rank7FrameExteriorSector.lean:361:0: 'RankSeven.FrameExteriorSector.sector_eq_weight_mul_physicalEntry' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Rank7FrameExteriorSector.lean:362:0: 'RankSeven.FrameExteriorSector.normalizedFrameSector_eq_four_effectEntry' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Rank7FrameExteriorSector.lean:363:0: 'RankSeven.FrameExteriorSector.physicalWedgeTrace_eq_spectral' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [5617/5757] Replayed Rank7SymmetricDefect
+info: Rank7SymmetricDefect.lean:673:0: 'RankSeven.SymmetricDefect.fourierTrace' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7SymmetricDefect.lean:674:0: 'RankSeven.SymmetricDefect.pairedOddMoment' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7SymmetricDefect.lean:675:0: 'RankSeven.SymmetricDefect.physicalSymmetricCertificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7SymmetricDefect.lean:676:0: 'RankSeven.SymmetricDefect.symmetricCertificateNonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5621/5757] Replayed Rank7PhysicalMixedFrame
+info: Rank7PhysicalMixedFrame.lean:621:0: 'RankSeven.PhysicalMixedFrame.oddDoubledResolution' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalMixedFrame.lean:622:0: 'RankSeven.PhysicalMixedFrame.oddPairResolution' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalMixedFrame.lean:623:0: 'RankSeven.PhysicalMixedFrame.KTrace' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalMixedFrame.lean:624:0: 'RankSeven.PhysicalMixedFrame.KProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalMixedFrame.lean:625:0: 'RankSeven.PhysicalMixedFrame.KHermitian' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalMixedFrame.lean:626:0: 'RankSeven.PhysicalMixedFrame.KFourthTrace' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalMixedFrame.lean:627:0: 'RankSeven.PhysicalMixedFrame.oddSectorGram' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalMixedFrame.lean:628:0: 'RankSeven.PhysicalMixedFrame.doubledTensorEntry' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalMixedFrame.lean:629:0: 'RankSeven.PhysicalMixedFrame.physicalMixedPlusAlternating' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5625/5757] Replayed Rank7ComputationalPurity
+info: Rank7ComputationalPurity.lean:351:0: 'RankSeven.ComputationalPurity.computationalPurity_eq_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7ComputationalPurity.lean:352:0: 'RankSeven.ComputationalPurity.computationalPurity_polynomial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [5627/5757] Replayed Rank7ComputationalExterior
+info: Rank7ComputationalExterior.lean:173:0: 'RankSeven.ComputationalExterior.computationalFrame_orthonormal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Rank7ComputationalExterior.lean:174:0: 'RankSeven.ComputationalExterior.computationalMinor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7ComputationalExterior.lean:175:0: 'RankSeven.ComputationalExterior.computationalEntries_eq_reference' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [5629/5757] Replayed Rank7PhysicalDefectAssembly
+info: Rank7PhysicalDefectAssembly.lean:465:0: 'RankSeven.PhysicalDefectAssembly.densityPauliTraceReal' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalDefectAssembly.lean:466:0: 'RankSeven.PhysicalDefectAssembly.pairedDensity_eq_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalDefectAssembly.lean:467:0: 'RankSeven.PhysicalDefectAssembly.pauliTraceEqSource' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalDefectAssembly.lean:468:0: 'RankSeven.PhysicalDefectAssembly.pauliPairTraceEqSource' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalDefectAssembly.lean:469:0: 'RankSeven.PhysicalDefectAssembly.physicalOverlapIdentity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalDefectAssembly.lean:470:0: 'RankSeven.PhysicalDefectAssembly.physicalAlternatingIdentity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Rank7PhysicalDefectAssembly.lean:471:0: 'RankSeven.PhysicalDefectAssembly.physicalSymmetricDefectEqSquares' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Rank7PhysicalDefectAssembly.lean:472:0: 'RankSeven.PhysicalDefectAssembly.physicalSymmetricDefectNonnegative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Rank7PhysicalDefectAssembly.lean:473:0: 'RankSeven.PhysicalDefectAssembly.pairedRawTraceSplit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalDefectAssembly.lean:474:0: 'RankSeven.PhysicalDefectAssembly.pairedPurityDefectDifference' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Rank7PhysicalDefectAssembly.lean:475:0: 'RankSeven.PhysicalDefectAssembly.pairedPurityBoundIffDefectBound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Rank7PhysicalDefectAssembly.lean:476:0: 'RankSeven.PhysicalDefectAssembly.orbitalPurityLeClosedForm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalDefectAssembly.lean:477:0: 'RankSeven.PhysicalDefectAssembly.pairedPurityComputationalDifference' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Rank7PhysicalDefectAssembly.lean:478:0: 'RankSeven.PhysicalDefectAssembly.computationalFrameDefectsZero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Rank7PhysicalDefectAssembly.lean:479:0: 'RankSeven.PhysicalDefectAssembly.rankSevenComputationalComparisonOfDefects' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [5631/5757] Replayed Rank7WedgeSquareIntertwiner
+info: Rank7WedgeSquareIntertwiner.lean:581:0: 'RankSeven.WedgeSquareIntertwiner.physicalWedgeSquareGram' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7WedgeSquareIntertwiner.lean:582:0: 'RankSeven.WedgeSquareIntertwiner.sourceWedgeSquarePhysicalEntries' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Rank7WedgeSquareIntertwiner.lean:583:0: 'RankSeven.WedgeSquareIntertwiner.oddWedgeSquareGram' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7WedgeSquareIntertwiner.lean:584:0: 'RankSeven.WedgeSquareIntertwiner.doubledWordOrthogonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7WedgeSquareIntertwiner.lean:585:0: 'RankSeven.WedgeSquareIntertwiner.doubledWordProjection' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5633/5757] Replayed Rank7PhysicalCutCapacities
+info: Rank7PhysicalCutCapacities.lean:525:0: 'RankSeven.PhysicalCutCapacities.oneHoleResolution' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalCutCapacities.lean:526:0: 'RankSeven.PhysicalCutCapacities.oneHoleFrameMass' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalCutCapacities.lean:527:0: 'RankSeven.PhysicalCutCapacities.physicalTripleCapacity' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5635/5757] Replayed Rank7FiveShuffleCAR
+info: Rank7FiveShuffleCAR.lean:227:0: 'RankSeven.FiveShuffleCAR.fiveShuffleCAR' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5637/5757] Replayed Rank7PhysicalPairExchange
+info: Rank7PhysicalPairExchange.lean:127:0: 'RankSeven.PhysicalPairExchange.physicalPairExchange' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5639/5757] Replayed Rank7PhysicalHopping
+info: Rank7PhysicalHopping.lean:205:0: 'RankSeven.PhysicalHopping.physicalHoppingSquare' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalHopping.lean:206:0: 'RankSeven.PhysicalHopping.pauliColumnField' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalHopping.lean:207:0: 'RankSeven.PhysicalHopping.coordinateExchange' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5641/5757] Replayed Rank7PhysicalCompressedSwap
+info: Rank7PhysicalCompressedSwap.lean:258:0: 'RankSeven.PhysicalCompressedSwap.physicalCompressedSwapBound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Rank7PhysicalCompressedSwap.lean:259:0: 'RankSeven.PhysicalCompressedSwap.physicalSwapIsometry' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalCompressedSwap.lean:260:0: 'RankSeven.PhysicalCompressedSwap.physicalLegGram' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5643/5757] Replayed Rank7PhysicalUniformOccupation
+info: Rank7PhysicalUniformOccupation.lean:334:0: 'RankSeven.PhysicalUniformOccupation.uniformOccupation' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalUniformOccupation.lean:335:0: 'RankSeven.PhysicalUniformOccupation.physicalOneHoleBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5645/5757] Replayed Rank7FiveFrameContractions
+info: Rank7FiveFrameContractions.lean:251:0: 'RankSeven.FiveFrameContractions.physicalZeroExchange' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7FiveFrameContractions.lean:252:0: 'RankSeven.FiveFrameContractions.physicalOneExchange' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7FiveFrameContractions.lean:253:0: 'RankSeven.FiveFrameContractions.sourceOne' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5647/5757] Replayed Rank7PhysicalTwoLinkBound
+info: Rank7PhysicalTwoLinkBound.lean:285:0: 'RankSeven.PhysicalTwoLinkBound.physicalTwoLinkBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalTwoLinkBound.lean:286:0: 'RankSeven.PhysicalTwoLinkBound.secondLayer' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5649/5757] Replayed Rank7FiveVolumeBessel
+info: Rank7FiveVolumeBessel.lean:167:0: 'RankSeven.FiveVolumeBessel.volumeBessel' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5651/5757] Replayed Rank7PhysicalDirectedCapacity
+info: Rank7PhysicalDirectedCapacity.lean:299:0: 'RankSeven.PhysicalDirectedCapacity.directedPauliMass' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalDirectedCapacity.lean:300:0: 'RankSeven.PhysicalDirectedCapacity.physicalDirectedCapacity' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5653/5757] Replayed Rank7PhysicalTwoHoleOccupancy
+info: Rank7PhysicalTwoHoleOccupancy.lean:306:0: 'RankSeven.PhysicalTwoHoleOccupancy.physicalOccupation209' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalTwoHoleOccupancy.lean:307:0: 'RankSeven.PhysicalTwoHoleOccupancy.physicalOccupationGrams' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5655/5757] Replayed Rank7ComplexFiniteRangeBound
+info: Rank7ComplexFiniteRangeBound.lean:150:0: 'RankSeven.ComplexFiniteRangeBound.besselFromEigenRows' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5657/5757] Replayed Rank7SingleCreationCAR
+info: Rank7SingleCreationCAR.lean:89:0: 'RankSeven.SingleCreationCAR.singleCreationCAR' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5659/5757] Replayed Rank7PhysicalOccupationBound
+info: Rank7PhysicalOccupationBound.lean:164:0: 'RankSeven.PhysicalOccupationBound.physicalOccupation' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5661/5757] Replayed Rank7PhysicalDoubleHoleNorm
+info: Rank7PhysicalDoubleHoleNorm.lean:182:0: 'RankSeven.PhysicalDoubleHoleNorm.contractionNorm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalDoubleHoleNorm.lean:183:0: 'RankSeven.PhysicalDoubleHoleNorm.physicalSecondContraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5663/5757] Replayed Rank7PhysicalC2Synthesis
+info: Rank7PhysicalC2Synthesis.lean:103:0: 'RankSeven.PhysicalC2Synthesis.physicalC2Identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalC2Synthesis.lean:104:0: 'RankSeven.PhysicalC2Synthesis.physicalC2Norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5665/5757] Replayed Rank7PhysicalC2Adjoint
+info: Rank7PhysicalC2Adjoint.lean:138:0: 'RankSeven.PhysicalC2Adjoint.actualC2Norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalC2Adjoint.lean:139:0: 'RankSeven.PhysicalC2Adjoint.actualC2AdjointNorm' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5667/5757] Replayed Rank7PhysicalC2Projected
+info: Rank7PhysicalC2Projected.lean:174:0: 'RankSeven.PhysicalC2Projected.freeParseval' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalC2Projected.lean:175:0: 'RankSeven.PhysicalC2Projected.physicalProjectedAdjoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5669/5757] Replayed Rank7PhysicalC2Canonical
+info: Rank7PhysicalC2Canonical.lean:43:0: 'RankSeven.PhysicalC2Canonical.canonicalAdjointOnComplement' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5671/5757] Replayed Rank7PhysicalEightTransport
+info: Rank7PhysicalEightTransport.lean:185:0: 'RankSeven.PhysicalEightTransport.transportCross' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5675/5757] Replayed Rank7TwoHolePhysicalTransportIdentity
+info: Rank7TwoHolePhysicalTransportIdentity.lean:32:0: 'RankSeven.PhysicalTwoHoleTransport.physicalBilinearTransport' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [5677/5757] Replayed Rank7PhysicalTwoHoleAdjointTransport
+info: Rank7PhysicalTwoHoleAdjointTransport.lean:253:0: 'RankSeven.PhysicalTwoHoleAdjointTransport.physicalAdjointIntertwinings' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Rank7PhysicalTwoHoleAdjointTransport.lean:254:0: 'RankSeven.PhysicalTwoHoleAdjointTransport.physicalAdjointTransportEntry' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [5681/5757] Replayed Rank7FiveFaceTest
+info: Rank7FiveFaceTest.lean:128:0: 'RankSeven.FiveFaceTest.volumeEnergy' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7FiveFaceTest.lean:129:0: 'RankSeven.FiveFaceTest.oneExtract' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5683/5757] Replayed Rank7FiveFaceCapacity
+info: Rank7FiveFaceCapacity.lean:208:0: 'RankSeven.FiveFaceCapacity.fiveFaceBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7FiveFaceCapacity.lean:209:0: 'RankSeven.FiveFaceCapacity.omittedPairOfTwoHole' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5685/5757] Replayed Rank7PhysicalWaveReproduction
+info: Rank7PhysicalWaveReproduction.lean:168:0: 'RankSeven.PhysicalWaveReproduction.columnReproduction' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5687/5757] Replayed Rank7TwoHolePhysicalExchange
+info: Rank7TwoHolePhysicalExchange.lean:92:0: 'RankSeven.PhysicalTwoHoleExchange.physicalIntertwinings204' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5689/5757] Replayed Rank7TwoHoleEigenInputs
+info: Rank7TwoHoleEigenInputs.lean:118:0: 'RankSeven.TwoHoleEigenInputs.atomic204' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7TwoHoleEigenInputs.lean:119:0: 'RankSeven.TwoHoleEigenInputs.reproduceReadout' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5691/5757] Replayed Rank7PhysicalProjectedTransport
+info: Rank7PhysicalProjectedTransport.lean:107:0: 'RankSeven.PhysicalProjectedTransport.physicalProjectedIntertwinings' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [5693/5757] Replayed Rank7PhysicalTwoHoleEigen
+info: Rank7PhysicalTwoHoleEigen.lean:133:0: 'RankSeven.PhysicalTwoHoleEigen.physicalEigenX' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalTwoHoleEigen.lean:134:0: 'RankSeven.PhysicalTwoHoleEigen.physicalEigenY' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5695/5757] Replayed Rank7PhysicalTwoHoleUpper
+info: Rank7PhysicalTwoHoleUpper.lean:209:0: 'RankSeven.PhysicalTwoHoleUpper.physicalTwoHoleUpper' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalTwoHoleUpper.lean:210:0: 'RankSeven.PhysicalTwoHoleUpper.physicalOmittedPairCapacity' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5697/5757] Replayed Rank7PackingPolynomial
+info: Rank7PackingPolynomial.lean:252:0: 'RankSeven.PackingPolynomial.wedgeSuffixExpansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PackingPolynomial.lean:253:0: 'RankSeven.PackingPolynomial.physicalExteriorExpansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PackingPolynomial.lean:254:0: 'RankSeven.PackingPolynomial.physicalRows' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PackingPolynomial.lean:255:0: 'RankSeven.PackingPolynomial.physicalRowsEight' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PackingPolynomial.lean:256:0: 'RankSeven.PackingPolynomial.physicalSignedForwardDebit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PackingPolynomial.lean:257:0: 'RankSeven.PackingPolynomial.physicalRestoredProbeSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5699/5757] Replayed Rank7UpperFrameGain
+info: Rank7UpperFrameGain.lean:103:0: 'RankSeven.UpperFrameGain.correctedPolyEval' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperFrameGain.lean:104:0: 'RankSeven.UpperFrameGain.physicalGain' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5701/5757] Replayed Rank7UpperRayCones
+info: Rank7UpperRayCones.lean:112:0: 'RankSeven.UpperRayCones.cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperRayCones.lean:113:0: 'RankSeven.UpperRayCones.traceBounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5703/5757] Replayed Rank7UpperRayGeometry
+info: Rank7UpperRayGeometry.lean:262:0: 'RankSeven.UpperRayGeometry.actualVertex' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperRayGeometry.lean:263:0: 'RankSeven.UpperRayGeometry.actualGeometry' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5705/5757] Replayed Rank7UpperPhysicalInterior
+info: Rank7UpperPhysicalInterior.lean:129:0: 'RankSeven.UpperPhysicalInterior.frameInterior' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5707/5757] Replayed Rank7UpperPhysicalReplay
+info: Rank7UpperPhysicalReplay.lean:105:0: 'RankSeven.UpperPhysicalReplay.coveringLeaf' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperPhysicalReplay.lean:106:0: 'RankSeven.UpperPhysicalReplay.replayPhysicalInterior' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5709/5757] Replayed Rank7UpperFrameTrace
+info: Rank7UpperFrameTrace.lean:91:0: 'RankSeven.UpperFrameTrace.traceOffsets' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperFrameTrace.lean:92:0: 'RankSeven.UpperFrameTrace.actualFrameInterior' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperFrameTrace.lean:94:0: 'RankSeven.UpperFrameTrace.physicalSharedTrace' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5711/5757] Replayed Rank7PhysicalMixedSpectrum
+info: Rank7PhysicalMixedSpectrum.lean:69:0: 'RankSeven.PhysicalMixedSpectrum.fourthTraceEqSpectrum' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5713/5757] Replayed Rank7PauliEdgeBlocks
+info: Rank7PauliEdgeBlocks.lean:431:0: 'RankSeven.PauliEdgeBlocks.antiAddLeft' depends on axioms: [propext]
+info: Rank7PauliEdgeBlocks.lean:432:0: 'RankSeven.PauliEdgeBlocks.companionExists' depends on axioms: [propext]
+info: Rank7PauliEdgeBlocks.lean:433:0: 'RankSeven.PauliEdgeBlocks.edgeCoordinate' depends on axioms: [propext]
+info: Rank7PauliEdgeBlocks.lean:434:0: 'RankSeven.PauliEdgeBlocks.perpendicularCharacterKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PauliEdgeBlocks.lean:435:0: 'RankSeven.PauliEdgeBlocks.perpendicularCharacterSquare' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PauliEdgeBlocks.lean:436:0: 'RankSeven.PauliEdgeBlocks.edgeDefectSquare' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PauliEdgeBlocks.lean:437:0: 'RankSeven.PauliEdgeBlocks.edgeDefectNonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5715/5757] Replayed Rank7PhysicalAntiQuartic
+info: Rank7PhysicalAntiQuartic.lean:1193:0: 'RankSeven.PhysicalAntiQuartic.physicalAntiQuarticExpansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalAntiQuartic.lean:1194:0: 'RankSeven.PhysicalAntiQuartic.groupedQuartic' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalAntiQuartic.lean:1195:0: 'RankSeven.PhysicalAntiQuartic.cyclicQuarticPhase' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalAntiQuartic.lean:1196:0: 'RankSeven.PhysicalAntiQuartic.cyclicOrderExists' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5717/5757] Replayed Rank7PhysicalEdgeSwitching
+info: Rank7PhysicalEdgeSwitching.lean:192:0: 'RankSeven.PhysicalEdgeSwitching.cycleWordsCyclic' depends on axioms: [propext]
+info: Rank7PhysicalEdgeSwitching.lean:193:0: 'RankSeven.PhysicalEdgeSwitching.cyclicPhysicalPhase' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalEdgeSwitching.lean:194:0: 'RankSeven.PhysicalEdgeSwitching.physicalEdgeEntry' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalEdgeSwitching.lean:195:0: 'RankSeven.PhysicalEdgeSwitching.physicalEdgeNonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5719/5757] Replayed Rank7AntiPairIncidence
+info: Rank7AntiPairIncidence.lean:129:0: 'RankSeven.AntiPairIncidence.directionPairMass' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7AntiPairIncidence.lean:130:0: 'RankSeven.AntiPairIncidence.unorderedAntiMass_eq_edgeSquares' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [5721/5757] Replayed Rank7AntiPlaneIncidence
+info: Rank7AntiPlaneIncidence.lean:569:0: 'RankSeven.AntiPlaneIncidence.canonicalPresentations' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7AntiPlaneIncidence.lean:570:0: 'RankSeven.AntiPlaneIncidence.chartPerm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7AntiPlaneIncidence.lean:571:0: 'RankSeven.AntiPlaneIncidence.edgeWeightedSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7AntiPlaneIncidence.lean:572:0: 'RankSeven.AntiPlaneIncidence.physicalPlaneEdgeSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5723/5757] Replayed Rank7AntiDefectTransport
+info: Rank7AntiDefectTransport.lean:471:0: 'RankSeven.AntiDefectTransport.ambientAlternatingTraceEqSource' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Rank7AntiDefectTransport.lean:472:0: 'RankSeven.AntiDefectTransport.ambientAlternatingOverlap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7AntiDefectTransport.lean:473:0: 'RankSeven.AntiDefectTransport.physicalAnticommutingOrderedExpansion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Rank7AntiDefectTransport.lean:474:0: 'RankSeven.AntiDefectTransport.physicalAnticommutingGroupedExpansion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Rank7AntiDefectTransport.lean:475:0: 'RankSeven.AntiDefectTransport.anticommutingBoundFromIncidence' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Rank7AntiDefectTransport.lean:476:0: 'RankSeven.AntiDefectTransport.physicalAnticommutingChargeFromPlaneIncidence' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Rank7AntiDefectTransport.lean:477:0: 'RankSeven.AntiDefectTransport.physicalAnticommutingCharge' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7AntiDefectTransport.lean:478:0: 'RankSeven.AntiDefectTransport.physicalAnticommutingDefectNonnegative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [5725/5757] Replayed Rank7MixedTransport
+info: Rank7MixedTransport.lean:470:0: 'RankSeven.MixedTransport.physicalColumnTransport' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7MixedTransport.lean:471:0: 'RankSeven.MixedTransport.physicalTraceTransport' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7MixedTransport.lean:472:0: 'RankSeven.MixedTransport.physicalAlternatingPrice' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7MixedTransport.lean:473:0: 'RankSeven.MixedTransport.physicalOverlapPrice' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5727/5757] Replayed Rank7PhysicalMixedDefect
+info: Rank7PhysicalMixedDefect.lean:128:0: 'RankSeven.PhysicalMixedDefect.physicalMixedTraceSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalMixedDefect.lean:129:0: 'RankSeven.PhysicalMixedDefect.physicalMixedCertificateFromTraces' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Rank7PhysicalMixedDefect.lean:130:0: 'RankSeven.PhysicalMixedDefect.physicalMixedDefectEqSquares' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalMixedDefect.lean:131:0: 'RankSeven.PhysicalMixedDefect.physicalMixedDefectNonnegative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [5729/5757] Replayed Rank7PhysicalComparison
+info: Rank7PhysicalComparison.lean:60:0: 'RankSeven.PhysicalComparison.frameDefectsNonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalComparison.lean:61:0: 'RankSeven.PhysicalComparison.pairedPurityLeOfNonpositiveGain' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Rank7PhysicalComparison.lean:62:0: 'RankSeven.PhysicalComparison.compareOfCompression' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5731/5757] Replayed Rank7JointProbePayment
+info: Rank7JointProbePayment.lean:834:0: 'RankSeven.JointProbePayment.signedHilbertSchmidt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7JointProbePayment.lean:835:0: 'RankSeven.JointProbePayment.jointShiftIdentity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7JointProbePayment.lean:836:0: 'RankSeven.JointProbePayment.densityResidual' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7JointProbePayment.lean:837:0: 'RankSeven.JointProbePayment.physicalMixedResidual' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7JointProbePayment.lean:838:0: 'RankSeven.JointProbePayment.polarizedShift' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7JointProbePayment.lean:839:0: 'RankSeven.JointProbePayment.diagonalFourier' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7JointProbePayment.lean:840:0: 'RankSeven.JointProbePayment.physicalDiagonalBalance' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7JointProbePayment.lean:841:0: 'RankSeven.JointProbePayment.physicalAnticommutingResidual' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7JointProbePayment.lean:842:0: 'RankSeven.JointProbePayment.physicalJointResidual' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7JointProbePayment.lean:843:0: 'RankSeven.JointProbePayment.physicalJointShift' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7JointProbePayment.lean:844:0: 'RankSeven.JointProbePayment.physicalPairPolarization' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7JointProbePayment.lean:845:0: 'RankSeven.JointProbePayment.physicalMatchingScore' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7JointProbePayment.lean:846:0: 'RankSeven.JointProbePayment.physicalPairWeight' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7JointProbePayment.lean:847:0: 'RankSeven.JointProbePayment.physicalMatchingPolarization' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5733/5757] Replayed Rank7ProjectedProbeOverlap
+info: Rank7ProjectedProbeOverlap.lean:361:0: 'RankSeven.ProjectedProbeOverlap.physicalProjectedTrace' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7ProjectedProbeOverlap.lean:362:0: 'RankSeven.ProjectedProbeOverlap.sortedMixedTrace' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7ProjectedProbeOverlap.lean:363:0: 'RankSeven.ProjectedProbeOverlap.physicalWeightedTrace' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7ProjectedProbeOverlap.lean:364:0: 'RankSeven.ProjectedProbeOverlap.physicalPairWedgeOverlap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7ProjectedProbeOverlap.lean:365:0: 'RankSeven.ProjectedProbeOverlap.pairPaymentIdentity' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5735/5757] Replayed Rank7JointProbeGram
+info: Rank7JointProbeGram.lean:334:0: 'RankSeven.JointProbeGram.sharedExteriorZero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7JointProbeGram.lean:335:0: 'RankSeven.JointProbeGram.pairGramShared' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7JointProbeGram.lean:336:0: 'RankSeven.JointProbeGram.pairWeightAverage' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7JointProbeGram.lean:337:0: 'RankSeven.JointProbeGram.physicalJointGram' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7JointProbeGram.lean:338:0: 'RankSeven.JointProbeGram.highestPayment' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7JointProbeGram.lean:339:0: 'RankSeven.JointProbeGram.sharedPayment' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5737/5757] Replayed Rank7PauliPairContraction
+info: Rank7PauliPairContraction.lean:180:0: 'RankSeven.PauliPairContraction.amplitudeSkew' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PauliPairContraction.lean:181:0: 'RankSeven.PauliPairContraction.physicalSkewContraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PauliPairContraction.lean:182:0: 'RankSeven.PauliPairContraction.physicalDegree' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PauliPairContraction.lean:183:0: 'RankSeven.PauliPairContraction.subsetContraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5739/5757] Replayed Rank7OddSkewContraction
+info: Rank7OddSkewContraction.lean:236:0: 'RankSeven.OddSkewContraction.oddKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7OddSkewContraction.lean:237:0: 'RankSeven.OddSkewContraction.massLeLengthSubOne' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5741/5757] Replayed Rank7UpperFrameReplay
+info: Rank7UpperFrameReplay.lean:38:0: 'RankSeven.UpperFrameReplay.actualFrameReplay' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5744/6135] Replayed Rank7UpperPairPfaffian
+info: Rank7UpperPairPfaffian.lean:129:0: 'RankSeven.UpperPairPfaffian.physicalColumnPfaffian' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperPairPfaffian.lean:130:0: 'RankSeven.UpperPairPfaffian.anchoredLeg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperPairPfaffian.lean:131:0: 'RankSeven.UpperPairPfaffian.anchoredColumn' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperPairPfaffian.lean:132:0: 'RankSeven.UpperPairPfaffian.anchoredSkew' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5746/6135] Replayed Rank7UpperOddCut
+info: Rank7UpperOddCut.lean:87:0: 'RankSeven.UpperOddCut.oddLoss' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5748/6135] Replayed Rank7UpperPairLoss
+info: Rank7UpperPairLoss.lean:99:0: 'RankSeven.UpperPairLoss.legMinimum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperPairLoss.lean:100:0: 'RankSeven.UpperPairLoss.perWordOddCut' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5750/6135] Replayed Rank7UpperPairCap
+info: Rank7UpperPairCap.lean:97:0: 'RankSeven.UpperPairCap.physicalPairCap' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5752/6135] Replayed Rank7RealUpperCutPrice
+info: Rank7RealUpperCutPrice.lean:164:0: 'RankSeven.RealUpperCutPrice.actualTracePrices' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7RealUpperCutPrice.lean:165:0: 'RankSeven.RealUpperCutPrice.supportedCompression' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5755/6135] Replayed Rank7RealTiedCutPrice
+info: Rank7RealTiedCutPrice.lean:378:0: 'RankSeven.RealTiedCutPrice.enteringError' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7RealTiedCutPrice.lean:379:0: 'RankSeven.RealTiedCutPrice.chartGeometry' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7RealTiedCutPrice.lean:380:0: 'RankSeven.RealTiedCutPrice.tiedSupportedCompression' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7RealTiedCutPrice.lean:381:0: 'RankSeven.RealTiedCutPrice.physicalTiedCompression' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5758/6135] Replayed Rank7PauliMatchingPrices
+info: Rank7PauliMatchingPrices.lean:688:0: 'RankSeven.PauliMatchingPrices.highestBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PauliMatchingPrices.lean:689:0: 'RankSeven.PauliMatchingPrices.sharedBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PauliMatchingPrices.lean:690:0: 'RankSeven.PauliMatchingPrices.physicalEdgeDegrees' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PauliMatchingPrices.lean:691:0: 'RankSeven.PauliMatchingPrices.physicalOddCapacity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PauliMatchingPrices.lean:692:0: 'RankSeven.PauliMatchingPrices.physicalOddRows' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PauliMatchingPrices.lean:693:0: 'RankSeven.PauliMatchingPrices.physicalPerWordBounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PauliMatchingPrices.lean:694:0: 'RankSeven.PauliMatchingPrices.physicalProbePayments' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5760/6135] Replayed Rank7WeightedProbeShift
+info: Rank7WeightedProbeShift.lean:172:0: 'RankSeven.WeightedProbeShift.physicalSquareReceipt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7WeightedProbeShift.lean:173:0: 'RankSeven.WeightedProbeShift.physicalDefectReceipt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7WeightedProbeShift.lean:174:0: 'RankSeven.WeightedProbeShift.physicalMomentOrder' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7WeightedProbeShift.lean:175:0: 'RankSeven.WeightedProbeShift.sixMassLeThree' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7WeightedProbeShift.lean:176:0: 'RankSeven.WeightedProbeShift.weightedSixMassLeSix' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5762/6135] Replayed Rank7PauliReserveSlots
+info: Rank7PauliReserveSlots.lean:349:0: 'RankSeven.PauliReserveSlots.neighborhoodFourier' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PauliReserveSlots.lean:350:0: 'RankSeven.PauliReserveSlots.cutLossBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PauliReserveSlots.lean:351:0: 'RankSeven.PauliReserveSlots.neighborhoodCuts' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PauliReserveSlots.lean:352:0: 'RankSeven.PauliReserveSlots.reserveSwap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PauliReserveSlots.lean:353:0: 'RankSeven.PauliReserveSlots.oneSlotBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PauliReserveSlots.lean:354:0: 'RankSeven.PauliReserveSlots.allCutSlots' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PauliReserveSlots.lean:355:0: 'RankSeven.PauliReserveSlots.reserveNonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PauliReserveSlots.lean:356:0: 'RankSeven.PauliReserveSlots.sameSlot' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PauliReserveSlots.lean:357:0: 'RankSeven.PauliReserveSlots.physicalReceiptWithCutSlots' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5764/6135] Replayed Rank7ReserveMixedNorm
+info: Rank7ReserveMixedNorm.lean:202:0: 'RankSeven.ReserveMixedNorm.physicalEdgeUpper' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7ReserveMixedNorm.lean:203:0: 'RankSeven.ReserveMixedNorm.physicalPlaneUpper' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7ReserveMixedNorm.lean:204:0: 'RankSeven.ReserveMixedNorm.projectedNormLeReserve' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7ReserveMixedNorm.lean:205:0: 'RankSeven.ReserveMixedNorm.spectralCutReserve' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7ReserveMixedNorm.lean:206:0: 'RankSeven.ReserveMixedNorm.highestPairReserve' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7ReserveMixedNorm.lean:207:0: 'RankSeven.ReserveMixedNorm.twoDiagonalPayments' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5766/6135] Replayed Rank7OddCutReserve
+info: Rank7OddCutReserve.lean:326:0: 'RankSeven.OddCutReserve.crossReserve' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7OddCutReserve.lean:327:0: 'RankSeven.OddCutReserve.simultaneousOddPayments' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7OddCutReserve.lean:328:0: 'RankSeven.OddCutReserve.realBesselTwo' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7OddCutReserve.lean:329:0: 'RankSeven.OddCutReserve.antiRealOrthogonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7OddCutReserve.lean:330:0: 'RankSeven.OddCutReserve.firstPairLeakage' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7OddCutReserve.lean:331:0: 'RankSeven.OddCutReserve.rankSixCross' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7OddCutReserve.lean:332:0: 'RankSeven.OddCutReserve.physicalOddPayments' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5768/6135] Replayed Rank7OddTensorUncertainty
+info: Rank7OddTensorUncertainty.lean:200:0: 'RankSeven.OddTensorUncertainty.matrixComp' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7OddTensorUncertainty.lean:201:0: 'RankSeven.OddTensorUncertainty.matrixDagger' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7OddTensorUncertainty.lean:202:0: 'RankSeven.OddTensorUncertainty.pauliGram' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7OddTensorUncertainty.lean:203:0: 'RankSeven.OddTensorUncertainty.pauliAnti' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7OddTensorUncertainty.lean:204:0: 'RankSeven.OddTensorUncertainty.pauliIsometry' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7OddTensorUncertainty.lean:205:0: 'RankSeven.OddTensorUncertainty.antiRealOrthogonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7OddTensorUncertainty.lean:206:0: 'RankSeven.OddTensorUncertainty.homogeneousBessel' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7OddTensorUncertainty.lean:207:0: 'RankSeven.OddTensorUncertainty.pauliUncertainty' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5770/6135] Replayed Rank7SlaterAlternant
+info: Rank7SlaterAlternant.lean:242:0: 'RankSeven.SlaterAlternant.topLine' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7SlaterAlternant.lean:243:0: 'RankSeven.SlaterAlternant.pushAlt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7SlaterAlternant.lean:244:0: 'RankSeven.SlaterAlternant.pushIsMatrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7SlaterAlternant.lean:245:0: 'RankSeven.SlaterAlternant.orientationAlt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7SlaterAlternant.lean:246:0: 'RankSeven.SlaterAlternant.canonicalValue' depends on axioms: [propext, Quot.sound]
+info: Rank7SlaterAlternant.lean:247:0: 'RankSeven.SlaterAlternant.topEigenvector' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7SlaterAlternant.lean:248:0: 'RankSeven.SlaterAlternant.slaterMassPositive' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5772/6135] Replayed Rank7SlaterUnionBound
+info: Rank7SlaterUnionBound.lean:279:0: 'RankSeven.SlaterUnionBound.tensorUnion' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7SlaterUnionBound.lean:280:0: 'RankSeven.SlaterUnionBound.energyNonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7SlaterUnionBound.lean:281:0: 'RankSeven.SlaterUnionBound.slaterPermutation' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7SlaterUnionBound.lean:282:0: 'RankSeven.SlaterUnionBound.marginalTrace' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7SlaterUnionBound.lean:283:0: 'RankSeven.SlaterUnionBound.determinantLeakage' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5774/6135] Replayed Rank7PhysicalOddLeakage
+info: Rank7PhysicalOddLeakage.lean:266:0: 'RankSeven.PhysicalOddLeakage.compressionComplement' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalOddLeakage.lean:267:0: 'RankSeven.PhysicalOddLeakage.determinantReal' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalOddLeakage.lean:268:0: 'RankSeven.PhysicalOddLeakage.frameSlaterMass' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalOddLeakage.lean:269:0: 'RankSeven.PhysicalOddLeakage.frameDeterminantExpectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalOddLeakage.lean:270:0: 'RankSeven.PhysicalOddLeakage.determinantUncertainty' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalOddLeakage.lean:271:0: 'RankSeven.PhysicalOddLeakage.oddFrameLeakage' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalOddLeakage.lean:272:0: 'RankSeven.PhysicalOddLeakage.traceLossEqCut' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalOddLeakage.lean:273:0: 'RankSeven.PhysicalOddLeakage.physicalOddCut' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalOddLeakage.lean:274:0: 'RankSeven.PhysicalOddLeakage.physicalOddCuts' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5776/6135] Replayed Rank7ThreeLegFourier
+info: Rank7ThreeLegFourier.lean:295:0: 'RankSeven.ThreeLegFourier.determinantGramNonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7ThreeLegFourier.lean:296:0: 'RankSeven.ThreeLegFourier.determinantThree' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7ThreeLegFourier.lean:297:0: 'RankSeven.ThreeLegFourier.shiftGram' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7ThreeLegFourier.lean:298:0: 'RankSeven.ThreeLegFourier.rankThreeTraceLoss' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7ThreeLegFourier.lean:299:0: 'RankSeven.ThreeLegFourier.physicalThreeTrace' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7ThreeLegFourier.lean:300:0: 'RankSeven.ThreeLegFourier.negativeCrossBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7ThreeLegFourier.lean:301:0: 'RankSeven.ThreeLegFourier.physicalLocalPrices' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5778/6135] Replayed Rank7SixModeProbe
+info: Rank7SixModeProbe.lean:176:0: 'RankSeven.SixModeProbe.sixScore' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7SixModeProbe.lean:177:0: 'RankSeven.SixModeProbe.sixPolarization' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7SixModeProbe.lean:178:0: 'RankSeven.SixModeProbe.sixWedgeLeThree' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7SixModeProbe.lean:179:0: 'RankSeven.SixModeProbe.largeKappaSix' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7SixModeProbe.lean:180:0: 'RankSeven.SixModeProbe.sixExcessSquared' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5780/6135] Replayed Rank7SixPointRounding
+info: Rank7SixPointRounding.lean:330:0: 'RankSeven.SixPointRounding.sixMassSquares' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7SixPointRounding.lean:331:0: 'RankSeven.SixPointRounding.sectorFive' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7SixPointRounding.lean:332:0: 'RankSeven.SixPointRounding.headWeightLeSix' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7SixPointRounding.lean:333:0: 'RankSeven.SixPointRounding.physicalLeakage' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7SixPointRounding.lean:334:0: 'RankSeven.SixPointRounding.sectorSixPrice' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7SixPointRounding.lean:335:0: 'RankSeven.SixPointRounding.roundedSixPrices' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7SixPointRounding.lean:336:0: 'RankSeven.SixPointRounding.fourierErrorScale' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7SixPointRounding.lean:337:0: 'RankSeven.SixPointRounding.uniformSixPrice' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7SixPointRounding.lean:338:0: 'RankSeven.SixPointRounding.physicalSixWedge' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7SixPointRounding.lean:339:0: 'RankSeven.SixPointRounding.physicalSixExcessSquared' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7SixPointRounding.lean:340:0: 'RankSeven.SixPointRounding.uniformSixPriceCoarse' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5782/6135] Replayed Rank7HeadPauliFourier
+info: Rank7HeadPauliFourier.lean:239:0: 'RankSeven.HeadPauliFourier.mixedResolution' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HeadPauliFourier.lean:240:0: 'RankSeven.HeadPauliFourier.transposeExpectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HeadPauliFourier.lean:241:0: 'RankSeven.HeadPauliFourier.realResolution' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HeadPauliFourier.lean:242:0: 'RankSeven.HeadPauliFourier.signedResolutionOfFrame' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HeadPauliFourier.lean:243:0: 'RankSeven.HeadPauliFourier.oddTwistedParseval' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HeadPauliFourier.lean:244:0: 'RankSeven.HeadPauliFourier.ordinaryTransforms' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HeadPauliFourier.lean:245:0: 'RankSeven.HeadPauliFourier.twistedHead' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5784/6135] Replayed Rank7PhysicalFourierDefect
+info: Rank7PhysicalFourierDefect.lean:319:0: 'RankSeven.PhysicalFourierDefect.topThreeOrth' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalFourierDefect.lean:320:0: 'RankSeven.PhysicalFourierDefect.totalMoments' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalFourierDefect.lean:321:0: 'RankSeven.PhysicalFourierDefect.fourthBalance' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalFourierDefect.lean:322:0: 'RankSeven.PhysicalFourierDefect.localDefectSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalFourierDefect.lean:323:0: 'RankSeven.PhysicalFourierDefect.oddSquares' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalFourierDefect.lean:324:0: 'RankSeven.PhysicalFourierDefect.physicalFourierIdentity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalFourierDefect.lean:325:0: 'RankSeven.PhysicalFourierDefect.physicalFourierBounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalFourierDefect.lean:326:0: 'RankSeven.PhysicalFourierDefect.weakMassLocalization' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalFourierDefect.lean:327:0: 'RankSeven.PhysicalFourierDefect.heavyCommute' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5786/6135] Replayed Rank7HeavyPauliGroup
+info: Rank7HeavyPauliGroup.lean:216:0: 'RankSeven.HeavyPauliGroup.maximalExtension' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HeavyPauliGroup.lean:217:0: 'RankSeven.HeavyPauliGroup.cardinalCast' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HeavyPauliGroup.lean:218:0: 'RankSeven.HeavyPauliGroup.characterSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HeavyPauliGroup.lean:219:0: 'RankSeven.HeavyPauliGroup.physicalFamily' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5788/6135] Replayed Rank7StabilizerCharacterBasis
+info: Rank7StabilizerCharacterBasis.lean:274:0: 'RankSeven.StabilizerCharacterBasis.liftExists' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7StabilizerCharacterBasis.lean:275:0: 'RankSeven.StabilizerCharacterBasis.liftProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7StabilizerCharacterBasis.lean:276:0: 'RankSeven.StabilizerCharacterBasis.blockTrace' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7StabilizerCharacterBasis.lean:277:0: 'RankSeven.StabilizerCharacterBasis.blockProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7StabilizerCharacterBasis.lean:278:0: 'RankSeven.StabilizerCharacterBasis.blockIsometry' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5790/6135] Replayed Rank7StabilizerCosetTransform
+info: Rank7StabilizerCosetTransform.lean:150:0: 'RankSeven.StabilizerCosetTransform.transversalExists' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7StabilizerCosetTransform.lean:151:0: 'RankSeven.StabilizerCosetTransform.enumerate' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7StabilizerCosetTransform.lean:152:0: 'RankSeven.StabilizerCosetTransform.quotientSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7StabilizerCosetTransform.lean:153:0: 'RankSeven.StabilizerCosetTransform.transformSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7StabilizerCosetTransform.lean:154:0: 'RankSeven.StabilizerCosetTransform.parseval' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5792/6135] Replayed Rank7StabilizerPopulationRounding
+info: Rank7StabilizerPopulationRounding.lean:230:0: 'RankSeven.StabilizerPopulationRounding.populationBessel' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7StabilizerPopulationRounding.lean:231:0: 'RankSeven.StabilizerPopulationRounding.middleBounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7StabilizerPopulationRounding.lean:232:0: 'RankSeven.StabilizerPopulationRounding.middleParseval' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7StabilizerPopulationRounding.lean:233:0: 'RankSeven.StabilizerPopulationRounding.twoLineLocalization' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7StabilizerPopulationRounding.lean:234:0: 'RankSeven.StabilizerPopulationRounding.physicalTwoLines' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5794/6135] Replayed Rank7StabilizerPairedCharacters
+info: Rank7StabilizerPairedCharacters.lean:249:0: 'RankSeven.StabilizerPairedCharacters.inversion' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7StabilizerPairedCharacters.lean:250:0: 'RankSeven.StabilizerPairedCharacters.pairedSquare' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7StabilizerPairedCharacters.lean:251:0: 'RankSeven.StabilizerPairedCharacters.halfGroup' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7StabilizerPairedCharacters.lean:252:0: 'RankSeven.StabilizerPairedCharacters.middleStable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7StabilizerPairedCharacters.lean:253:0: 'RankSeven.StabilizerPairedCharacters.firstCharacterRegion' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7StabilizerPairedCharacters.lean:254:0: 'RankSeven.StabilizerPairedCharacters.coarseErrors' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5796/6135] Replayed Rank7StabilizerSmallCodes
+info: Rank7StabilizerSmallCodes.lean:185:0: 'RankSeven.StabilizerSmallCodes.outsidePrice' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7StabilizerSmallCodes.lean:186:0: 'RankSeven.StabilizerSmallCodes.firstPlusOutside' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7StabilizerSmallCodes.lean:187:0: 'RankSeven.StabilizerSmallCodes.mateInvol' depends on axioms: [propext, Classical.choice]
+info: Rank7StabilizerSmallCodes.lean:188:0: 'RankSeven.StabilizerSmallCodes.physicalSmallCodes' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5798/6135] Replayed Rank7StabilizerOddSector
+info: Rank7StabilizerOddSector.lean:167:0: 'RankSeven.StabilizerOddSector.offsetExists' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7StabilizerOddSector.lean:168:0: 'RankSeven.StabilizerOddSector.conjugateBlock' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7StabilizerOddSector.lean:169:0: 'RankSeven.StabilizerOddSector.wordBlock' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7StabilizerOddSector.lean:170:0: 'RankSeven.StabilizerOddSector.selectorAction' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7StabilizerOddSector.lean:171:0: 'RankSeven.StabilizerOddSector.selectorMass' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5800/6135] Replayed Rank7StabilizerSectorKernel
+info: Rank7StabilizerSectorKernel.lean:107:0: 'RankSeven.StabilizerSectorKernel.complexPairing' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7StabilizerSectorKernel.lean:108:0: 'RankSeven.StabilizerSectorKernel.cosetWordKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7StabilizerSectorKernel.lean:109:0: 'RankSeven.StabilizerSectorKernel.kernelAsBlocks' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5802/6135] Replayed Rank7StabilizerExteriorTrace
+info: Rank7StabilizerExteriorTrace.lean:281:0: 'RankSeven.StabilizerExteriorTrace.amplitudeCoset' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7StabilizerExteriorTrace.lean:282:0: 'RankSeven.StabilizerExteriorTrace.compressedCross' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7StabilizerExteriorTrace.lean:283:0: 'RankSeven.StabilizerExteriorTrace.sourceTraceBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7StabilizerExteriorTrace.lean:284:0: 'RankSeven.StabilizerExteriorTrace.residualCoset' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7StabilizerExteriorTrace.lean:285:0: 'RankSeven.StabilizerExteriorTrace.cosetWedgePrice' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5804/6135] Replayed Rank7CharacterFourOrbits
+info: Rank7CharacterFourOrbits.lean:294:0: 'RankSeven.CharacterFourOrbits.orbitSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7CharacterFourOrbits.lean:295:0: 'RankSeven.CharacterFourOrbits.matchingPrice' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7CharacterFourOrbits.lean:296:0: 'RankSeven.CharacterFourOrbits.sixMassBounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7CharacterFourOrbits.lean:297:0: 'RankSeven.CharacterFourOrbits.selectorTrace' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5806/6135] Replayed Rank7FiniteProjectionAngles
+info: Rank7FiniteProjectionAngles.lean:176:0: 'RankSeven.FiniteProjectionAngles.frobeniusBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7FiniteProjectionAngles.lean:177:0: 'RankSeven.FiniteProjectionAngles.oneSided' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7FiniteProjectionAngles.lean:178:0: 'RankSeven.FiniteProjectionAngles.projectionAngles' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5808/6135] Replayed Rank7PhysicalProjectionAngles
+info: Rank7PhysicalProjectionAngles.lean:287:0: 'RankSeven.PhysicalProjectionAngles.physicalHeadEnergy' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalProjectionAngles.lean:288:0: 'RankSeven.PhysicalProjectionAngles.lineTransport' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalProjectionAngles.lean:289:0: 'RankSeven.PhysicalProjectionAngles.codeResponse' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalProjectionAngles.lean:290:0: 'RankSeven.PhysicalProjectionAngles.pointwise' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalProjectionAngles.lean:291:0: 'RankSeven.PhysicalProjectionAngles.physicalRoundedSector' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalProjectionAngles.lean:292:0: 'RankSeven.PhysicalProjectionAngles.uniformPhysicalSixPrice' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5810/6135] Replayed Rank7PhysicalTailBlend
+info: Rank7PhysicalTailBlend.lean:358:0: 'RankSeven.PhysicalTailBlend.headReceiptIdentity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalTailBlend.lean:359:0: 'RankSeven.PhysicalTailBlend.signedPrice' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalTailBlend.lean:360:0: 'RankSeven.PhysicalTailBlend.physicalBlend' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalTailBlend.lean:361:0: 'RankSeven.PhysicalTailBlend.jointReserve' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalTailBlend.lean:362:0: 'RankSeven.PhysicalTailBlend.blendedTail' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalTailBlend.lean:363:0: 'RankSeven.PhysicalTailBlend.physicalBlendedTailReceipt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalTailBlend.lean:364:0: 'RankSeven.PhysicalTailBlend.unconditionalSignedTail' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalTailBlend.lean:365:0: 'RankSeven.PhysicalTailBlend.flatTailReceipt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalTailBlend.lean:366:0: 'RankSeven.PhysicalTailBlend.spectralFactor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalTailBlend.lean:367:0: 'RankSeven.PhysicalTailBlend.physicalPenaltyReceipt' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5812/6135] Replayed Rank7PhysicalOddTail
+info: Rank7PhysicalOddTail.lean:122:0: 'RankSeven.PhysicalOddTail.rankSixCrossEveryOdd' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalOddTail.lean:123:0: 'RankSeven.PhysicalOddTail.physicalReserve' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalOddTail.lean:124:0: 'RankSeven.PhysicalOddTail.fullySignedTail' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalOddTail.lean:125:0: 'RankSeven.PhysicalOddTail.sameFrameBlend' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalOddTail.lean:126:0: 'RankSeven.PhysicalOddTail.penaltyReceiptOfRounding' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalOddTail.lean:127:0: 'RankSeven.PhysicalOddTail.largeGramPenaltyReceipt' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5814/6135] Replayed Rank7PhysicalUniformTail
+info: Rank7PhysicalUniformTail.lean:54:0: 'RankSeven.PhysicalUniformTail.uniformBlend' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalUniformTail.lean:55:0: 'RankSeven.PhysicalUniformTail.uniformPenaltyReceipt' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5816/6135] Replayed Rank7PhysicalEndpointPauli
+info: Rank7PhysicalEndpointPauli.lean:304:0: 'RankSeven.PhysicalEndpointPauli.highestReverse' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalEndpointPauli.lean:305:0: 'RankSeven.PhysicalEndpointPauli.reverseReceipt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalEndpointPauli.lean:306:0: 'RankSeven.PhysicalEndpointPauli.fullPenalty' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalEndpointPauli.lean:307:0: 'RankSeven.PhysicalEndpointPauli.chartPayment' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5818/6135] Replayed Rank7EndpointReserveSlots
+info: Rank7EndpointReserveSlots.lean:205:0: 'RankSeven.EndpointReserveSlots.physicalSlots' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7EndpointReserveSlots.lean:206:0: 'RankSeven.EndpointReserveSlots.chartOddHigh' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7EndpointReserveSlots.lean:207:0: 'RankSeven.EndpointReserveSlots.chartHighestPaid' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5820/6135] Replayed Rank7SharedTwoSlotReserve
+info: Rank7SharedTwoSlotReserve.lean:253:0: 'RankSeven.SharedTwoSlotReserve.localWeighted' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7SharedTwoSlotReserve.lean:254:0: 'RankSeven.SharedTwoSlotReserve.reserveAsLoss' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7SharedTwoSlotReserve.lean:255:0: 'RankSeven.SharedTwoSlotReserve.cutData' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7SharedTwoSlotReserve.lean:256:0: 'RankSeven.SharedTwoSlotReserve.physicalTwoSlots' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5822/6135] Replayed Rank7PhysicalEndpointReserve
+info: Rank7PhysicalEndpointReserve.lean:211:0: 'RankSeven.PhysicalEndpointReserve.unequalCross' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalEndpointReserve.lean:212:0: 'RankSeven.PhysicalEndpointReserve.oddSharedCleared' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalEndpointReserve.lean:213:0: 'RankSeven.PhysicalEndpointReserve.chartSharedPaid' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalEndpointReserve.lean:214:0: 'RankSeven.PhysicalEndpointReserve.chartPauliRemainder' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5824/6135] Replayed Rank7PhysicalEndpointPrice
+info: Rank7PhysicalEndpointPrice.lean:223:0: 'RankSeven.PhysicalEndpointPrice.weightedChartProbes' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PhysicalEndpointPrice.lean:224:0: 'RankSeven.PhysicalEndpointPrice.physicalPriceOnFrame' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5826/6135] Replayed Rank7HighestAnchorSelection
+info: Rank7HighestAnchorSelection.lean:133:0: 'RankSeven.HighestAnchorSelection.largeGram' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestAnchorSelection.lean:134:0: 'RankSeven.HighestAnchorSelection.threshold' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestAnchorSelection.lean:135:0: 'RankSeven.HighestAnchorSelection.physicalHeavyAnchor' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5828/6135] Replayed Rank7HighestAnchorCommutation
+info: Rank7HighestAnchorCommutation.lean:167:0: 'RankSeven.HighestAnchorCommutation.overlapHalf' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestAnchorCommutation.lean:168:0: 'RankSeven.HighestAnchorCommutation.heavyDifference' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestAnchorCommutation.lean:169:0: 'RankSeven.HighestAnchorCommutation.physicalHeavyCoset' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5830/6135] Replayed Rank7EndpointLargeGrams
+info: Rank7EndpointLargeGrams.lean:110:0: 'RankSeven.EndpointLargeGrams.secondPairCap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7EndpointLargeGrams.lean:111:0: 'RankSeven.EndpointLargeGrams.largeShared' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7EndpointLargeGrams.lean:112:0: 'RankSeven.EndpointLargeGrams.largeFramePrice' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5832/6135] Replayed Rank7EndpointCornerGram
+info: Rank7EndpointCornerGram.lean:31:0: 'RankSeven.EndpointLargeGrams.largeSharedOnCorner' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5834/6135] Replayed Rank7UpperCornerDual
+info: Rank7UpperCornerDual.lean:123:0: 'RankSeven.UpperCornerDual.certified' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5836/6135] Replayed Rank7UpperCornerExpansion
+info: Rank7UpperCornerExpansion.lean:87:0: 'RankSeven.UpperCornerExpansion.expands' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5858/6135] Replayed Rank7UpperCornerFactorsReal
+info: Rank7UpperCornerFactorsReal.lean:72:0: 'RankSeven.UpperCornerFactors.realExpansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5860/6135] Replayed Rank7UpperSigned00
+info: Rank7UpperSigned00.lean:55:0: 'RankSeven.UpperSignedData.ok23' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5862/6135] Replayed Rank7UpperSigned01
+info: Rank7UpperSigned01.lean:55:0: 'RankSeven.UpperSignedData.ok47' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5864/6135] Replayed Rank7UpperSigned02
+info: Rank7UpperSigned02.lean:55:0: 'RankSeven.UpperSignedData.ok71' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5866/6135] Replayed Rank7UpperSigned03
+info: Rank7UpperSigned03.lean:55:0: 'RankSeven.UpperSignedData.ok95' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5868/6135] Replayed Rank7UpperSigned04
+info: Rank7UpperSigned04.lean:55:0: 'RankSeven.UpperSignedData.ok119' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5870/6135] Replayed Rank7UpperSigned05
+info: Rank7UpperSigned05.lean:55:0: 'RankSeven.UpperSignedData.ok143' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5872/6135] Replayed Rank7UpperSigned06
+info: Rank7UpperSigned06.lean:55:0: 'RankSeven.UpperSignedData.ok167' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5874/6135] Replayed Rank7UpperSigned07
+info: Rank7UpperSigned07.lean:55:0: 'RankSeven.UpperSignedData.ok191' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5876/6135] Replayed Rank7UpperSigned08
+info: Rank7UpperSigned08.lean:55:0: 'RankSeven.UpperSignedData.ok215' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5878/6135] Replayed Rank7UpperSigned09
+info: Rank7UpperSigned09.lean:55:0: 'RankSeven.UpperSignedData.ok239' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5880/6135] Replayed Rank7UpperSigned10
+info: Rank7UpperSigned10.lean:55:0: 'RankSeven.UpperSignedData.ok263' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5882/6135] Replayed Rank7UpperSigned11
+info: Rank7UpperSigned11.lean:51:0: 'RankSeven.UpperSignedData.ok285' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5884/6135] Replayed Rank7UpperSignedObjectives
+info: Rank7UpperSignedObjectives.lean:26:0: 'RankSeven.UpperSignedData.allObjectives' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5886/6135] Replayed Rank7UpperPackedCoordinates
+info: Rank7UpperPackedCoordinates.lean:32:0: 'RankSeven.UpperPackedCoordinates.inject' depends on axioms: [propext, Quot.sound]
+ℹ [5890/6135] Replayed Rank7UpperCornerPolynomial
+info: Rank7UpperCornerPolynomial.lean:75:0: 'RankSeven.UpperCornerPolynomial.gainExpansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5892/6135] Replayed Rank7UpperCornerFrameProducts
+info: Rank7UpperCornerFrameProducts.lean:82:0: 'RankSeven.UpperCornerFrameProducts.physicalWedgeProducts' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperCornerFrameProducts.lean:83:0: 'RankSeven.UpperCornerFrameProducts.scaledProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5894/6135] Replayed Rank7UpperCornerWedgeWeights
+info: Rank7UpperCornerWedgeWeights.lean:62:0: 'RankSeven.UpperCornerWedgeWeights.physicalTerms' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5896/6135] Replayed Rank7UpperCornerSignedIdentity
+info: Rank7UpperCornerSignedIdentity.lean:102:0: 'RankSeven.UpperCornerSignedIdentity.physicalPrice' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5898/6135] Replayed Rank7UpperCornerVector
+info: Rank7UpperCornerVector.lean:77:0: 'RankSeven.UpperCornerVector.featurePackedFast' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5900/6135] Replayed Rank7UpperCornerReadoutCore
+info: Rank7UpperCornerReadoutCore.lean:54:0: 'RankSeven.UpperCornerReadouts.readAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5928/6135] Replayed Rank7UpperCornerSizes
+info: Rank7UpperCornerSizes.lean:85:0: 'RankSeven.UpperCornerSizes.digitRange' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5930/6135] Replayed Rank7UpperCornerObjectivePacking
+info: Rank7UpperCornerObjectivePacking.lean:35:0: 'RankSeven.UpperCornerColumns.packedObject' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5932/6135] Replayed Rank7UpperCornerPacking
+info: Rank7UpperCornerPacking.lean:22:0: 'RankSeven.UpperCornerColumns.packedTerm' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5934/6135] Replayed Rank7UpperSignedCornerGain
+info: Rank7UpperSignedCornerGain.lean:67:0: 'RankSeven.UpperSignedCornerGain.coefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperSignedCornerGain.lean:68:0: 'RankSeven.UpperSignedCornerGain.signedPolynomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5936/6135] Replayed Rank7UpperCornerAccounting
+info: Rank7UpperCornerAccounting.lean:111:0: 'RankSeven.UpperCornerAccounting.physicalSignedGain' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperCornerAccounting.lean:112:0: 'RankSeven.UpperCornerAccounting.discreteBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5938/6135] Replayed Rank7UpperCornerShiftHull
+info: Rank7UpperCornerShiftHull.lean:87:0: 'RankSeven.UpperCornerShiftHull.fullShifts' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5940/6135] Replayed Rank7UpperCornerCompletion
+info: Rank7UpperCornerCompletion.lean:38:0: 'RankSeven.UpperCornerCompletion.minimumCompletion' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperCornerCompletion.lean:39:0: 'RankSeven.UpperCornerCompletion.completionPriceNonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5942/6135] Replayed Rank7UpperCornerRayBound
+info: Rank7UpperCornerRayBound.lean:130:0: 'RankSeven.UpperCornerRayBound.signedRayBounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5944/6135] Replayed Rank7UpperPairReplay
+info: Rank7UpperPairReplay.lean:39:0: 'RankSeven.UpperPairReplay.actualFrameReplay' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5946/6135] Replayed Rank7UpperCertifiedExterior
+info: Rank7UpperCertifiedExterior.lean:74:0: 'RankSeven.UpperCertifiedExterior.physicalShiftCaps' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperCertifiedExterior.lean:75:0: 'RankSeven.UpperCertifiedExterior.exteriorEstimates' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5948/6135] Replayed Rank7UpperCertifiedFrameReplay
+info: Rank7UpperCertifiedFrameReplay.lean:63:0: 'RankSeven.UpperCertifiedFrameReplay.frameReplay' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperCertifiedFrameReplay.lean:64:0: 'RankSeven.UpperCertifiedFrameReplay.checkedSlab' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5950/6135] Replayed Rank7UnshiftedDefects
+info: Rank7UnshiftedDefects.lean:45:0: 'RankSeven.UnshiftedDefects.nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5952/6135] Replayed Rank7UpperPointMargin
+info: Rank7UpperPointMargin.lean:60:0: 'RankSeven.PointProducts.byPoint_eq' depends on axioms: [propext, Quot.sound]
+info: Rank7UpperPointMargin.lean:175:0: 'RankSeven.PointMargin.point_eq' depends on axioms: [propext, Quot.sound]
+ℹ [5954/6135] Replayed Rank7UpperHintReplay
+info: Rank7UpperHintReplay.lean:162:0: 'RankSeven.HintReplay.hintedCorners_eq' depends on axioms: [propext, Quot.sound]
+info: Rank7UpperHintReplay.lean:163:0: 'RankSeven.HintReplay.checkSound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5956/6135] Replayed Rank7UpperNearCollar
+info: Rank7UpperNearCollar.lean:50:0: 'RankSeven.CollarBatch.collarContains' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperNearCollar.lean:51:0: 'RankSeven.CollarBatch.batchWitness' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5958/6135] Replayed Rank7UpperNearBands
+info: Rank7UpperNearBands.lean:42:0: 'RankSeven.CollarBatch.Bands.checkWitness' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5960/6135] Replayed Rank7UpperHintShards
+info: Rank7UpperHintShards.lean:31:0: 'RankSeven.HintShards.glue' depends on axioms: [propext, Quot.sound]
+ℹ [5962/6135] Replayed Rank7UpperCoveredTree
+info: Rank7UpperCoveredTree.lean:116:0: 'RankSeven.UpperCoveredTree.childrenCover' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperCoveredTree.lean:117:0: 'RankSeven.UpperCoveredTree.checkSound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5964/6135] Replayed Rank7UpperCoveredFrame
+info: Rank7UpperCoveredFrame.lean:160:0: 'RankSeven.UpperCoveredFrame.checkWithDomain' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperCoveredFrame.lean:161:0: 'RankSeven.UpperCoveredFrame.actualFrameCovered' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5966/6135] Replayed Rank7UpperDomainFrontier
+info: Rank7UpperDomainFrontier.lean:73:0: 'RankSeven.UpperDomainFrontier.verified' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperDomainFrontier.lean:74:0: 'RankSeven.UpperDomainFrontier.split' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7UpperDomainFrontier.lean:75:0: 'RankSeven.UpperDomainFrontier.refine' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5968/6135] Replayed Rank7RealUpperPhysicalComparison
+info: Rank7RealUpperPhysicalComparison.lean:301:0: 'RankSeven.RealUpperPhysicalComparison.strictCornerPaid' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7RealUpperPhysicalComparison.lean:302:0: 'RankSeven.RealUpperPhysicalComparison.cornerWitnessComparison' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Rank7RealUpperPhysicalComparison.lean:303:0: 'RankSeven.RealUpperPhysicalComparison.frontierComparison' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7RealUpperPhysicalComparison.lean:304:0: 'RankSeven.RealUpperPhysicalComparison.frontierComparisonLarge' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [5971/6135] Replayed Rank7LowerContractor
+info: Rank7LowerContractor.lean:357:0: 'RankSeven.LowerContractor.lowerClamps' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7LowerContractor.lean:358:0: 'RankSeven.LowerContractor.productCaps' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7LowerContractor.lean:359:0: 'RankSeven.LowerContractor.upperClamps' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7LowerContractor.lean:360:0: 'RankSeven.LowerContractor.positiveYClamps' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7LowerContractor.lean:361:0: 'RankSeven.LowerContractor.reducePreserves' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7LowerContractor.lean:363:0: 'RankSeven.LowerContractor.reduceValid' depends on axioms: [propext, Quot.sound]
+info: Rank7LowerContractor.lean:364:0: 'RankSeven.LowerContractor.initialValid' does not depend on any axioms
+ℹ [5973/6135] Replayed Rank7LowerLeaves
+info: Rank7LowerLeaves.lean:169:0: 'RankSeven.LowerLeaves.acceptedOldCondition' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7LowerLeaves.lean:170:0: 'RankSeven.LowerLeaves.weightedPriceSound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7LowerLeaves.lean:171:0: 'RankSeven.LowerLeaves.acceptedWeightedMargin' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7LowerLeaves.lean:172:0: 'RankSeven.LowerLeaves.residualOfOldFailure' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5975/6135] Replayed Rank7LowerCorner
+info: Rank7LowerCorner.lean:614:0: 'RankSeven.LowerCorner.acceptedWitness' depends on axioms: [propext, Quot.sound]
+info: Rank7LowerCorner.lean:616:0: 'RankSeven.LowerCorner.conjugateWidth' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7LowerCorner.lean:617:0: 'RankSeven.LowerCorner.sharedWidthsEnclosed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7LowerCorner.lean:619:0: 'RankSeven.LowerCorner.preparedPricesEnclosed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7LowerCorner.lean:621:0: 'RankSeven.LowerCorner.marginsEnclosed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7LowerCorner.lean:623:0: 'RankSeven.LowerCorner.acceptedRealSector' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7LowerCorner.lean:625:0: 'RankSeven.LowerCorner.shiftEnclosed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7LowerCorner.lean:627:0: 'RankSeven.LowerCorner.acceptedSharedSector' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5977/6135] Replayed Rank7LowerNormalizedSigned
+info: Rank7LowerNormalizedSigned.lean:132:0: 'RankSeven.LowerNormalizedSigned.normalizedBounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5979/6135] Replayed Rank7LowerSignedPrices
+info: Rank7LowerSignedPrices.lean:94:0: 'RankSeven.LowerSignedPrices.realCaps' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5981/6135] Replayed Rank7LowerExteriorScale
+info: Rank7LowerExteriorScale.lean:89:0: 'RankSeven.LowerExteriorScale.rescaleBounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5983/6135] Replayed Rank7LowerSignedExterior
+info: Rank7LowerSignedExterior.lean:121:0: 'RankSeven.LowerSignedExterior.allTails' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7LowerSignedExterior.lean:122:0: 'RankSeven.LowerSignedExterior.priceParts' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7LowerSignedExterior.lean:123:0: 'RankSeven.LowerSignedExterior.leafIdentity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7LowerSignedExterior.lean:124:0: 'RankSeven.LowerSignedExterior.physicalLeaf' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5985/6135] Replayed Rank7LowerReplay
+info: Rank7LowerReplay.lean:129:0: 'RankSeven.LowerReplay.replayRegion' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5987/6135] Replayed Rank7LowerPhysicalRay
+info: Rank7LowerPhysicalRay.lean:80:0: 'RankSeven.LowerPhysicalRay.sectorPositive' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5989/6135] Replayed Rank7LowerAffinePayment
+info: Rank7LowerAffinePayment.lean:92:0: 'RankSeven.LowerAffinePayment.interpolate' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7LowerAffinePayment.lean:93:0: 'RankSeven.LowerAffinePayment.actualCutNonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5991/6135] Replayed Rank7LowerCertifiedFrameReplay
+info: Rank7LowerCertifiedFrameReplay.lean:92:0: 'RankSeven.LowerCertifiedFrameReplay.sharedInterior' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7LowerCertifiedFrameReplay.lean:93:0: 'RankSeven.LowerCertifiedFrameReplay.checkedSlab' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5993/6135] Replayed Rank7LowerPhysicalGainScale
+info: Rank7LowerPhysicalGainScale.lean:81:0: 'RankSeven.LowerPhysicalGainScale.physicalNumerator' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5995/6135] Replayed Rank7RealLowerCutPrice
+info: Rank7RealLowerCutPrice.lean:195:0: 'RankSeven.RealLowerCutPrice.fullWidth' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7RealLowerCutPrice.lean:196:0: 'RankSeven.RealLowerCutPrice.rootWidth' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7RealLowerCutPrice.lean:197:0: 'RankSeven.RealLowerCutPrice.actualShared' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5998/6135] Replayed Rank7RealLowerRawCut
+info: Rank7RealLowerRawCut.lean:59:0: 'RankSeven.RealLowerRawCut.rawCut' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6001/6135] Replayed Rank7LowerPhysicalPauliSlots
+info: Rank7LowerPhysicalPauliSlots.lean:89:0: 'RankSeven.LowerPhysicalPauliSlots.fullLeading' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6003/6135] Replayed Rank7RealLowerPauliPrice
+info: Rank7RealLowerPauliPrice.lean:116:0: 'RankSeven.RealLowerPauliPrice.sharedScaled' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6006/6135] Replayed Rank7RealLowerPhysicalPrice
+info: Rank7RealLowerPhysicalPrice.lean:136:0: 'RankSeven.RealLowerPhysicalPrice.physicalPrice' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6009/6135] Replayed Rank7RealLowerPhysicalComparison
+info: Rank7RealLowerPhysicalComparison.lean:144:0: 'RankSeven.RealLowerPhysicalComparison.sharedComparison' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7RealLowerPhysicalComparison.lean:145:0: 'RankSeven.RealLowerPhysicalComparison.checkedSlab' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7RealLowerPhysicalComparison.lean:146:0: 'RankSeven.RealLowerPhysicalComparison.largeGrams' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7RealLowerPhysicalComparison.lean:147:0: 'RankSeven.RealLowerPhysicalComparison.checkedSlabLarge' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6014/6135] Replayed Rank7RealLowerSmallHeadDual
+info: Rank7RealLowerSmallHeadDual.lean:60:0: 'RankSeven.RealLowerSmallHead.planSound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7RealLowerSmallHeadDual.lean:61:0: 'RankSeven.RealLowerSmallHead.gainSumNonpos' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6017/6135] Replayed Rank7RealLowerSmallHeadFactors
+info: Rank7RealLowerSmallHeadFactors.lean:61:0: 'RankSeven.RealLowerSmallHead.headExpansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7RealLowerSmallHeadFactors.lean:62:0: 'RankSeven.RealLowerSmallHead.headAmplitude' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6020/6135] Replayed Rank7LowerSmallHeadOff
+info: Rank7LowerSmallHeadOff.lean:84:0: 'RankSeven.LowerSmallHeadData.offPlans' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6022/6135] Replayed Rank7LowerSmallHeadFirst
+info: Rank7LowerSmallHeadFirst.lean:84:0: 'RankSeven.LowerSmallHeadData.firstPlans' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6024/6135] Replayed Rank7LowerSmallHeadBoth
+info: Rank7LowerSmallHeadBoth.lean:84:0: 'RankSeven.LowerSmallHeadData.bothPlans' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6026/6135] Replayed Rank7LowerSmallHeadMixed
+info: Rank7LowerSmallHeadMixed.lean:84:0: 'RankSeven.LowerSmallHeadData.mixedPlans' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6028/6135] Replayed Rank7RealLowerSmallHead
+info: Rank7RealLowerSmallHead.lean:112:0: 'RankSeven.RealLowerSmallHead.cornerGain' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7RealLowerSmallHead.lean:113:0: 'RankSeven.RealLowerSmallHead.exteriorNonpositive' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7RealLowerSmallHead.lean:114:0: 'RankSeven.RealLowerSmallHead.physicalOldSmallHead' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7RealLowerSmallHead.lean:115:0: 'RankSeven.RealLowerSmallHead.residualOld' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6031/6135] Replayed Rank7RealLowerWeightedDebit
+info: Rank7RealLowerWeightedDebit.lean:64:0: 'RankSeven.RealLowerWeighted.exteriorDebit' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6034/6135] Replayed Rank7RealLowerWeightedReceipt
+info: Rank7RealLowerWeightedReceipt.lean:80:0: 'RankSeven.RealLowerWeighted.pauliReceipt' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6037/6135] Replayed Rank7RealLowerWeighted
+info: Rank7RealLowerWeighted.lean:68:0: 'RankSeven.RealLowerWeighted.weightedPhysical' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7RealLowerWeighted.lean:69:0: 'RankSeven.RealLowerWeighted.weightedLarge' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6040/6135] Replayed Rank7RealLowerWeightedFourth
+info: Rank7RealLowerWeightedFourth.lean:38:0: 'RankSeven.RealLowerWeighted.fourthWitnessMargin' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7RealLowerWeightedFourth.lean:39:0: 'RankSeven.RealLowerWeighted.weightedFourth' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6043/6135] Replayed Rank7RealLowerWeightedFullMargin
+info: Rank7RealLowerWeightedFullMargin.lean:58:0: 'RankSeven.RealLowerWeighted.fourthFullMargin' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6046/6135] Replayed Rank7RealLowerAllWeighted
+info: Rank7RealLowerAllWeighted.lean:61:0: 'RankSeven.RealLowerWeighted.allWeightedWitnesses' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6049/6135] Replayed Rank7AnchorSteiner
+info: Rank7AnchorSteiner.lean:136:0: 'RankSeven.AnchorSteiner.insertion' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6051/6135] Replayed Rank7AnchorSteinerTest
+info: Rank7AnchorSteinerTest.lean:127:0: 'RankSeven.AnchorSteinerTest.characterFiveTail' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6053/6135] Replayed Rank7AnchorExteriorCreation
+info: Rank7AnchorExteriorCreation.lean:100:0: 'RankSeven.AnchorExteriorCreation.carGram' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6055/6135] Replayed Rank7AnchorExteriorFive
+info: Rank7AnchorExteriorFive.lean:113:0: 'RankSeven.AnchorExteriorFive.arbitraryCharacterFive' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6057/6135] Replayed Rank7AnchorExteriorHomogeneous
+info: Rank7AnchorExteriorHomogeneous.lean:75:0: 'RankSeven.AnchorExteriorHomogeneous.homogeneousCharacterFive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [6059/6135] Replayed Rank7AnchorMixedCAR
+info: Rank7AnchorMixedCAR.lean:112:0: 'RankSeven.AnchorMixedCAR.triplePush' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7AnchorMixedCAR.lean:113:0: 'RankSeven.AnchorMixedCAR.contractedLower' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6061/6135] Replayed Rank7AnchorTripleEnergy
+info: Rank7AnchorTripleEnergy.lean:66:0: 'RankSeven.AnchorTripleEnergy.tripleEnergy' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6063/6135] Replayed Rank7HighestTailReplacement
+info: Rank7HighestTailReplacement.lean:173:0: 'RankSeven.HighestTailReplacement.energyReplacement' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestTailReplacement.lean:174:0: 'RankSeven.HighestTailReplacement.contractedRaise' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestTailReplacement.lean:175:0: 'RankSeven.HighestTailReplacement.testReplacement' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestTailReplacement.lean:176:0: 'RankSeven.HighestTailReplacement.capRaise' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestTailReplacement.lean:177:0: 'RankSeven.HighestTailReplacement.capLower' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestTailReplacement.lean:178:0: 'RankSeven.HighestTailReplacement.vacantSuffices' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6065/6135] Replayed Rank7HighestSlaterCoordinates
+info: Rank7HighestSlaterCoordinates.lean:207:0: 'RankSeven.HighestSlaterCoordinates.lowerSynth' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestSlaterCoordinates.lean:208:0: 'RankSeven.HighestSlaterCoordinates.synthGram' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestSlaterCoordinates.lean:209:0: 'RankSeven.HighestSlaterCoordinates.synthCap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestSlaterCoordinates.lean:210:0: 'RankSeven.HighestSlaterCoordinates.contractedSynth' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestSlaterCoordinates.lean:211:0: 'RankSeven.HighestSlaterCoordinates.contractedSlaterEnergy' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestSlaterCoordinates.lean:212:0: 'RankSeven.HighestSlaterCoordinates.unitSlater' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6067/6135] Replayed Rank7AnchorOccupation
+info: Rank7AnchorOccupation.lean:108:0: 'RankSeven.AnchorOccupation.single' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6069/6135] Replayed Rank7AnchorScoreEnumeration
+info: Rank7AnchorScoreEnumeration.lean:120:0: 'RankSeven.AnchorScoreEnumeration.triplePrice' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7AnchorScoreEnumeration.lean:121:0: 'RankSeven.AnchorScoreEnumeration.filterTriples' depends on axioms: [propext, Quot.sound]
+ℹ [6071/6135] Replayed Rank7AnchorVacantScore
+info: Rank7AnchorVacantScore.lean:91:0: 'RankSeven.AnchorVacantScore.tripleScore' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7AnchorVacantScore.lean:92:0: 'RankSeven.AnchorVacantScore.vacantAnchored' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6073/6135] Replayed Rank7AnchorAllFock
+info: Rank7AnchorAllFock.lean:52:0: 'RankSeven.AnchorAllFock.anchoredPairContractions' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6075/6135] Replayed Rank7HighestFivePairMinors
+info: Rank7HighestFivePairMinors.lean:116:0: 'RankSeven.HighestFivePairMinors.pullCoordinates' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestFivePairMinors.lean:117:0: 'RankSeven.HighestFivePairMinors.tableEnergy' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestFivePairMinors.lean:118:0: 'RankSeven.HighestFivePairMinors.tenPairMinors' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestFivePairMinors.lean:119:0: 'RankSeven.HighestFivePairMinors.dotMode' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestFivePairMinors.lean:120:0: 'RankSeven.HighestFivePairMinors.tripleMembers' depends on axioms: [propext, Quot.sound]
+ℹ [6077/6135] Replayed Rank7HighestScaledSlater
+info: Rank7HighestScaledSlater.lean:155:0: 'RankSeven.HighestScaledSlater.commonNormEnergy' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestScaledSlater.lean:156:0: 'RankSeven.HighestScaledSlater.scaledSlater' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestScaledSlater.lean:157:0: 'RankSeven.HighestScaledSlater.scaledPairMinors' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestScaledSlater.lean:158:0: 'RankSeven.HighestScaledSlater.anchoredTrace' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestScaledSlater.lean:159:0: 'RankSeven.HighestScaledSlater.anchoredScaledFive' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6079/6135] Replayed Rank7HighestAnchorOddCoset
+info: Rank7HighestAnchorOddCoset.lean:112:0: 'RankSeven.HighestAnchorOddCoset.evenCoset' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestAnchorOddCoset.lean:113:0: 'RankSeven.HighestAnchorOddCoset.oddKernel' depends on axioms: [propext]
+info: Rank7HighestAnchorOddCoset.lean:114:0: 'RankSeven.HighestAnchorOddCoset.physicalOddCoset' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6081/6135] Replayed Rank7HighestCodeParseval
+info: Rank7HighestCodeParseval.lean:192:0: 'RankSeven.HighestCodeParseval.blockTransform' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestCodeParseval.lean:193:0: 'RankSeven.HighestCodeParseval.sourceNorm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestCodeParseval.lean:194:0: 'RankSeven.HighestCodeParseval.physicalCodeParseval' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestCodeParseval.lean:195:0: 'RankSeven.HighestCodeParseval.physicalHeavyCodes' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6083/6135] Replayed Rank7HighestCodeLocalization
+info: Rank7HighestCodeLocalization.lean:250:0: 'RankSeven.HighestCodeLocalization.innerBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestCodeLocalization.lean:251:0: 'RankSeven.HighestCodeLocalization.pairedPeak' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestCodeLocalization.lean:252:0: 'RankSeven.HighestCodeLocalization.codeBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestCodeLocalization.lean:253:0: 'RankSeven.HighestCodeLocalization.populationTotal' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestCodeLocalization.lean:254:0: 'RankSeven.HighestCodeLocalization.physicalPeak' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6085/6135] Replayed Rank7HighestAnchorMoments
+info: Rank7HighestAnchorMoments.lean:152:0: 'RankSeven.HighestAnchorMoments.averagedFourth' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestAnchorMoments.lean:153:0: 'RankSeven.HighestAnchorMoments.fourthMomentDeficit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestAnchorMoments.lean:154:0: 'RankSeven.HighestAnchorMoments.smallDeficit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestAnchorMoments.lean:155:0: 'RankSeven.HighestAnchorMoments.projectionMismatch' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6087/6135] Replayed Rank7HighestCodeTransport
+info: Rank7HighestCodeTransport.lean:186:0: 'RankSeven.HighestCodeTransport.physicalCodePopulation' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestCodeTransport.lean:187:0: 'RankSeven.HighestCodeTransport.transitionWeight' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestCodeTransport.lean:188:0: 'RankSeven.HighestCodeTransport.outsideCodeEnergy' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestCodeTransport.lean:189:0: 'RankSeven.HighestCodeTransport.outsidePoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6089/6135] Replayed Rank7HighestCosetFourier
+info: Rank7HighestCosetFourier.lean:205:0: 'RankSeven.HighestCosetFourier.centeredMean' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestCosetFourier.lean:206:0: 'RankSeven.HighestCosetFourier.dephasedNorm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestCosetFourier.lean:207:0: 'RankSeven.HighestCosetFourier.inversionC' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestCosetFourier.lean:208:0: 'RankSeven.HighestCosetFourier.insideDeviation' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6091/6135] Replayed Rank7HighestPhysicalConcentration
+info: Rank7HighestPhysicalConcentration.lean:239:0: 'RankSeven.HighestPhysicalConcentration.insideFourth' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestPhysicalConcentration.lean:240:0: 'RankSeven.HighestPhysicalConcentration.physicalFourthDeficit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Rank7HighestPhysicalConcentration.lean:241:0: 'RankSeven.HighestPhysicalConcentration.physicalStrongPeak' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestPhysicalConcentration.lean:242:0: 'RankSeven.HighestPhysicalConcentration.physicalStabilizerPlane' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [6093/6135] Replayed Rank7HighestExteriorStability
+info: Rank7HighestExteriorStability.lean:112:0: 'RankSeven.HighestExteriorStability.compressionStability' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestExteriorStability.lean:113:0: 'RankSeven.HighestExteriorStability.componentStability' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestExteriorStability.lean:114:0: 'RankSeven.HighestExteriorStability.physicalHighestRate' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6095/6135] Replayed Rank7HighestExteriorOccupation
+info: Rank7HighestExteriorOccupation.lean:161:0: 'RankSeven.HighestExteriorOccupation.exteriorGram' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestExteriorOccupation.lean:162:0: 'RankSeven.HighestExteriorOccupation.projectedMasses' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestExteriorOccupation.lean:163:0: 'RankSeven.HighestExteriorOccupation.physicalOccupation' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6097/6135] Replayed Rank7HighestExteriorComponents
+info: Rank7HighestExteriorComponents.lean:217:0: 'RankSeven.HighestExteriorComponents.componentOrthogonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestExteriorComponents.lean:218:0: 'RankSeven.HighestExteriorComponents.componentMass' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestExteriorComponents.lean:219:0: 'RankSeven.HighestExteriorComponents.splitOrthogonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestExteriorComponents.lean:220:0: 'RankSeven.HighestExteriorComponents.componentValues' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestExteriorComponents.lean:221:0: 'RankSeven.HighestExteriorComponents.physicalSourceMass' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6099/6135] Replayed Rank7HighestTailTransfer
+info: Rank7HighestTailTransfer.lean:147:0: 'RankSeven.HighestTailTransfer.linear' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestTailTransfer.lean:148:0: 'RankSeven.HighestTailTransfer.fullColumn' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestTailTransfer.lean:149:0: 'RankSeven.HighestTailTransfer.fullTransfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestTailTransfer.lean:150:0: 'RankSeven.HighestTailTransfer.componentTransfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6101/6135] Replayed Rank7HighestOneHoleGram
+info: Rank7HighestOneHoleGram.lean:178:0: 'RankSeven.HighestOneHoleGram.oneHoleIdentity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestOneHoleGram.lean:179:0: 'RankSeven.HighestOneHoleGram.tripleMassIdentity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestOneHoleGram.lean:180:0: 'RankSeven.HighestOneHoleGram.oneHoleBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6103/6135] Replayed Rank7HighestTransferBound
+info: Rank7HighestTransferBound.lean:130:0: 'RankSeven.HighestTransferBound.oneTail' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestTransferBound.lean:131:0: 'RankSeven.HighestTransferBound.allTails' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestTransferBound.lean:132:0: 'RankSeven.HighestTransferBound.componentUpper' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6105/6135] Replayed Rank7HighestAnchorReduction
+info: Rank7HighestAnchorReduction.lean:117:0: 'RankSeven.HighestAnchorReduction.forCode' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestAnchorReduction.lean:118:0: 'RankSeven.HighestAnchorReduction.physicalHighest' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestAnchorReduction.lean:119:0: 'RankSeven.HighestAnchorReduction.counterexampleRequiresAnchor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [6107/6135] Replayed Rank7HighestStabilizerLine
+info: Rank7HighestStabilizerLine.lean:134:0: 'RankSeven.HighestStabilizerLine.projectionMinors' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestStabilizerLine.lean:135:0: 'RankSeven.HighestStabilizerLine.projectedExteriorZero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestStabilizerLine.lean:136:0: 'RankSeven.HighestStabilizerLine.characterPivot' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6109/6135] Replayed Rank7HighestAnchorVectors
+info: Rank7HighestAnchorVectors.lean:167:0: 'RankSeven.HighestAnchorVectors.testHasPhysicalAnchor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestAnchorVectors.lean:168:0: 'RankSeven.HighestAnchorVectors.anchorTransfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestAnchorVectors.lean:169:0: 'RankSeven.HighestAnchorVectors.testsFromLines' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestAnchorVectors.lean:170:0: 'RankSeven.HighestAnchorVectors.physicalHighestFromLines' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6111/6135] Replayed Rank7HighestAnchorMetric
+info: Rank7HighestAnchorMetric.lean:92:0: 'RankSeven.HighestAnchorMetric.characterWedgeMass' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestAnchorMetric.lean:93:0: 'RankSeven.HighestAnchorMetric.lineBoundFromOrthogonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6113/6135] Replayed Rank7HighestAnchorPauliTrace
+info: Rank7HighestAnchorPauliTrace.lean:142:0: 'RankSeven.HighestAnchorPauliTrace.frameTensorAction' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestAnchorPauliTrace.lean:143:0: 'RankSeven.HighestAnchorPauliTrace.wordExpectationMinor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestAnchorPauliTrace.lean:144:0: 'RankSeven.HighestAnchorPauliTrace.anchorWordTrace' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestAnchorPauliTrace.lean:145:0: 'RankSeven.HighestAnchorPauliTrace.physicalHighestFromWords' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6115/6135] Replayed Rank7HighestCharacterChart
+info: Rank7HighestCharacterChart.lean:198:0: 'RankSeven.HighestCharacterChart.columnProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestCharacterChart.lean:199:0: 'RankSeven.HighestCharacterChart.chartNorm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestCharacterChart.lean:200:0: 'RankSeven.HighestCharacterChart.chartGram' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestCharacterChart.lean:201:0: 'RankSeven.HighestCharacterChart.physicalCoordinateCap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestCharacterChart.lean:202:0: 'RankSeven.HighestCharacterChart.wordPrice' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestCharacterChart.lean:203:0: 'RankSeven.HighestCharacterChart.physicalHighestFromWall' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6117/6135] Replayed Rank7AnchorCharacterSupport
+info: Rank7AnchorCharacterSupport.lean:98:0: 'RankSeven.AnchorCharacterSupport.physicalFourSelection' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6119/6135] Replayed Rank7AnchorOrbitBound
+info: Rank7AnchorOrbitBound.lean:134:0: 'RankSeven.AnchorOrbitBound.orbitCount' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7AnchorOrbitBound.lean:135:0: 'RankSeven.AnchorOrbitBound.occupationPrice' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7AnchorOrbitBound.lean:136:0: 'RankSeven.AnchorOrbitBound.occupiedFourAverage' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6121/6135] Replayed Rank7HighestChartAction
+info: Rank7HighestChartAction.lean:138:0: 'RankSeven.HighestChartAction.analysisVector' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestChartAction.lean:139:0: 'RankSeven.HighestChartAction.stepUnit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestChartAction.lean:140:0: 'RankSeven.HighestChartAction.vectorAction' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestChartAction.lean:141:0: 'RankSeven.HighestChartAction.analysisAction' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestChartAction.lean:142:0: 'RankSeven.HighestChartAction.anchorOff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestChartAction.lean:143:0: 'RankSeven.HighestChartAction.anchorNorm' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6123/6135] Replayed Rank7HighestChartMinorTrace
+info: Rank7HighestChartMinorTrace.lean:124:0: 'RankSeven.HighestChartMinorTrace.bladeGram' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestChartMinorTrace.lean:125:0: 'RankSeven.HighestChartMinorTrace.physicalBladeGram' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestChartMinorTrace.lean:126:0: 'RankSeven.HighestChartMinorTrace.movedBlade' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestChartMinorTrace.lean:127:0: 'RankSeven.HighestChartMinorTrace.fourStepUnit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestChartMinorTrace.lean:128:0: 'RankSeven.HighestChartMinorTrace.wordOrbitTrace' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6125/6135] Replayed Rank7HighestChartSelection
+info: Rank7HighestChartSelection.lean:174:0: 'RankSeven.HighestChartSelection.stableStep' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestChartSelection.lean:175:0: 'RankSeven.HighestChartSelection.translatedBlade' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestChartSelection.lean:176:0: 'RankSeven.HighestChartSelection.offPlane' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestChartSelection.lean:177:0: 'RankSeven.HighestChartSelection.shiftAffine' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestChartSelection.lean:178:0: 'RankSeven.HighestChartSelection.planeTrace' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6127/6135] Replayed Rank7HighestChartOrbitPrice
+info: Rank7HighestChartOrbitPrice.lean:162:0: 'RankSeven.HighestChartOrbitPrice.movePerm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestChartOrbitPrice.lean:163:0: 'RankSeven.HighestChartOrbitPrice.fixedAnchor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestChartOrbitPrice.lean:164:0: 'RankSeven.HighestChartOrbitPrice.orbitFour' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestChartOrbitPrice.lean:165:0: 'RankSeven.HighestChartOrbitPrice.physicalOrbitPrice' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6129/6135] Replayed Rank7HighestTripleCounting
+info: Rank7HighestTripleCounting.lean:90:0: 'RankSeven.HighestTripleCounting.doubleSheet' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestTripleCounting.lean:91:0: 'RankSeven.HighestTripleCounting.tripleSheet' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestTripleCounting.lean:92:0: 'RankSeven.HighestTripleCounting.anchoredTriples' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6131/6135] Replayed Rank7HighestAnchorCoefficient
+info: Rank7HighestAnchorCoefficient.lean:264:0: 'RankSeven.HighestAnchorCoefficient.laplace' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestAnchorCoefficient.lean:265:0: 'RankSeven.HighestAnchorCoefficient.deltaBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestAnchorCoefficient.lean:266:0: 'RankSeven.HighestAnchorCoefficient.markedRow' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestAnchorCoefficient.lean:267:0: 'RankSeven.HighestAnchorCoefficient.maskMass' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestAnchorCoefficient.lean:268:0: 'RankSeven.HighestAnchorCoefficient.physicalWallDomination' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7HighestAnchorCoefficient.lean:269:0: 'RankSeven.HighestAnchorCoefficient.physicalHighest' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6133/6135] Built Rank7RealPhysicalHighest (17s)
+info: Rank7RealPhysicalHighest.lean:110:0: 'RankSeven.RealPhysicalHighest.upperFrontier' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7RealPhysicalHighest.lean:111:0: 'RankSeven.RealPhysicalHighest.lowerSlab' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7RealPhysicalHighest.lean:112:0: 'RankSeven.RealPhysicalHighest.lowerWeighted' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (6135 jobs).

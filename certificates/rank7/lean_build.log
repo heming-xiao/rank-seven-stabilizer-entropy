@@ -1,0 +1,14 @@
+Lean (version 4.36.0, x86_64-w64-windows-gnu, commit 611c117bfaf7b7ae1cfcf246ce6fba31e8f509e9, Release)
+info: rank7_lean: no previous manifest, creating one from scratch
+info: toolchain not updated; already up-to-date
+ℹ [2/8] Built Rank7MixedCutRate (1.0s)
+info: Rank7MixedCutRate.lean:101:0: 'RankSeven.sqrtThreeLowerBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7MixedCutRate.lean:102:0: 'RankSeven.mixedCutExteriorDebit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7MixedCutRate.lean:103:0: 'RankSeven.mixedCutRate' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7MixedCutRate.lean:104:0: 'RankSeven.mixedCutRateWithRadical' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7MixedCutRate.lean:105:0: 'RankSeven.mixedCutSeedConclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [4/8] Built Rank7TailCoverage (1.9s)
+info: Rank7TailCoverage.lean:65:0: 'RankSeven.mainTailCoverage' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7TailCoverage.lean:66:0: 'RankSeven.allTailRatios' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [6/8] Built RankSeven (1.2s)
+Build completed successfully (8 jobs).

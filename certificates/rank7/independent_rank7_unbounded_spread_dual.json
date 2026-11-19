@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "cones": {
+    "largest_five_probability_ratio_at_most_three": {
+      "CB_feasible": true,
+      "rows_by_kind": {
+        "pair": 21,
+        "four_set": 35,
+        "directed_link": 42
+      },
+      "packing_rows": 98,
+      "certified_monomials": 84,
+      "uncertified_monomials": [],
+      "dual_constraints_checked": 2940,
+      "CB_saturations_checked": 588,
+      "exact_dual_objective_matches": 84,
+      "positive_multipliers_checked": 882,
+      "maximum_multiplier_denominator": 12,
+      "scaled_objective_factor": 8,
+      "monomials_occurring_in_some_triple": 75
+    },
+    "middle_inverse_gap_at_most_largest_probability_inverse": {
+      "CB_feasible": true,
+      "rows_by_kind": {
+        "pair": 21,
+        "four_set": 35,
+        "directed_link": 42
+      },
+      "packing_rows": 98,
+      "certified_monomials": 84,
+      "uncertified_monomials": [],
+      "dual_constraints_checked": 2940,
+      "CB_saturations_checked": 588,
+      "exact_dual_objective_matches": 84,
+      "positive_multipliers_checked": 598,
+      "maximum_multiplier_denominator": 18,
+      "scaled_objective_factor": 1,
+      "monomials_occurring_in_some_triple": 75
+    }
+  },
+  "certificate_sha256": "b16931521b33688e8adebeef5fa8a03fc6912e92c0fe1fd37a41e962e4a889c9"
+}

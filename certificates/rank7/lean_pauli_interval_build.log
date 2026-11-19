@@ -1,0 +1,50 @@
+Rank-seven Lean build in a clean temporary checkout
+UTC: 2026-11-18T15:37:58+00:00
+Command: lake build
+
+Lean (version 4.36.0, x86_64-w64-windows-gnu, commit 611c117bfaf7b7ae1cfcf246ce6fba31e8f509e9, Release)
+info: rank7_lean: no previous manifest, creating one from scratch
+info: toolchain not updated; already up-to-date
+ℹ [2/16] Built Rank7MixedCutRate (3.9s)
+info: Rank7MixedCutRate.lean:101:0: 'RankSeven.sqrtThreeLowerBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7MixedCutRate.lean:102:0: 'RankSeven.mixedCutExteriorDebit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7MixedCutRate.lean:103:0: 'RankSeven.mixedCutRate' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7MixedCutRate.lean:104:0: 'RankSeven.mixedCutRateWithRadical' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7MixedCutRate.lean:105:0: 'RankSeven.mixedCutSeedConclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [4/16] Built Rank7TailCoverage (3.9s)
+info: Rank7TailCoverage.lean:65:0: 'RankSeven.mainTailCoverage' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7TailCoverage.lean:66:0: 'RankSeven.allTailRatios' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6/16] Built Rank7PauliReduction (3.9s)
+info: Rank7PauliReduction.lean:282:0: 'RankSeven.Pauli.twirlTranspose' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PauliReduction.lean:283:0: 'RankSeven.Pauli.zeroAncillaFourthMoment' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PauliReduction.lean:284:0: 'RankSeven.Pauli.productExpectationEqTrace' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7PauliReduction.lean:285:0: 'RankSeven.crossPurityLe' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8/16] Built Rank7Interval (3.0s)
+info: Rank7Interval.lean:582:0: 'RankSeven.Interval.cppFloorEq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7Interval.lean:583:0: 'RankSeven.Interval.floorSqrtSound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7Interval.lean:584:0: 'RankSeven.Interval.Bounds.rationalSound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7Interval.lean:585:0: 'RankSeven.Interval.Bounds.cppAbsoluteEq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7Interval.lean:586:0: 'RankSeven.Interval.Bounds.squareSound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7Interval.lean:587:0: 'RankSeven.Interval.Bounds.smallestSound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7Interval.lean:588:0: 'RankSeven.Interval.Bounds.largestSound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7Interval.lean:589:0: 'RankSeven.Interval.Bounds.positivePartSound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7Interval.lean:590:0: 'RankSeven.Interval.Bounds.mulSound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7Interval.lean:591:0: 'RankSeven.Interval.Bounds.divSound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7Interval.lean:592:0: 'RankSeven.Interval.Bounds.discountPrune' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7Interval.lean:593:0: 'RankSeven.Interval.blendSound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7Interval.lean:594:0: 'RankSeven.Interval.blendEnclosed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Rank7Interval.lean:595:0: 'RankSeven.Interval.Bilinear.positiveOnRectangle' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [10/16] Built Rank7UpperCorner (1.3s)
+ℹ [12/16] Built Rank7CornerSample (2.4s)
+info: Rank7CornerSample.lean:96:0: 'RankSeven.Interval.cornerSampleAccepted' does not depend on any axioms
+info: Rank7CornerSample.lean:97:0: 'RankSeven.Interval.cornerSampleRecomputed' depends on axioms: [propext]
+info: Rank7CornerSample.lean:98:0: 'RankSeven.Interval.cornerSampleWeights' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [14/16] Built RankSeven (992ms)
+Build completed successfully (16 jobs).
+
+Fresh C++ extraction and comparison to the checked Lean table
+Command: python lean/extract_rank7_corner_sample.py
+Fresh C++ extraction matches the Lean box, all six shift triples and 24 rows, including 2 mixed rows.
+ffd06e81b72842e64752b9c3f62f73344e39a60d70cd73f3fc2dcf311bca66d5 verify_rank7_fourth_tie_bilinear.cpp
+db8df09e4e34c9f42953085f2363a43c6f152db5a1d9ee39be00b81ac3b8e71a verify_rank7_equal_fifth_sixth.cpp
+

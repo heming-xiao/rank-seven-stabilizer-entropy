@@ -1,0 +1,357 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\tr}{\operatorname{Tr}}
+\newcommand{\cF}{c_{\mathrm F}}
+\newcommand{\pF}{\Pi_{\mathrm F}}
+\newcommand{\CB}{\mathrm{CB}}
+
+\title{Exact nonlocal stabilizer R\'enyi entropy at Schmidt rank seven}
+\author{\textbf{Heming Xiao}\\[0.25em]
+  \normalsize Project Initiator and Lead\\[-0.05em]
+  \normalsize Independent Research}
+\date{\normalsize 18 November 2026\\[0.65em]
+  \small Main proof, verification code, and manuscript developed by OpenAI Codex agents.\\
+  \small Independent human review invited.}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We prove that the descending computational-basis Schmidt representative
+minimizes the second-order stabilizer R\'enyi entropy on the local-unitary
+orbit of every pure state of Schmidt rank seven. The result holds on
+arbitrary qubit bipartitions with complex local unitaries. It gives the
+minimum as an explicit function of the seven Schmidt probabilities.
+The proof combines a paired-frame reduction with dimension-independent
+Pauli estimates and exhaustive, outward-rounded integer interval
+verification. A transport argument handles the unrestricted gap between
+the fourth and fifth probabilities using certificates at their equality.
+\end{abstract}
+
+\section{Problem and result}
+
+Let \(A\) and \(B\) contain \(n_A\) and \(n_B\) qubits, respectively.
+For a normalized pure state define its stabilizer purity and order-two
+stabilizer R\'enyi entropy by
+\[
+ P_2(\psi)=2^{-(n_A+n_B)}
+ \sum_{P\in\{I,X,Y,Z\}^{\otimes(n_A+n_B)}}
+ |\langle\psi|P|\psi\rangle|^4,\qquad
+ M_2(\psi)=-\log_2 P_2(\psi).
+\]
+The stabilizer R\'enyi entropy is a measure of nonstabilizerness
+\cite{leone}. Its nonlocal version minimizes \(M_2\) over
+\(U_A\otimes U_B\) \cite{cao,qw,torre,lcold}. Let
+\(t_0\ge\cdots\ge t_6>0\) be the nonzero Schmidt probabilities and let
+\(\lvert\psi_{\CB}\rangle=\sum_{j=0}^{6}\sqrt{t_j}\lvert j\rangle_A
+\lvert j\rangle_B\), using binary labels with leading zeros as needed.
+
+The ordered Schmidt gauge is a proposed minimizer
+\cite{torre,lcold,fg,sierant}. Sierant proved the conjecture for all
+spectra of rank at most six and for dyadic-staircase spectra
+\cite[Theorems 1 and 2]{sierant}. Section II.2.2 of that work
+identifies general rank seven as an open case. Liu and Cui proved local
+minimality in the ordered gauge for integer orders at least two
+\cite[Eq.~(5) and Appendix C]{lcnew}. The local-orbit optimization
+based on stabilizer fidelity also has an exact solution
+\cite{sfid,viscardi}. Huang, Chen,
+and Yao study dimension reduction and compute the rank-two value
+\cite{hcy}. The result here uses a comparison on every ambient qubit
+dimension.
+
+\begin{theorem}\label{thm:rank7}
+For every pure state of Schmidt rank seven on any qubit bipartition,
+\[
+ \min_{U_A,U_B} M_2((U_A\otimes U_B)\psi)=M_2(\psi_{\CB}),
+\]
+where the minimum includes all complex local unitaries.
+\end{theorem}
+
+\begin{corollary}\label{cor:formula}
+Let \(\mathcal A\) be the four-element subsets of
+\(\{0,\ldots,6\}\) whose binary labels have XOR zero. The minimum in
+Theorem~\ref{thm:rank7} equals
+\[
+ -\log_2\!\left[
+ 7\left(\sum_{j=0}^{6}t_j^2\right)^2
+ -6\sum_{j=0}^{6}t_j^4
+ +168\sum_{I\in\mathcal A}\prod_{i\in I}t_i
+ \right].
+\]
+\end{corollary}
+
+\section{Reduction to a Pauli-defect bound}
+
+On a balanced cut of local dimension \(D\), write the coefficient
+matrix as \(T=U_A M U_B^{\mathsf T}\), where
+\(M=\operatorname{diag}(\sqrt{t_0},\ldots,\sqrt{t_6},0,\ldots,0)\).
+Set \(H=M^{\otimes4}\) and \(J=D^{-2}\sum_P P^{\otimes4}\), with
+the sum over the sign-free single-side Pauli strings. The purity is
+\[
+ D^2\tr(HAHB),\quad
+ A=(U_A^\dagger)^{\otimes4} J U_A^{\otimes4},\qquad
+ B=(U_B^{\mathsf T})^{\otimes4} J \overline{U_B}^{\otimes4}.
+\]
+This follows by expanding
+\(\langle P\otimes Q\rangle=\tr(T^\dagger P T Q^{\mathsf T})\)
+to the fourth power, using \(J^{\mathsf T}=J\).
+Hilbert--Schmidt Cauchy--Schwarz bounds the expression by
+\(\sqrt{D^2\tr(HAHA)\,D^2\tr(HBHB)}\).
+The two factors are actual paired-frame purities. A paired frame has
+coefficient matrix \(N=VMV^\dagger\) for a unitary \(V\).
+The paired reduction is also given in
+\cite[Lemma 1 and Corollary 1]{sierant} and
+\cite[Eq.~(4) and Appendix B]{lcnew}.
+For unequal qubit sides, appending leading computational ancillas to
+the smaller side embeds the states being compared in a balanced
+orbit. Each ancilla contributes a factor of one to \(P_2\), and the
+sorted representative uses the same binary labels after padding
+\cite[Eq.~(16)]{sierant}.
+
+Let \(\pF\) be the antisymmetric Pauli projector of
+\cite[Eq.~(39)]{sierant}. Define
+\(\cF(K)=\tr(\pF\Lambda^4K)\), and put \(\eta=4/D\). Choose the
+orthonormal eigenframe \(u_0,\ldots,u_6\) for the positive spectrum
+of \(N^2\). For a four-element set \(I\), define
+\[
+ w_I=\eta^{-1}\langle u_I,\pF u_I\rangle,\qquad
+ E=\sum_{|I|=4}(w_I-w_I^{\CB})\prod_{i\in I}t_i,
+\]
+where \(u_I\) is the exterior product of the \(u_i\) in index order.
+The computational array \(w_I^{\CB}\) is the indicator of
+\(\mathcal A\), so \(\cF(N^2)-\cF(M^2)=\eta E\).
+Sierant's sector decomposition and rank-seven compression bound give
+\begin{align*}
+ G(V)&=\mathcal I(t)+6D^2 Q_{(1^4)}(N)
+                  +18D\,\cF(N^2)-\mathcal D(N),\\
+ \mathcal I(t)&=7\left(\sum_jt_j^2\right)^2-6\sum_jt_j^4,
+ \qquad Q_{(1^4)}(N)\le\eta\,\cF(N^2).
+\end{align*}
+Here \(\mathcal D\) is the nonnegative sum of the three sector
+defects, which vanishes at \(V=I\), and the compression bound is
+saturated there
+\cite[Proposition 2, Eq.~(175), and Theorem 7]{sierant}.
+Retain the normalized compression loss
+\[
+ \mathcal D_F(N)
+ =\frac{\eta\cF(N^2)-Q_{(1^4)}(N)}{\eta^2}\ge0 .
+\]
+Then the exact purity difference and the target bound are
+\begin{equation}\label{eq:defect}
+ G(V)-G(I)=168E-\big(\mathcal D(N)+96\mathcal D_F(N)\big)\le0.
+\end{equation}
+The coefficients are \((6D^2\eta+18D)\eta=168\) and
+\(6D^2\eta^2=96\). The sum of the two defects is the physical
+quantity bounded by the certificate. Evaluating the
+decomposition at \(V=I\) gives the expression inside the logarithm in
+Corollary~\ref{cor:formula}. Its interpretation as the maximum follows
+from Theorem~\ref{thm:rank7}.
+
+\section{The finite certificate}
+
+The accompanying proof supplement
+(\texttt{proof/rank7\_submission\_proof\_guide.md}) indexes the analytic
+comparisons and verifier sources.
+The following describes the inequalities certified by those sources and
+how they imply Eq.~\eqref{eq:defect}.
+
+The normalized four-wedge compression \(\mathsf C\) is a
+positive contraction on the exterior space of the seven
+Schmidt vectors \cite[Theorem 22]{sierant}. Its diagonal is
+\((w_I)\). With \(a_I=\sqrt{\prod_{i\in I}t_i}\), the exact loss is
+\[
+ \mathcal D_F(N)=
+ \sum_I a_I^2(\mathsf C-\mathsf C^2)_{II}
+ +\sum_{I<J}(a_I-a_J)^2|\mathsf C_{IJ}|^2.
+\]
+For a coordinate cut with projection \(R\), the cut trace loss
+is bounded below by \(\{s_R\}(1-\{s_R\})\), where
+\(s_R=\tr(R\mathsf C R)\) and braces denote fractional part.
+Two nested cuts can use disjoint amplitude intervals, sharing
+the displayed compression loss. The shared cut requires an
+explicit correction for exterior labels that cross its nominal
+endpoint. The separate Pauli-sector estimates control the signed
+mixed terms and the deficit left after these interval payments.
+
+\paragraph{Spectral reduction.}
+Write the ordered probabilities as \((\alpha,\beta,\gamma,a,b,c,d)\),
+and let \(h=\alpha-\beta\), \(k=\beta-\gamma\), \(q=\gamma-a\),
+\(p=a-b\). Normalize \(b=1\) or \(d=1\) as specified in the certificate.
+All comparisons are homogeneous of degree four in the probabilities.
+The two defects are nonnegative, so \(E\le0\) immediately gives
+Eq.~\eqref{eq:defect}. On \(E>0\), the mixed branch certifies the
+stronger bound with \(A_0E\) in place of \(168E\), where
+\(A_0=(101/100)168\). The weighted and analytic pruning branches
+establish Eq.~\eqref{eq:defect} directly. The analytic criteria
+cover either nonpositive leading trace excess and specified spectral regions.
+In particular, the unconditional small-gap comparison handles
+\(q\le\max(2d/3,b/2)\). The remaining variables
+\((h,k,q,c,d)\) lie inside explicit bounded boxes after rescaling.
+
+\paragraph{Transport from \(a=b\).}
+For a fixed physical frame, let \(F=E-\lambda U-\mu U_1\) be
+the signed exterior gain after the two mixed terms, with
+\(\lambda=24s/A_0,\ \mu=24t/A_0,\ A_0=(101/100)168\).
+The mixed comparison at \(p=0\) gives
+\[
+ A_0F(0)+96D_{\mathrm{seed}}
+ \le Q+96\big(W_1(0)T_1+W_s(0)T_s\big).
+\]
+Here \(Q\) is a physical Pauli remainder usable throughout the ray,
+\(W_1,W_s\) are disjoint-interval squared widths, and \(T_1,T_s\)
+are lower trace prices bounded above by \(e=1-w_{0123}\).
+The seed allowance \(D_{\mathrm{seed}}\) covers the shared
+crossing at \(p=0\). The decay of the widths and the increase in
+crossing error are bounded by the decrease of \(A_0F(p)\) for
+\(q\ge2d/3\), with \(0\le s\le3hq/2\) and
+\(0\le t\le7k(h+k+q)/4\). Hence the same remainder and trace
+prices certify Eq.~\eqref{eq:defect} for every \(p\ge0\).
+The independent weighted branch has its own transfer bound,
+including the possible loss of its highest width. The older
+pruning criteria either hold at every \(p\) or transmit by spectral
+monotonicity. These three cases are identified separately in the
+supplement for both implementations.
+
+\paragraph{Interval comparison on the tie.}
+In the upper-ratio verifier \(a=b=1\), the underlying signed
+exterior gain plus its crossing allowance is multiaffine in the
+two tail probabilities \(c,d\) on the same physical frame.
+The lower bound on the defect uses a common multiaffine minorant.
+At the four ordered corners, each of the two exterior estimates
+can be mixed with the other using a corner-specific weight.
+The same shifts work at all four corners and on both boundary
+rays of each sector of \(v/n\), where \(v,n>0\) are the two trace
+excesses. The ray boundaries are \(0,1/2,2/3,1,2,4,\infty\).
+Concavity of the trace lower prices on each bounded sector extends
+the inequalities between its endpoints. The unbounded sector
+uses an affine comparison and a monotone trace lower price.
+The bounded-corner lower price and the actual signed gain then
+interpolate throughout the ordered rectangle.
+For the lower-ratio verifier only the sixth weight is interpolated,
+and the highest compression price may be set to zero.
+
+\paragraph{Exhaustive cover.}
+Both verifiers either accept a box by a sufficient comparison,
+remove a region covered by the analytic reductions, or bisect
+an interval into two closed subintervals. Every accepted comparison
+uses outward-rounded integer interval endpoints. No sampled margin
+is needed. The proof of each contractor states the necessary
+inequality it preserves. Table~\ref{tab:cover} gives the exact
+ratio intervals, where \(\xi=d/b\). The two end regions use the
+large-ratio and close-bottom results proved in the supplement.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}lll@{}}
+\toprule
+Range of \(\xi\) & Comparison & Recorded leaves \\
+\midrule
+\((0,1/2]\) & large fifth-to-seventh ratio & \(93{,}703\) \\
+\([1/2,9/16]\) & upper verifier, first slab & \(6{,}455{,}151\) \\
+\([9/16,3/4]\) & upper verifier, thirteen closed cells & \(127{,}384{,}781\) \\
+\([3/4,100/101]\) & lower verifier, six closed slabs & \(4{,}350{,}568\) \\
+\([100/101,1]\) & close bottom probabilities & see supplement \\
+\bottomrule
+\end{tabular}
+\caption{Covered ratio intervals. The first four rows count accepted
+leaves including boxes pruned by already proved criteria.}
+\label{tab:cover}
+\end{table}
+
+\begin{proof}[Proof of Theorem~\ref{thm:rank7}]
+Table~\ref{tab:cover} covers every \(0<\xi\le1\), including all
+joining endpoints. The transport argument covers arbitrary \(a-b\)
+where a tie certificate is used. Therefore the Pauli-defect bound
+\eqref{eq:defect} holds for every paired frame and every spectrum of
+rank seven. Cauchy--Schwarz transfers the resulting upper purity bound
+to the full local-unitary orbit. Leading computational padding gives
+the same result on unequal cuts. The sorted representative attains
+the bound, so it attains the minimum of \(M_2\).
+\end{proof}
+
+\section{Reproducibility and disclosure}
+
+The proof supplement maps the analytic lemmas, source files, exact
+run records, and compilation and replay commands. The final coverage
+checker uses rational arithmetic to combine the thirteen closed
+intervals and checks the recorded source hashes and execution
+summaries. Replaying the C++ verifier regenerates the interval
+traversal. Independent internal reviews inspected the analytic
+reductions, the code and the finished interval records.
+The supplementary Lean project checks the algebraic rate bounds and
+the assembly of the spectral intervals. Its coverage theorem takes
+the comparisons inside each interval as hypotheses.
+The Lean formalization is ongoing. Future versions will record
+updates to the checked scope and include updated build records.
+
+The project was initiated and directed through a human brief.
+Generative AI agents accessed via OpenAI Codex performed substantial
+proof development and derivation, implemented the verification code,
+drafted the manuscript, and contributed literature checks and internal
+reviews. The numerical certificates were generated by exact integer
+or rational computations. The report invites independent human
+review of the proof and verification code.
+
+\begin{thebibliography}{10}
+\bibitem{leone}
+L.~Leone, S.~F.~E. Oliviero, and A.~Hamma,
+Stabilizer R\'enyi Entropy,
+\href{https://doi.org/10.1103/PhysRevLett.128.050402}{Phys. Rev. Lett. \textbf{128}, 050402 (2022)}.
+
+\bibitem{cao}
+C.~Cao, G.~Cheng, A.~Hamma, L.~Leone, W.~Munizzi, and S.~F.~E. Oliviero,
+Gravitational Backreaction Is Magical,
+\href{https://doi.org/10.1103/z3vr-w5c5}{PRX Quantum \textbf{6}, 040375 (2025)}.
+
+\bibitem{qw}
+D.~Qian and J.~Wang,
+Quantum nonlocal nonstabilizerness,
+\href{https://doi.org/10.1103/PhysRevA.111.052443}{Phys. Rev. A \textbf{111}, 052443 (2025)}.
+
+\bibitem{torre}
+G.~Torre, F.~Franchini, and S.~M.~Giampaolo,
+Non-Local Magic from the Entanglement Spectrum,
+\href{https://arxiv.org/abs/2607.07808v2}{arXiv:2607.07808v2} (2026).
+
+\bibitem{lcold}
+L.-Y.-N.~Liu and J.~Cui,
+Nonlocal nonstabilizerness for slightly entangled quantum many-body states,
+\href{https://arxiv.org/abs/2607.10714}{arXiv:2607.10714} (2026).
+
+\bibitem{fg}
+F.~Franchini and S.~M.~Giampaolo,
+Schmidt-gauge non-local magic: Representation, optimality, and mathematical properties,
+\href{https://arxiv.org/abs/2608.02745v2}{arXiv:2608.02745v2} (2026).
+
+\bibitem{sierant}
+P.~Sierant,
+Spectral geometry of nonlocal stabilizer entropy,
+\href{https://arxiv.org/abs/2609.13106v2}{arXiv:2609.13106v2} (2026).
+
+\bibitem{lcnew}
+L.-Y.-N.~Liu and J.~Cui,
+Entanglement, anti-flatness, and nonlocal nonstabilizerness:
+a unified perspective from entanglement spectrum,
+\href{https://arxiv.org/abs/2609.01993v2}{arXiv:2609.01993v2} (2026).
+
+\bibitem{sfid}
+P.~Sierant,
+Exact quantification of nonlocal magic,
+\href{https://arxiv.org/abs/2608.28563}{arXiv:2608.28563} (2026).
+
+\bibitem{viscardi}
+M.~Viscardi, L.~Leone, and A.~Hamma,
+Non-local Magic: closed-form solution and equivalence with magic of purification,
+\href{https://arxiv.org/abs/2609.04119v2}{arXiv:2609.04119v2} (2026).
+
+\bibitem{hcy}
+X.~Huang, G.~Chen, and Y.~Yao,
+Intrinsic spectral structure of bipartite nonlocal magic resource,
+\href{https://arxiv.org/abs/2606.24368v1}{arXiv:2606.24368v1} (2026).
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,388 @@
+\section{Rank-seven neighborhoods of rank-six spectra}
+
+\begin{theorem}\label{thm:rank6-neighborhood}
+For each \(g>0\) there is an explicit \(\varepsilon(g)>0\),
+independent of the qubit bipartition, such that the sorted
+computational representative is globally optimal at order two
+for positive ordered rank-seven probabilities with \(t_0=1\),
+\(\min(t_0-t_1,t_1-t_2)\ge g\), and \(t_6\le\varepsilon(g)\).
+With strict inequality \(t_6<\varepsilon(g)\) and distinct
+positive probabilities, the optimizers are precisely the local
+Clifford images of the sorted representative up to phase.
+\end{theorem}
+
+Let \(C\) be positive with rank at most \(R\), maximum eigenvalue
+one, and \(c_W=\tr(CW)\). Write \(\eta=\Delta_d(C)/d\) and put
+\(\rho=1/(4R^4)\). By the defect formula and
+\(\tr(C^4)\le[\tr(C^2)]^2\) one has
+\[
+ d^{-1}\sum_W c_W^4\ge [\tr(C^2)]^2-\eta.
+\]
+Also \(\sum_W c_W^2=d\tr(C^2)\) and \(|c_W|\le R\). At
+\(\eta\le1/4\), the set \(S=\{W:c_W^2>1/2\}\) therefore has
+at least \(\rho d\) labels. The anticommuting defect bound
+of \cite[Theorem~14]{sierant} gives at most \(2\eta d^2\)
+ordered anticommuting pairs in \(S\).
+
+Choose \(k=\lceil24/\rho^2\rceil+1\) and
+\(\zeta=1/[16(k+1)]\). At \(\eta\le\zeta\rho^2/4\), at
+least half of \(S\) consists of labels that each anticommute
+with at most \(\zeta|S|\) labels of \(S\). Call this subset
+\(T\), which contains the identity label zero. Every binary
+sum in \((k+1)T\) has at most \((k+1)\zeta|S|\) anticommuting
+partners in \(S\). Its unnormalized symplectic Fourier
+coefficient of \(1_S\) is at least \(|S|/2\). Parseval on the
+\(d^2\) labels gives
+\[
+ |(k+1)T|\le4d^2/|S|\le4d/\rho .
+\]
+If a shortest word in \(T\) for an element of \(\langle T\rangle\)
+has length at least \(k\), the translates of \(T\) by every
+third prefix of its first \(k\) steps are disjoint. An
+intersection would shorten the word by replacing at least
+three steps by two. These translates lie in \((k+1)T\), giving
+more than \(4d/\rho\) elements by the choice of \(k\), a
+contradiction. Thus \(V=\langle T\rangle\subseteq kT\).
+Every label of \(V\) anticommutes with at most \(|S|/16\)
+labels of \(S\), so averaging over \(V\) shows
+\(|S\setminus V^\perp|\le|S|/8\).
+Consequently \(B=T\cap V^\perp\) is commuting and has
+\(|B|\ge3\rho d/8\).
+
+Let \(H=\langle B\rangle\),
+\(m=\lceil\log_2(8/\rho)\rceil\), and \(\beta=\rho/[16(m+1)]\).
+Call a character of \(H\) sparse if it is negative on fewer
+than \(\beta d\) elements of \(B\). There cannot be \(m\)
+independent sparse characters, since their common kernel
+would have cardinality at most \(d/2^m\le\rho d/8\) and
+contain more than \(\rho d/8\) elements of \(B\).
+Taking the common kernel \(H'\) of all sparse characters
+gives joint eigenspaces of dimension
+\(\ell=d/|H'|\le L=4\cdot2^m/\rho\). Each Pauli outside
+\((H')^\perp\) anticommutes with at least \(\beta d\) labels
+of \(B\). Those labels have \(c_W^2>1/2\). The defect bound
+and Parseval then give
+\[
+ \|C-\mathcal E_{H'}C\|_{\rm HS}^2\le A\eta,\qquad
+ A=1/(2\beta),
+\]
+where \(\mathcal E_{H'}\) is Pauli conjugation averaging.
+
+For the logical Pauli labels \(p\in (H')^\perp/H'\), define
+\(a_p^2=|H'|^{-1}\sum_{W\in p+H'}c_W^2\).
+Parseval over the joint characters of \(H'\) identifies this
+with the sum over blocks of the squared logical coefficients
+at \(p\). If two logical labels anticommute, their entire
+cosets anticommute, giving \(\eta\ge4a_p^2a_q^2/\ell^2\).
+For \(s=g/(16L)\) and \(\eta<2s^4/L^2\), the labels with
+\(a_p>s\) therefore commute. Let \(G\) be the group generated
+by their cosets together with \(H'\). Retaining just these high
+cosets in \(\mathcal E_{H'}C\) gives a matrix \(C_{\rm hi}\)
+that is scalar on the joint eigenspaces of \(G\). The omitted
+terms change the operator norm in each \(H'\) block by at
+most \(\ell s\le g/16\), because every omitted coefficient
+in the block has modulus at most \(s\). If
+\(\eta<g^2/(16A)\), then
+\(\|C-C_{\rm hi}\|<g/4+g/16<g/2\).
+
+Each label in \((H')^\perp\setminus G^\perp\)
+anticommutes with some entire high coset. Counting these
+pairs by the endpoint outside \(G^\perp\) and using the defect bound
+gives
+\[
+ \|C-\mathcal E_G C\|_{\rm HS}^2
+ \le \mathcal A\eta,\qquad
+ \mathcal A=A+L/(4s^2).
+\]
+The projections in this bound are nested and the two sets of
+removed Pauli coefficients are disjoint.
+
+With \(t_0-t_1\ge g\), the bound on \(C-C_{\rm hi}\) makes the
+largest eigenvalue of \(C_{\rm hi}\) simple. All joint
+eigenspaces of \(G\) have equal dimension, so \(G\) is maximal.
+The gaps of both leading eigenlines \(P_0,P_1\) of \(C\) are
+at least \(g\). Comparing commutators in its eigenbasis gives
+\(\|P_j-\mathcal E_GP_j\|_{\rm HS}^2\le\mathcal A\eta/g^2\).
+For a rank-one projector, its largest basis weight in the
+stabilizer basis of \(G\) is at least one minus this
+dephasing loss. At \(\eta<g^2/(4\mathcal A)\) the two chosen
+reference lines must be distinct by orthogonality. Thus,
+writing
+\[
+ \eta_*=\min\{1/4,\zeta\rho^2/4,g^2/(16A),2s^4/L^2,
+                           g^2/(4\mathcal A)\},
+ \qquad
+ K(g,R)=2/\eta_*+2\mathcal A/g^2,
+\]
+the sum of the squared infidelities is at most \(K(g,R)\eta\).
+This holds for \(\eta\ge\eta_*\) as well because the sum is
+always at most two.
+
+\begin{proof}[Proof of Theorem~\ref{thm:rank6-neighborhood}]
+In the rank-seven forward comparison
+\eqref{eq:forward-dominant}, \(t_0=1\) gives
+\(0\le\gamma_{02}\le\gamma_{01}\le t_6+t_6^2\le2t_6\).
+Lemma~\ref{lem:compensated-anchors} and the ordered-line
+rounding give the upper bound
+\[
+  \bigl(336\cdot126500\,t_6 K(g,7)-1\bigr)\eta
+\]
+on the purity excess. In particular
+\(\varepsilon(g)=[336\cdot126500\,K(g,7)]^{-1}\) suffices.
+Apply the two-frame comparison and stabilizer padding.
+For a strict cutoff the defect must vanish at any optimal
+one-frame objective. At an optimizing physical state both
+frames attain equality, so each physical marginal has
+commuting Pauli support. The rigidity statement of
+Theorem~\ref{thm:one-stabilizer-marginal} gives the equality
+classification for distinct probabilities.
+\end{proof}
+
+\begin{theorem}\label{thm:doublet-boundary}
+For each \(g>0\) there is a dimension-independent positive
+cutoff \(\varepsilon_{\rm eq}(g)\) such that sorted rank-seven
+probabilities with \(t_0=t_1=1\), \(1-t_2\ge g\), and
+\(t_6\le\varepsilon_{\rm eq}(g)\) have the same global optimum.
+\end{theorem}
+
+\begin{proof}
+Use the same constants and proceed to \(\mathcal E_G C\) as above
+with \(\eta<\eta_*\). Put \(z=(t_1+t_2)/2\). Since
+\(\|C-C_{\rm hi}\|<5g/16\), the spectrum of \(C_{\rm hi}\) has
+exactly two values above \(z\), counting multiplicities, and its
+distance from \(z\) is at least \(3g/16\). Its joint \(G\) block
+size must divide two. Hence its two-dimensional upper spectral
+space \(Q\) is either a single rank-two stabilizer block or a
+span of two members of a common stabilizer basis. In both cases
+it is a rank-two stabilizer code.
+
+Put \(D=\mathcal E_G C\). The difference \(D-C_{\rm hi}\) has
+operator norm at most \(g/16\), by averaging
+\(\mathcal E_{H'}C-C_{\rm hi}\) over \(G\). The operators are
+block diagonal and \(C_{\rm hi}\) is scalar on each \(G\) block,
+so \(Q\) is also the upper spectral subspace of \(D\).
+For an eigenvector \(x_i\) of \(C\) in its leading plane \(P\)
+and an eigenvector \(u_j\) of \(D\) below \(z\), with eigenvalue
+\(\lambda_j\), the identity
+\((t_i-\lambda_j)\langle u_j|x_i\rangle
+=\langle u_j|(C-D)x_i\rangle\) gives
+\[
+ 1-\tfrac12\tr(PQ)\le 2\|C-D\|_{\rm HS}^2/g^2
+                    \le 2\mathcal A\eta/g^2.
+\]
+The rank-two stability estimate \eqref{eq:delta-dimensionfree}
+gives \((L_{01}-2)_+\le20\mathcal A\eta/g^2\).
+Here \(b_0=0\), so the forward coefficient \(\gamma_{02}\)
+vanishes and \(\gamma_{01}\le t_6^2\).
+In the near case the purity excess is therefore nonpositive
+if \(t_6\le g/\sqrt{3360\mathcal A}\). In the far case
+\(\eta\ge\eta_*\), use \(L_{01}\le5/2\), which suffices for
+\(t_6\le\sqrt{\eta_*/84}\). The smaller of the two cutoffs works
+on every bipartition by the paired comparison.
+\end{proof}
+
+\begin{theorem}\label{thm:simple-top-boundary}
+For each \(g>0\) there is a dimension-independent positive
+cutoff \(\varepsilon_{\rm top}(g)\) such that sorted rank-seven
+probabilities with \(t_0=1\), \(t_0-t_1\ge g\), and
+\(t_6\le\varepsilon_{\rm top}(g)\) satisfy global optimality.
+The remaining probabilities need no separation.
+\end{theorem}
+
+\begin{proof}
+For \(\eta<\eta_*\), the preceding construction gives a maximal
+\(G\) using just the leading gap. Let \(v_0\) be the stabilizer
+reference of \(x_0\), with squared infidelity at most
+\(e_0=\mathcal A\eta/g^2<1/4\).
+
+For a two-wedge with reference stabilizer lines \(v,w\) and
+squared infidelities \(e_x,e_y\), retain the two one-anchor
+self-expectations in the proof of
+\eqref{eq:delta-dimensionfree}. Specifically, let \(a^2,b_0^2,b_1^2\)
+be the self-expectations of the component on \(v\wedge w\) and the
+two components \(\eta_0,\eta_1\) containing one reference line.
+Using the star compressions of the operator \(L=2I-M_Y\) gives
+\(a^2+b_0^2+b_1^2-2a(b_0+b_1)\ge-2b_0b_1\).
+Since \(L\preceq2I\), this is at least
+\(-4\|\eta_0\|\|\eta_1\|\). The other cross terms use
+\(\|L-3I/4\|\le5/4\), and the component \(z\) outside both
+reference lines has self-expectation at least \(-\|z\|^2/2\).
+With \(\|\eta_0\|\le2\sqrt{e_y}\),
+\(\|\eta_1\|\le2\sqrt{e_x}\), and \(\|z\|\le\sqrt{e_x e_y}\),
+the result is \((L_{xy}-2)_+\le 29\sqrt{e_x e_y}\).
+
+Write the forward bracket in \eqref{eq:forward-dominant} as
+\[
+ \gamma_{02}(L_{01}+L_{02}-4)
+   +t_6^2 b_1(t_0-t_3)(L_{01}-2).
+\]
+For \(b_1>0\), the line \(x_1\) has gap at least
+\(h_1=\min(g,b_1)\). Its dephasing loss is at most
+\(d_1=\mathcal A\eta/h_1^2\).
+If \(d_1<1/2\), its most likely reference line is distinct
+from \(v_0\). Otherwise any distinct reference has
+infidelity at most \(1\le2d_1\). The asymmetric estimate and
+\(b_1/h_1\le1/g\) therefore bound the second term by
+\(29\sqrt2\,t_6^2\mathcal A\eta/g^2\). The term vanishes if \(b_1=0\).
+
+If \(b_2>0\), set \(P=\operatorname{span}\{x_1,x_2\}\).
+Its gap to the complementary eigenvalues is at least
+\(h_2=\min(g,b_2)\), so its projector's squared dephasing
+loss is at most \(d_2=\mathcal A\eta/h_2^2\).
+For \(d_2<1/4\) the top two coordinate masses of its
+projector sum to at least \(2-d_2\). Both coordinates are
+different from \(v_0\), whose mass is at most \(e_0\). Their
+span \(Q\) admits the polar isometry \(PQ(QPQ)^{-1/2}\)
+onto \(P\). It gives an orthonormal basis of \(P\) with
+squared infidelities at most \(2d_2\).
+If \(d_2\ge1/4\), any two distinct references outside \(v_0\)
+and any orthonormal basis of \(P\) give errors at most
+\(1\le4d_2\).
+The sum \(L_{01}+L_{02}\) is invariant under this basis
+change inside \(P\), since each overlap trace counts a
+quadruple with the number of legs in \(P\). Thus the
+asymmetric estimate on the two legs gives
+\(L_{01}+L_{02}-4\le116\mathcal A\eta/(g h_2)\).
+As \(\gamma_{02}\le b_2t_6\) and \(b_2/h_2\le1/g\),
+the first term costs at most \(116t_6\mathcal A\eta/g^2\).
+It vanishes if \(b_2=0\).
+
+The combined bracket is at most \(160t_6\mathcal A\eta/g^2\).
+For \(\eta\ge\eta_*\) use \(L_{ij}\le5/2\) to bound it instead
+by \(2t_6\). Paying the coefficient \(168\) with the defect
+\(\eta\) shows that
+\[
+ \varepsilon_{\rm top}(g)=\min\{\eta_*/336,\ g^2/(26880\mathcal A)\}
+\]
+suffices. The physical comparison and equality argument for
+a strict cutoff are the same as in Theorem~\ref{thm:rank6-neighborhood}.
+\end{proof}
+
+\begin{lemma}\label{lem:affine-eight-anchor}
+A fixed two-plane contained in the coordinate space of a binary
+affine three-space has normalized five-set occupancy at most two
+against every orthogonal five-space.
+\end{lemma}
+
+\begin{proof}
+Let \(H\) be the affine three-space and \(X\) the fixed two-plane.
+For a direction \(L\), twice contracting its stabilizer four-form
+by \(X\) yields a two-form in a single block of \(X^\perp\).
+The blocks are the six-dimensional space \(\mathbb C^H\ominus X\)
+and the eight-dimensional coordinate spaces of the other cosets
+of \(\operatorname{dir}H\). Indeed a contributing plane meets
+\(H\) in either four points, or two points with the other two in
+a coset fixed by \(L\). Thus the two-form operator is an orthogonal
+sum of operators on the two-exteriors of these blocks.
+In an orthonormal basis of a block let \(p_{ij}\) be its nonnegative
+coordinate pair weights. The one-hole isometry and the five-plane
+bound of \cite[Theorem~17 and Corollary~4]{sierant} give degree
+one at each vertex and triangle sums at most one.
+For a subset \(A\) in a block of even size \(m=6\) or \(8\),
+the total internal weight \(e(A)\) satisfies
+\(e(A)-e(A^c)=|A|-m/2\) by the degree identity.
+For even sizes the degree bound gives \(e(A)\le |A|/2\).
+For odd sizes, singleton and triangle bounds and their complements
+give \(e(A)\le\lfloor |A|/2\rfloor\).
+
+Choose the block bases to diagonalize the compressions of the
+five-plane projection to the blocks, with diagonal values \(s_i\).
+The two-exterior compression then gives occupancy
+\(\sum_b\sum_{i<j\in b}p_{ij}s_i s_j\).
+In the union basis, the squared coefficients of a unit volume form
+of the five-plane give a distribution on five-element subsets
+\(S\). The inclusion probability for two labels in the same block
+is the corresponding two-by-two principal minor of the projection,
+which is \(s_i s_j\). The occupancy is therefore the expectation
+of \(\sum_b e(S\cap b)\), bounded by two for every five-set.
+\end{proof}
+
+\begin{theorem}\label{thm:all-rank6-boundary}
+For each \(s\in(0,1]\) there is an explicit dimension-independent
+\(r_6(s)>0\) such that normalized rank-seven probabilities with
+\(t_5\ge s\) and \(t_6\le r_6(s)\) have sorted computational-basis
+optimality on every qubit bipartition and over all local unitaries.
+In particular every rank-six spectrum has a relative rank-seven
+neighborhood of global optimality.
+\end{theorem}
+
+\begin{proof}
+Use the high-coset construction with \(g=s/2\), and put
+\(\eta_0=\min\{\eta_*,g^2s^8/(20\cdot560^2\mathcal A)\}\).
+Require \(t_6\le s/2\). For \(\eta<\eta_0\), use the truncation at
+\(z=(t_5+t_6)/2\). Exactly six of its eigenvalues are above \(z\),
+at distance at least \(3g/16\) from the cutoff. The common \(G\)
+block size is a power of two dividing six, hence one or two.
+The same upper spectral projection \(Q\) applies to
+\(D=\mathcal E_G C\), because \(D\) preserves the blocks and its
+distance to \(C_{\rm hi}\) is at most \(g/16\).
+
+After a Clifford, \(Q\) consists of six computational labels.
+For block size two these are three coordinate cosets of one
+binary direction. The three points in the quotient lie in one
+affine plane, whose preimage is an eight-point affine space.
+For block size one the six labels can span a larger affine space.
+Let \(P\) be the actual leading six-space.
+The spectral-projection residual as in
+Theorem~\ref{thm:doublet-boundary} gives
+\(\tr P(I-Q)\le4\mathcal A\eta/g^2\).
+The direct principal-angle rotation \(e^K\) maps \(Q\) to \(P\)
+with \(K\) off-diagonal in \(Q\oplus Q^\perp\) and
+\(h^2=\|K\|_{\rm op}^2\le \pi^2\mathcal A\eta/g^2\).
+Pull back the actual frame by \(e^{-K}\), preserving its
+eigenvalues. If the six reference labels lie in no affine
+three-space, they contain at most one affine plane: two such
+planes inside six labels would meet in a line and span an affine
+three-space. Hence the compression of \(\Pi_{\rm F}\) to their
+four-exterior space is zero or \(q\) times a rank-one projector.
+The reference \(c_{\rm F}/q\) is at most \(t_0t_1t_2t_3+20t_6\),
+using the one-hole bound for the twenty tail wedges. The sorted
+reference has the planes \(0123,0145,2345\), giving at least
+\(t_0t_1t_2t_3+2s^4\). Transporting the frame changes
+\(c_{\rm F}/q\) by at most \(280h\): there are 35 terms and each
+normalized squared projection changes at speed at most \(8h\).
+At \(\eta<\eta_0\) and \(t_6\le s^4/40\) the two errors are each
+at most \(s^4/2\). This gives strict exterior comparison, and
+therefore strict purity comparison by the rank-seven compression.
+
+It remains that \(Q\) lies in an affine eight-point space \(H\).
+Translate the labels so that \(H\) is linear.
+Let \(a\) be the difference of its two missing labels, so \(Q\)
+is three \(a\)-cosets of \(H\) and the remaining coset is \(E\).
+The two fixed pairs \(01,02\) are in \(H\), so each reference
+occupancy is at most two by Lemma~\ref{lem:affine-eight-anchor}.
+
+Every projected four-wedge has zero derivative of its squared
+norm along this rotation at the reference. To see it, compare
+the orthogonal direction labels of affine planes contributing
+to its value and to its derivative. A wedge of four leading
+vectors uses directions in \(H\) containing \(a\), since planes
+in the union of three cosets must take two points per coset.
+Varying one vector puts it either outside \(H\), giving no
+plane, or in \(E\) once, which gives directions avoiding \(a\).
+A wedge with the last vector uses its component in \(E\) once,
+giving directions in \(H\) avoiding \(a\). Varying the last
+vector puts it in \(Q\), giving only directions containing \(a\).
+Varying a leading vector gives two factors from \(Q^\perp\):
+both in \(E\) give a direction containing \(a\), one outside
+\(H\) gives no plane, and both outside \(H\) give a direction
+outside \(H\). Thus the derivative and value have disjoint
+direction supports in every case.
+The uniform second derivative bound \(640h^2\) then gives
+\(L_{0i}-2\le320h^2\). Using the weaker constant
+\(h^2\le20\mathcal A\eta/g^2\) and each forward coefficient at
+most \(2t_6\), the bracket is at most
+\(25600t_6\mathcal A\eta/g^2\).
+
+For \(\eta\ge\eta_0\), the universal \(L_{ij}\le5/2\) gives a
+bracket at most \(2t_6\). Multiplying by \(168\) and subtracting
+\(\eta\) in either case proves the comparison for
+\[
+ r_6(s)=\min\{s/2,\ s^4/40,\ \eta_0/336,\
+                                      g^2/(4300800\mathcal A)\}.
+\]
+The paired reduction and stabilizer padding apply as above.
+At a strict cutoff both marginal defects vanish at an optimum.
+For distinct positive probabilities the same rigidity argument
+gives precisely the local Clifford optimizers.
+\end{proof}

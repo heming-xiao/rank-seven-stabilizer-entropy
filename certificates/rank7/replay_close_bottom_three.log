@@ -1,0 +1,12 @@
+c in [1,201/200], ray (1, 0): 14 accepted, 5 outside, depth 7.
+c in [1,201/200], ray (1, Fraction(1, 2)): 31 accepted, 5 outside, depth 11.
+c in [1,201/200], ray (1, 1): 101 accepted, 8 outside, depth 18.
+c in [1,201/200], ray (1, 2): 102 accepted, 8 outside, depth 15.
+c in [1,201/200], ray (1, 4): 46 accepted, 6 outside, depth 10.
+c in [1,201/200], ray (0, 1): 39 accepted, 5 outside, depth 10.
+c in [201/200,101/100], ray (1, 0): 14 accepted, 5 outside, depth 7.
+c in [201/200,101/100], ray (1, Fraction(1, 2)): 30 accepted, 5 outside, depth 11.
+c in [201/200,101/100], ray (1, 1): 97 accepted, 8 outside, depth 18.
+c in [201/200,101/100], ray (1, 2): 100 accepted, 8 outside, depth 15.
+c in [201/200,101/100], ray (1, 4): 46 accepted, 6 outside, depth 10.
+c in [201/200,101/100], ray (0, 1): 38 accepted, 5 outside, depth 10.
