@@ -1,6 +1,6 @@
 # Exact nonlocal stabilizer Rényi entropy at Schmidt rank seven
 
-**Community research draft v1**
+**Preprint v2 · 21 November 2026**
 
 **Heming Xiao**  
 Project Initiator and Lead  
@@ -19,11 +19,11 @@ fifth Schmidt probabilities to arbitrary rank-seven spectra.
 
 ## Research and verification status
 
-Lean formalization is in progress. Follow [the Lean README](lean/README.md)
-for the statements checked and the [build audit](certificates/rank7/lean_shared_odd_leakage_build.log)
-for the exact verified snapshot. The full main theorem and full interval
-replay remain under formalization. We will update the Lean source, scope
-statement, and build records as further parts of the proof are checked.
+Lean 4.36.0 checks the full interval cover, the attained minimum over the complex local-unitary orbit for a state given in seven-term Schmidt form, and the explicit minimum formula. All 5,683 project modules passed strict compilation. The [final axiom log](certificates/rank7/Rank7TheoremAudit.log) covers seven declarations. Independent human review remains open.
+
+- [Read the revised paper](paper/rank7_submission.pdf).
+- [Download the complete v5 reproduction package](reproduction/rank-seven-reproduction-v5.zip). Extract it and follow the top-level README to check the hashes and rebuild the formal proof.
+- [Cite the paper and its reproduction materials on Zenodo](https://doi.org/10.5281/zenodo.24421820).
 
 ## Contents
 
@@ -31,7 +31,7 @@ statement, and build records as further parts of the proof are checked.
 | --- | --- |
 | [paper/](paper/) | [Research draft PDF](paper/rank7_submission.pdf) and [LaTeX source](paper/rank7_submission.tex) |
 | [proof/](proof/) | [Proof guide](proof/rank7_submission_proof_guide.md), derivations, and technical reviews |
-| [lean/](lean/) | Lean sources, pinned toolchain, and [build instructions](lean/README.md) |
+| [lean/](lean/) | Earlier Lean development and a guide to the full v5 build |
 | [verification/](verification/) | C++ and Python verifiers with [reproduction commands](verification/README.md) |
 | [certificates/](certificates/) | [Run records and certificates](certificates/README.md) |
 | [literature/](literature/) | [Literature checks and reference material](literature/README.md) |
@@ -47,6 +47,4 @@ python verification/verify_rank7_tail_interval_union.py --require-complete
 ```
 
 For a fresh traversal, use the compiler and commands in
-[verification/README.md](verification/README.md). For Lean, use the
-bundled-library build and pinned Mathlib instructions in
-[lean/README.md](lean/README.md).
+[verification/README.md](verification/README.md). For the full Lean proof, use the README in the [v5 reproduction package](reproduction/rank-seven-reproduction-v5.zip).

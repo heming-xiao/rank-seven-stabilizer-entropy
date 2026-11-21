@@ -1,8 +1,10 @@
-# Lean checks for the rank-seven research draft
+# Lean verification at Schmidt rank seven
 
-The full rank-seven theorem and the complete interval replay are still
-being formalized. This directory and its build records will be updated
-as more of the proof is checked.
+The [v5 reproduction package](../reproduction/rank-seven-reproduction-v5.zip) contains the complete audited source, pinned dependencies manifest, build commands, and final audit output. The source archive inside it is `lean-v5.zip`. The [seven-declaration audit](../certificates/rank7/Rank7TheoremAudit.log) and [full verification record](../certificates/rank7/independent-final-verification.json) are also available directly in this repository.
+
+## Earlier local checks
+
+The files below document the earlier Lean project distributed with v1.
 
 From this directory, run `lake build` with Lean 4.36.0.
 The project uses Lean's bundled libraries. See the

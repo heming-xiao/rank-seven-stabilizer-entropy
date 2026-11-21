@@ -1,0 +1,7 @@
+'RankSeven.FullSpectrumCertified.localUnitaryRepresentative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RankSeven.FullSpectrumCertified.localUnitaryMinimum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RankSeven.RealSchmidtOrbit.normalizedLocalUnitaryMinimum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RankSeven.FullSpectrumCertified.minimum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RankSeven.FullSpectrumCertified.attained' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RankSeven.SchmidtProbability.reference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RankSeven.SchmidtProbability.planes' depends on axioms: [propext]

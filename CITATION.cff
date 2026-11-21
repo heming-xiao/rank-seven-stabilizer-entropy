@@ -1,12 +1,22 @@
 cff-version: "1.2.0"
-title: "Rank Seven Stabilizer Entropy Project"
-message: "Cite this version of the community research and reproduction materials. Heming Xiao initiated and leads the project. OpenAI Codex agents developed the main proof, verification code, and manuscript."
+message: "Cite the paper and its accompanying Lean proof and reproduction materials using the version DOI."
+title: "Exact nonlocal stabilizer Rényi entropy at Schmidt rank seven"
 authors:
-  - name: "Rank Seven Stabilizer Entropy Project"
-contact:
-  - given-names: Heming
-    family-names: Xiao
-version: "v1"
+  - family-names: "Xiao"
+    given-names: "Heming"
+version: "v2"
 type: software
-repository-code: https://github.com/heming-xiao/rank-seven-stabilizer-entropy
-date-released: "2026-11-19"
+doi: "10.5281/zenodo.24421820"
+repository-code: "https://github.com/heming-xiao/rank-seven-stabilizer-entropy"
+date-released: "2026-11-21"
+preferred-citation:
+  type: generic
+  title: "Exact nonlocal stabilizer Rényi entropy at Schmidt rank seven"
+  authors:
+    - family-names: "Xiao"
+      given-names: "Heming"
+  doi: "10.5281/zenodo.24421820"
+  version: "v2"
+  year: 2026
+  publisher:
+    name: "Zenodo"

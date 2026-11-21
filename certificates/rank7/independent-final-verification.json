@@ -1,0 +1,94 @@
+{
+  "checkedModuleCount": 5683,
+  "targetClosure": 5683,
+  "independentValidationUtc": "2026-11-21T15:10:46.823738+00:00",
+  "firstSameSessionSourceBuildStartedUtc": "2026-11-21T11:06:13.9337697Z",
+  "currentRevisionDriverStartedUtc": "2026-11-21T13:30:33.009048+00:00",
+  "strictDriverExit": {
+    "when": "2026-11-21T15:10:32.775866+00:00",
+    "exit": 0,
+    "receipts": 5683
+  },
+  "sourceIdenticalObjectsTransferredFromEarlierSameSessionCandidate": 4208,
+  "internalImportEdges": 15664,
+  "completeCandidateArchiveSHA256": "37a013d66a93550bbe469e88f94553d35b186365acaa0e1ac930b6bb6cc4ab9f",
+  "originalFrozenArchiveSHA256": "87a6852c9275042e2a8336ad58af8254e50369254fa0a11615ef3e7d8be0f16a",
+  "changedProjectSourcesFromOriginal": [
+    "Rank7RealNearTwoCoverageProgress",
+    "Rank7RealNearTwoExteriorRestore",
+    "Rank7RealThreeHeadSeed",
+    "Rank7UpperSharedRow"
+  ],
+  "addedProjectSourcesFromOriginal": [
+    "Rank7RealNearTwoCert00B0R2",
+    "Rank7RealNearTwoCert00B0R3",
+    "Rank7RealNearTwoCert00B1R2",
+    "Rank7RealNearTwoCert01B0R2",
+    "Rank7RealNearTwoCert01B1R2",
+    "Rank7RealNearTwoCert02B0R2",
+    "Rank7RealNearTwoCert02B1R2",
+    "Rank7RealNearTwoCert03B0R2",
+    "Rank7RealNearTwoCert03B0R3",
+    "Rank7RealNearTwoCert03B1R2",
+    "Rank7RealNearTwoCert04B0R3",
+    "Rank7RealNearTwoCert04B1R3"
+  ],
+  "manifestSHA256": "6f3e6084ba6b83d18317f7e2688ade6de9bca71417e713e1e69ce38b2e738ce9",
+  "compiler": "Lean (version 4.36.0, x86_64-w64-windows-gnu, commit 611c117bfaf7b7ae1cfcf246ce6fba31e8f509e9, Release)",
+  "leanExecutableSHA256": "f567cc855e5f8006f65076bc813711d581edbae54f1d1d138462e7114351b532",
+  "externalPackagePins": {
+    "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+    "plausible": "054b228ce0ac61d767c6e71ba73a24728f191b72",
+    "LeanSearchClient": "4fb58e749ef3fc0395fe274f6cab70c2ea85f1c9",
+    "importGraph": "8370c640afcd1cc3fb1cb9bf1560cc66eafee5e0",
+    "proofwidgets": "2f0f3520daeac2d9310ff25b7a877a0e5cdaa203",
+    "aesop": "66ff77cf0c4c898799e4b94d14db55f7a02d0c5a",
+    "Qq": "ff055a2fcc835935e0ae607339b455a5f5896b4b",
+    "batteries": "b4b25a3886a16daacaf6615c2eea7170a6e8f458",
+    "Cli": "50810f72af7618bee62fe9800dc26e806c188703"
+  },
+  "target": "Rank7TheoremAudit",
+  "targetObjectSHA256": "fa9e7a2f836c427c5d728b86e0b8bbd4dc9e1ed311e7a992a4736798ca629303",
+  "targetLogSHA256": "641a8287d091f50aa71f30d87a1b49828c915faf85a235dc02a69a3c3a4210a6",
+  "unionOfAxiomsPrintedAcrossProject": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "axioms": {
+    "RankSeven.FullSpectrumCertified.localUnitaryRepresentative": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RankSeven.FullSpectrumCertified.localUnitaryMinimum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RankSeven.RealSchmidtOrbit.normalizedLocalUnitaryMinimum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RankSeven.FullSpectrumCertified.minimum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RankSeven.FullSpectrumCertified.attained": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RankSeven.SchmidtProbability.reference": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RankSeven.SchmidtProbability.planes": [
+      "propext"
+    ]
+  },
+  "earlierMemoryFailureModulesStrictlyReverified": 47
+}

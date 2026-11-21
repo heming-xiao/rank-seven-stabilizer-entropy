@@ -81,19 +81,6 @@ execution summaries against the frozen source files. An independent
 traversal replay uses the C++ executables. The exact union, including
 its endpoints, was checked independently.
 
-## Lean checks
+## Full Lean verification (v2)
 
-The release includes the [Lean project](../lean/README.md) and its
-[build audit](../certificates/rank7/lean_shared_odd_leakage_build.log).
-The project checks the rectangular Pauli purity reduction, several
-physical packing and compression inequalities, and selected interval
-replays. It also proves the physical small shared-Gram leakage bound.
-The full rank-seven theorem and the complete interval replay remain
-under formalization. Future versions will record updates to the checked
-scope and provide updated build logs. The C++ programs regenerate the interval
-traversals described above.
-
-To reproduce the bundled-library proof checks, run `lake build` in
-`lean/` with Lean 4.36.0. The separate
-[real-spectrum project](../lean/real/README.md) uses the pinned Mathlib
-revision.
+Download the [v5 reproduction package](../reproduction/rank-seven-reproduction-v5.zip) for the full formal proof. The bundle README maps the paper's numbered results to their Lean declarations and gives a reproducible build. The [final axiom log](../certificates/rank7/Rank7TheoremAudit.log) and [audit record](../certificates/rank7/independent-final-verification.json) identify the verified sources. The interval comparisons documented above retain their original external run records.
