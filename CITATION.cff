@@ -4,9 +4,9 @@ title: "Exact nonlocal stabilizer Rényi entropy at Schmidt rank seven"
 authors:
   - family-names: "Xiao"
     given-names: "Heming"
-version: "v2"
+version: "v3"
 type: software
-doi: "10.5281/zenodo.24421820"
+doi: "10.5281/zenodo.24424358"
 repository-code: "https://github.com/heming-xiao/rank-seven-stabilizer-entropy"
 date-released: "2026-11-21"
 preferred-citation:
@@ -15,8 +15,8 @@ preferred-citation:
   authors:
     - family-names: "Xiao"
       given-names: "Heming"
-  doi: "10.5281/zenodo.24421820"
-  version: "v2"
+  doi: "10.5281/zenodo.24424358"
+  version: "v3"
   year: 2026
   publisher:
     name: "Zenodo"

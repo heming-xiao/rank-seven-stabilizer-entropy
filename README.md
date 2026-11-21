@@ -1,6 +1,6 @@
 # Exact nonlocal stabilizer Rényi entropy at Schmidt rank seven
 
-**Preprint v2 · 21 November 2026**
+**Preprint v3 · 21 November 2026**
 
 **Heming Xiao**  
 Project Initiator and Lead  
@@ -23,7 +23,7 @@ Lean 4.36.0 checks the full interval cover, the attained minimum over the comple
 
 - [Read the revised paper](paper/rank7_submission.pdf).
 - [Download the complete v5 reproduction package](reproduction/rank-seven-reproduction-v5.zip). Extract it and follow the top-level README to check the hashes and rebuild the formal proof.
-- [Cite the paper and its reproduction materials on Zenodo](https://doi.org/10.5281/zenodo.24421820).
+- [Cite the paper and its reproduction materials on Zenodo](https://doi.org/10.5281/zenodo.24424358).
 
 ## Contents
 
