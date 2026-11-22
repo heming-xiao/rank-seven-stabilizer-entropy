@@ -1,0 +1,17 @@
+{
+  "checked_release_files": 5689,
+  "project_target": "Rank7TheoremAudit",
+  "reachable_project_modules": 5683,
+  "successful_receipts": 5683,
+  "project_import_edges": 15664,
+  "compiler_counts": {
+    "Lean (version 4.36.0, x86_64-w64-windows-gnu, commit 611c117bfaf7b7ae1cfcf246ce6fba31e8f509e9, Release)": 5683
+  },
+  "source_archive_project_objects": 0,
+  "compiled_audit_sha256": "641a8287d091f50aa71f30d87a1b49828c915faf85a235dc02a69a3c3a4210a6",
+  "published_audit_sha256": "641a8287d091f50aa71f30d87a1b49828c915faf85a235dc02a69a3c3a4210a6",
+  "same_audit_declarations_ignoring_line_endings": true,
+  "upper_cells": 524,
+  "raw_kernel_checks": 3684,
+  "raw_plan_subcells": 25374
+}

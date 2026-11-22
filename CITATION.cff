@@ -1,22 +1,22 @@
 cff-version: "1.2.0"
-message: "Cite the paper and its accompanying Lean proof and reproduction materials using the version DOI."
+message: "Cite the paper and its accompanying Lean proof and reproduction materials using the versioned repository link."
 title: "Exact nonlocal stabilizer Rényi entropy at Schmidt rank seven"
 authors:
   - family-names: "Xiao"
     given-names: "Heming"
-version: "v3"
+version: "v3.1"
 type: software
-doi: "10.5281/zenodo.24424358"
+url: "https://github.com/heming-xiao/rank-seven-stabilizer-entropy/releases/tag/v3.1"
 repository-code: "https://github.com/heming-xiao/rank-seven-stabilizer-entropy"
-date-released: "2026-11-21"
+date-released: "2026-11-22"
 preferred-citation:
   type: generic
   title: "Exact nonlocal stabilizer Rényi entropy at Schmidt rank seven"
   authors:
     - family-names: "Xiao"
       given-names: "Heming"
-  doi: "10.5281/zenodo.24424358"
-  version: "v3"
+  url: "https://github.com/heming-xiao/rank-seven-stabilizer-entropy/releases/tag/v3.1"
+  version: "v3.1"
   year: 2026
   publisher:
     name: "Zenodo"

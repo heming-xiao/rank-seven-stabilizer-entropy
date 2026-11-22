@@ -13,8 +13,8 @@
 
 \title{Exact nonlocal stabilizer R\'enyi entropy at Schmidt rank seven}
 \author{Heming Xiao\\[0.25em]
-  \normalsize Independent Research}
-\date{Revised 21 November 2026}
+  \normalsize Independent Research \enspace$\cdot$\enspace \href{mailto:ruimiyomi@gmail.com}{\nolinkurl{ruimiyomi@gmail.com}}}
+\date{Revised 22 November 2026}
 
 \begin{document}
 \maketitle
@@ -283,8 +283,7 @@ lists the analytic lemmas, source files, run records, and replay
 commands. The coverage checker joins the thirteen closed intervals
 using rational arithmetic and checks the source hashes and run
 summaries. Replaying the C++ verifier regenerates the interval
-traversal. Separate AI-assisted reviews examined the analytic
-reductions, the verifier code, and the interval records.
+traversal.
 
 The Lean~4.36.0 proof in the v5 source bundle starts with a normalized
 state given by a seven-term Schmidt decomposition. It allows arbitrary
@@ -292,40 +291,42 @@ qubit dimensions on both sides and complex Schmidt frames. The Lean
 kernel checks the full interval cover and the deductions from the
 Pauli estimates to Theorem~\ref{thm:rank7}, including attainment by
 the sorted representative and the formula in Corollary~\ref{cor:formula}.
-The external verifier counts in Table~\ref{tab:cover} describe a
-separate calculation.
+
 
 In the v5 sources, \texttt{localUnitaryRepresentative} proves
 Theorem~\ref{thm:rank7} and \texttt{localUnitaryMinimum} gives the
-formula in Corollary~\ref{cor:formula}. All 5,683 project modules
-passed strict compilation from source. The audit lists only
-\texttt{propext}, \texttt{Classical.choice}, and \texttt{Quot.sound}
-across seven declarations. The reproduction bundle includes the pinned
-dependency versions, build instructions, and the full output in
-\path{audit/Rank7TheoremAudit.log}. The manuscript and the complete v5
-proof bundle are archived at
-\href{https://doi.org/10.5281/zenodo.24421820}{\texttt{doi:10.5281/zenodo.24421820}}.
+formula in Corollary~\ref{cor:formula}. On 22 November 2026, a \href{https://github.com/heming-xiao/rank-seven-stabilizer-entropy/blob/v3.1/certificates/rank7/reproduction-2026-11-22/README.md}{fresh build} from the public sources in a
+clean workspace compiled all 5,683 project modules. The resulting
+axiom report matched the archived report byte for byte. For both
+declarations it lists only \texttt{propext}, \texttt{Classical.choice},
+and \texttt{Quot.sound}. The external C++ and Python checks in Table~\ref{tab:cover}
+were outside the scope of this build.
+The run used the \href{https://doi.org/10.5281/zenodo.24421820}{v5 bundle
+archived with preprint v2}. Its Lean source archive is byte-identical
+to the one \href{https://doi.org/10.5281/zenodo.24424358}{archived with
+preprint v3}. Build instructions and \path{audit/Rank7TheoremAudit.log} are included.
 
 \newpage
 \paragraph{Generative AI Disclosure and Author Responsibility.}
 Heming Xiao initiated and directed this independent research project.
-He defined its focus on Schmidt rank seven, established the verification
-objectives, and oversaw the preparation of the reproducibility materials.
+He selected Schmidt rank seven as the research target, set the verification
+objectives, and oversaw preparation of the reproducibility materials.
 OpenAI Codex agents using GPT-6.2 Sol and GPT-6.2 Astra developed the
-mathematical arguments, formalized the proof in Lean, implemented the
+mathematical arguments, formalized the proof in Lean, wrote the
 verification code, and drafted the manuscript.
 
-The formal proof, including the full interval cover, was checked using
-Lean~4.36.0. Xiao coordinated separate AI-agent reviews of the source
-compilation, the correspondence between the formal statements and the
-manuscript, and the numerical certificates. He has not personally verified
-the complete mathematical proof, and independent verification by an
-external human expert remains pending to his knowledge.
+Xiao coordinated separate AI-agent reviews of the source build, the
+correspondence between the formal statements and the manuscript,
+and the numerical certificates. He also arranged for a GPT-6.2 Astra
+agent in a separate Codex project to reproduce the Lean build from the
+public sources.
 
-Xiao takes responsibility for accurately reporting the research process,
-contributions, and verification status. He welcomes independent scrutiny
-of the mathematical claims and commits to investigating reported errors
-and publishing corrections where warranted.
+Xiao has not personally verified the complete mathematical proof.
+To his knowledge, a full review by an external human expert remains
+pending. He takes responsibility for accurately reporting the research
+process, contributions, and verification status. He welcomes independent
+scrutiny of the mathematical claims and will investigate reported errors
+and publish corrections where warranted.
 
 \begin{thebibliography}{10}
 \bibitem{leone}
